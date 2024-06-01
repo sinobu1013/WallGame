@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['left_0',['LEFT',['../set_8h.html#a437ef08681e7210d6678427030446a54',1,'set.h']]]
+  ['getspifailures_5f00004_0',['GetSPIFailures_00004',['../_wmi_ap_rpl_8h.html#a303b24bc8ccfed8cbf6ee8ce38f183fe',1,'WmiApRpl.h']]]
 ];

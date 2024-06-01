@@ -1,0 +1,87 @@
+\doxysection{rasctrnm.\+h}
+\hypertarget{rasctrnm_8h_source}{}\label{rasctrnm_8h_source}\mbox{\hyperlink{rasctrnm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00001}00001\ \textcolor{comment}{/*++\ BUILD\ Version:\ 0001\ \ \ \ //\ Increment\ this\ if\ a\ change\ has\ global\ effects}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00003}00003\ \textcolor{comment}{Copyright\ (c)\ 1992\ \ Microsoft\ Corporation}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00005}00005\ \textcolor{comment}{Module\ Name:}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00006}00006\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ \ rasctrnm.h}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00008}00008\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00009}00009\ \textcolor{comment}{Abstract:}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ \ This\ file\ defines\ the\ ras\ symbols\ used\ in\ the\ rasctrs.ini\ file\ for}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ \ loading\ the\ counters\ to\ registry.\ }}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00014}00014\ \textcolor{comment}{Created:}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00015}00015\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ \ Thomas\ J.\ Dimitri\ \ \ \ \ \ \ \ \ \ \ 28\ May\ 93}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00018}00018\ \textcolor{comment}{Revision\ History}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00019}00019\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ \ Ram\ Cherala\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 04\ Nov\ 93\ \ \ Added\ this\ header\ }}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00021}00021\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00022}00022\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00023}00023\ \textcolor{comment}{-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00024}00024\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00025}00025\ \textcolor{comment}{//\ \ rasctrnm.h}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00026}00026\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00027}00027\ \textcolor{comment}{//\ \ Offset\ definition\ file\ for\ exensible\ counter\ objects\ and\ counters}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00028}00028\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00029}00029\ \textcolor{comment}{//\ \ These\ "{}relative"{}\ offsets\ must\ start\ at\ 0\ and\ be\ multiples\ of\ 2\ (i.e.}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00030}00030\ \textcolor{comment}{//\ \ even\ numbers).\ In\ the\ Open\ Procedure,\ they\ will\ be\ added\ to\ the}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00031}00031\ \textcolor{comment}{//\ \ "{}First\ Counter"{}\ and\ "{}First\ Help"{}\ values\ fo\ the\ device\ they\ belong\ to,}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00032}00032\ \textcolor{comment}{//\ \ in\ order\ to\ determine\ the\ \ absolute\ location\ of\ the\ counter\ and}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00033}00033\ \textcolor{comment}{//\ \ object\ names\ and\ corresponding\ help\ text\ in\ the\ registry.}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00034}00034\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00035}00035\ \textcolor{comment}{//\ \ this\ file\ is\ used\ by\ the\ extensible\ counter\ DLL\ code\ as\ well\ as\ the}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00036}00036\ \textcolor{comment}{//\ \ counter\ name\ and\ help\ text\ definition\ file\ (.INI)\ file\ that\ is\ used}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00037}00037\ \textcolor{comment}{//\ \ by\ LODCTR\ to\ load\ the\ names\ into\ the\ registry.}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00038}00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00041}\mbox{\hyperlink{rasctrnm_8h_a630fb0c3b3495a23bdec444d96185d73}{00041}}\ \textcolor{preprocessor}{\#define\ RASPORTOBJ\ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00044}00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00045}00045\ \textcolor{comment}{//\ The\ following\ constants\ are\ good\ for\ both\ Total\ and\ individual\ port.}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00046}00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00048}\mbox{\hyperlink{rasctrnm_8h_a5dd8b0116897762f32d2628769032607}{00048}}\ \textcolor{preprocessor}{\#define\ BYTESTX\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00049}\mbox{\hyperlink{rasctrnm_8h_a0a6f75335eecc5b69f97f75d97f8388d}{00049}}\ \textcolor{preprocessor}{\#define\ BYTESRX\ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00051}\mbox{\hyperlink{rasctrnm_8h_a097a464bf4dbf23a44bbaa1cb95cb1ed}{00051}}\ \textcolor{preprocessor}{\#define\ FRAMESTX\ \ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00052}\mbox{\hyperlink{rasctrnm_8h_adb98ab9991bbc30c5a2ca92248196734}{00052}}\ \textcolor{preprocessor}{\#define\ FRAMESRX\ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00054}\mbox{\hyperlink{rasctrnm_8h_a48819c78c9b27ccb02d65512dc3cc0f0}{00054}}\ \textcolor{preprocessor}{\#define\ PERCENTTXC\ \ \ \ \ \ 10}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00055}\mbox{\hyperlink{rasctrnm_8h_a240fb6feb6d248c566e2e1c2e4b5a9c7}{00055}}\ \textcolor{preprocessor}{\#define\ PERCENTRXC\ \ \ \ \ \ 12}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00057}\mbox{\hyperlink{rasctrnm_8h_abbf3c9862f59a6df7480f1f9569d36f0}{00057}}\ \textcolor{preprocessor}{\#define\ CRCERRORS\ \ \ \ \ \ \ 14}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00058}\mbox{\hyperlink{rasctrnm_8h_ab86bd0e6ce86ec1091ae3cf95dd6341e}{00058}}\ \textcolor{preprocessor}{\#define\ TIMEOUTERRORS\ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00059}\mbox{\hyperlink{rasctrnm_8h_a6c93f8d09cd892b39e84a3fe661fa9af}{00059}}\ \textcolor{preprocessor}{\#define\ SERIALOVERRUNS\ \ \ \ \ \ \ \ \ \ 18}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00060}\mbox{\hyperlink{rasctrnm_8h_af1ada82aed680c85a0d026d112038e23}{00060}}\ \textcolor{preprocessor}{\#define\ ALIGNMENTERRORS\ \ \ \ \ \ \ \ \ 20}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00061}\mbox{\hyperlink{rasctrnm_8h_a78cfe76d80225812e9796225d2af0ae7}{00061}}\ \textcolor{preprocessor}{\#define\ BUFFEROVERRUNS\ \ \ \ \ \ \ \ \ \ 22}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00063}\mbox{\hyperlink{rasctrnm_8h_ab3163a77306f4b3949d458304e6b8ca7}{00063}}\ \textcolor{preprocessor}{\#define\ TOTALERRORS\ \ \ \ \ 24}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00065}\mbox{\hyperlink{rasctrnm_8h_a101ef905fc4f144fbe673331e4528f16}{00065}}\ \textcolor{preprocessor}{\#define\ BYTESTXSEC\ \ \ \ \ \ 26}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00066}\mbox{\hyperlink{rasctrnm_8h_aa4e26b935748bd0505ff33e6b6e3d398}{00066}}\ \textcolor{preprocessor}{\#define\ BYTESRXSEC\ \ \ \ \ \ 28}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00068}\mbox{\hyperlink{rasctrnm_8h_a105cba2fc933452768695dfd6baa2145}{00068}}\ \textcolor{preprocessor}{\#define\ FRAMESTXSEC\ \ \ \ \ 30}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00069}\mbox{\hyperlink{rasctrnm_8h_a53e8a5fb6c29c193163631943be193f5}{00069}}\ \textcolor{preprocessor}{\#define\ FRAMESRXSEC\ \ \ \ \ 32}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00071}\mbox{\hyperlink{rasctrnm_8h_adce9842e3d928886b5e3f6396741ed84}{00071}}\ \textcolor{preprocessor}{\#define\ TOTALERRORSSEC\ \ \ \ \ \ \ \ \ \ 34}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00074}00074\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00075}00075\ \textcolor{comment}{//\ The\ following\ constants\ are\ good\ only\ for\ Total.}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00076}00076\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00078}\mbox{\hyperlink{rasctrnm_8h_af1662a4a4677bd31c0d593da32ee7843}{00078}}\ \textcolor{preprocessor}{\#define\ RASTOTALOBJ\ \ \ \ \ \ \ \ \ \ \ \ \ 36}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00080}\mbox{\hyperlink{rasctrnm_8h_aa3e1b07bb04dece2d9c7a885ef5987e9}{00080}}\ \textcolor{preprocessor}{\#define\ TOTALCONNECTIONS\ \ \ \ \ \ \ \ 38}}
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{rasctrnm_8h_source_l00082}00082\ }
+
+\end{DoxyCode}
