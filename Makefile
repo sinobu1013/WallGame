@@ -4,12 +4,14 @@ SRCDIR = .
 MAIN_FILE = src/c/
 GAME_FILE = src/c/game/
 PROG_FILE = src/c/prog/
-SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c $(SRCDIR)/$(PROG_FILE)*.c}
+GUI_FILE = src/c/gui/
+SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c $(SRCDIR)/$(PROG_FILE)*.c $(SRCDIR)/$(GUI_FILE)*.c}
 OBJS = $(SRCS:.c=.o)
+CFLAGS = -ltcl86 -ltk86
 CC = gcc
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS)
+	$(CC) -o $(NAME) $(OBJS) $(CFLAGS)
 
 %.o: %.c %.h
 	$(CC) -c -o $*.o $<

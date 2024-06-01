@@ -13,6 +13,7 @@
 #include "./game/init.h"
 #include "./prog/print_value.h"
 #include "./game/game.h"
+#include "./gui/gui.h"
 
 
 /**
@@ -36,5 +37,6 @@ int main(void){
     }
     
     game_free(&game_date);
+    gui();
     return 0;
 }
