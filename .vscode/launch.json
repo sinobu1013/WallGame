@@ -5,11 +5,11 @@
       "name": "C/C++ Launch",
       "type": "cppdbg",
       "request": "launch",
+      "program": "${workspaceFolder}/game.exe",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/game.exe",
+      "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
         {
@@ -17,7 +17,7 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
+      ]
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -27,7 +27,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "c:/Users/shinobu/Desktop/個人用フォルダ/prog/game/WallGame/src/c",
-      "program": "c:/Users/shinobu/Desktop/個人用フォルダ/prog/game/WallGame/src/c/build/Debug/outDebug",
+      "program": "c:/Users/shinobu/Desktop/個人用フォルダ/prog/game/WallGame/src/c/main.c",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

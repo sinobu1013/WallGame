@@ -21,12 +21,19 @@
 void init(GAME_DATE *game_date){
     game_date->turn = 0;
     game_date->main_player = WHITE_PLAYER;
-    game_date->black_player.x = (int)SUM_CELL_W / 2;
-    game_date->black_player.y = 0;
-    game_date->white_player.x = (int)SUM_CELL_W / 2;
-    game_date->white_player.y = SUM_CELL_H - 1;
-    game_date->black_wall_num = game_date->white_wall_num = WALL_SUM_NUMBER;
     game_date->board.num_wall = 0;
+    
+    game_date->player = (PLAYER*)malloc(sizeof(PLAYER) * (SUM_PLAYER_NUMBER + 1));
+    if(game_date->player == NULL){
+        perror("Failed to allocate memory for player information");
+        exit(EXIT_FAILURE);
+    }
+    game_date->player[WHITE_PLAYER].position.y = SUM_CELL_H - 1;
+    game_date->player[WHITE_PLAYER].position.x = SUM_CELL_W / 2;
+    game_date->player[WHITE_PLAYER].goal_h = 0;
+    game_date->player[BLACK_PLAYER].position.y = 0;
+    game_date->player[BLACK_PLAYER].position.x = SUM_CELL_W / 2;
+    game_date->player[BLACK_PLAYER].goal_h = SUM_CELL_H - 1;
 
     int i, j;
 
@@ -50,12 +57,12 @@ void init(GAME_DATE *game_date){
     }
 
     // 壁の座標情報（縦）を初期化
-    game_date->board.wall_h = (int**)malloc(sizeof(int*) * SUM_CELL_H);
+    game_date->board.wall_h = (int**)malloc(sizeof(int*) * (SUM_CELL_H + 1));
     if(game_date->board.wall_h == NULL){
         perror("Failed to allocate memory for wall_h board");
         exit(EXIT_FAILURE);
     }
-    rep(i, SUM_CELL_H){
+    rep(i, SUM_CELL_H + 1){
         game_date->board.wall_h[i] = (int*)malloc(sizeof(int) * SUM_CELL_W);
         if(game_date->board.wall_h[i] == NULL){
             perror("Failed to allocate memory for wall_h board row");
@@ -75,17 +82,20 @@ void init(GAME_DATE *game_date){
         exit(EXIT_FAILURE);
     }
     rep(i, SUM_CELL_H){
-        game_date->board.wall_w[i] = (int*)malloc(sizeof(int) * SUM_CELL_W);
+        game_date->board.wall_w[i] = (int*)malloc(sizeof(int) * (SUM_CELL_W + 1));
         if(game_date->board.wall_w[i] == NULL){
             perror("Failed to allocate memory for wall_w board row");
             while(i-- > 0) free(game_date->board.wall_w[i]);  // 既に確保したメモリを解放
             free(game_date->board.wall_w);
             exit(EXIT_FAILURE);
         }
-        rep(j, SUM_CELL_W){
+        rep(j, SUM_CELL_W + 1){
             game_date->board.wall_w[i][j] = 0;
         }
     }
+
+    game_date->board.player[game_date->player[WHITE_PLAYER].position.y][game_date->player[WHITE_PLAYER].position.x] = WHITE_PLAYER;
+    game_date->board.player[game_date->player[BLACK_PLAYER].position.y][game_date->player[BLACK_PLAYER].position.x] = BLACK_PLAYER;
 }
 
 /**

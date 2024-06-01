@@ -1,16 +1,30 @@
-#ifndef SET_H
+#ifndef SET_H 
 #define SET_H
 
-#define SUM_CELL_W 8
-#define SUM_CELL_H 8
+#define SUM_CELL_W 9    /**< 横のマスの数 */
+#define SUM_CELL_H 8    /**< 縦のマスの数 */
 
-#define WHITE_PLAYER 0
-#define BLACK_PLAYER 1
+#define SPACE 0         /**< 空白 */
+#define WHITE_PLAYER 1  /**< 白のプレイヤー */
+#define BLACK_PLAYER 2  /**< 黒のプレイヤー */
 
-#define WALL_SUM_NUMBER 5
+#define MOVE 0      /**< 移動 */
+#define CREATE 1    /**< 壁の設置 */
+#define STAY 2      /**< 滞在 */
+
+#define UP 0        /**< 上 */
+#define DOWN 1      /**< 下 */
+#define RIGHT 2     /**< 右 */
+#define LEFT 3      /**< 左 */
+
+#define WIN 999     /**< 勝利 */
+#define WALL_SUM_NUMBER 5   /**< 壁の枚数（初期値） */
+#define SUM_PLAYER_NUMBER 2 /**< プレイヤー数 */
 
 #define rep(i, n) for(i=0;i<n;i++)
 #define reps(i,s,n) for(i=s;i<n;i++)
+#define True 1
+#define False 0
 
 /**
  * @brief 座標表示
@@ -33,6 +47,16 @@ typedef struct Board{
 }BOARD;
 
 /**
+ * @brief プレイヤー情報
+ * 
+ */
+typedef struct Player{
+    POINT position;     /**< プレイヤーの座標 */
+    int wall_num;       /**< 残りの壁の枚数 */
+    int goal_h;         /**< ゴールの位置 */
+}PLAYER;
+
+/**
  * @brief ゲームの状態
  * 
  */
@@ -40,11 +64,18 @@ typedef struct GameDate{
     int turn;           /**< 現在のターン数 */
     BOARD board;        /**< ボード情報 */
     int main_player;    /**< 現ターンのプレイヤー */
-    POINT black_player; /**< 黒（プレイヤー）の座標 */
-    POINT white_player; /**< 白（プレイヤー）の座標 */
-    int black_wall_num; /**< 黒側の残りの壁の枚数 */
-    int white_wall_num; /**< 白側の残りの壁の枚数 */
+    PLAYER *player;     /**< プレイヤー情報 */
 }GAME_DATE;
 
+/**
+ * @brief 行動情報
+ * 
+ */
+typedef struct Activity{
+    int type;           /**< 行動の種類 */
+    int move;           /**< 移動する場合の向き */
+    POINT wall_point;   /**< 壁を設置する場合の座標 */
+    int direction;      /**< 壁を設置する場合の向き */
+}ACT;
 
 #endif
