@@ -1,0 +1,7 @@
+<map id="GameDate" name="GameDate">
+<area shape="rect" id="Node000001" title="ゲームの状態" alt="" coords="30,112,113,139"/>
+<area shape="rect" id="Node000002" href="$struct_board.html" title="ゲームのボード情報" alt="" coords="5,5,61,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,47,47,87,62,110,58,113,43,89,32,48"/>
+<area shape="rect" id="Node000003" href="$struct_point.html" title="座標表示" alt="" coords="85,5,136,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,48,79,113,74,111,98,46"/>
+</map>

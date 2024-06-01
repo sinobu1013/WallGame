@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['set_2eh_0',['set.h',['../set_8h.html',1,'']]],
-  ['student_1',['Student',['../struct_student.html',1,'']]],
-  ['sum_5fcell_5fh_2',['SUM_CELL_H',['../set_8h.html#ab35a4d0b09725becad04719feaeb4204',1,'set.h']]],
-  ['sum_5fcell_5fw_3',['SUM_CELL_W',['../set_8h.html#aafbd7073c46e2b8c686c35bb70b08116',1,'set.h']]]
+  ['player_0',['player',['../struct_board.html#adeca488dc1067909a7afd298cd94e6c3',1,'Board']]],
+  ['point_1',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]],
+  ['point_2',['Point',['../struct_point.html',1,'']]],
+  ['print_5fvalue_2ec_3',['print_value.c',['../print__value_8c.html',1,'']]],
+  ['print_5fvalue_2eh_4',['print_value.h',['../print__value_8h.html',1,'']]]
 ];

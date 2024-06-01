@@ -5,55 +5,147 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{set_8h__dep__incl}
+\includegraphics[width=350pt]{set_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_student}{Student}}
-\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{struct_point}{Point}}
+\begin{DoxyCompactList}\small\item\em 座標表示 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_board}{Board}}
+\begin{DoxyCompactList}\small\item\em ゲームのボード情報 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_game_date}{Game\+Date}}
+\begin{DoxyCompactList}\small\item\em ゲームの状態 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\+\_\+\+CELL\+\_\+W}}~8;
+\#define \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\+\_\+\+CELL\+\_\+W}}~8
 \item 
-\#define \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\+\_\+\+CELL\+\_\+H}}~8;
+\#define \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\+\_\+\+CELL\+\_\+H}}~8
+\item 
+\#define \mbox{\hyperlink{set_8h_a27d423ce517555d16c00a82c40806c25}{WHITE\+\_\+\+PLAYER}}~0
+\item 
+\#define \mbox{\hyperlink{set_8h_a1aa9974b5e7986619c487506d12adb50}{BLACK\+\_\+\+PLAYER}}~1
+\item 
+\#define \mbox{\hyperlink{set_8h_aa4c8ef3afd761b8f8df8b7be3ee61957}{WALL\+\_\+\+SUM\+\_\+\+NUMBER}}~5
+\item 
+\#define \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,  n)~for(i=0;i$<$n;i++)
+\item 
+\#define \mbox{\hyperlink{set_8h_aae64e55d5a04f6f2eea6c83d13d7d9bf}{reps}}(i,  s,  n)~for(i=s;i$<$n;i++)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_student}{Student}} \mbox{\hyperlink{set_8h_ab8568934239b1ad0a2dd443522d61ca1}{BOARD}}
-\end{DoxyCompactItemize}
+typedef struct \mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}
+\begin{DoxyCompactList}\small\item\em 座標表示 \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_board}{Board}} \mbox{\hyperlink{set_8h_a20e826fa1a9a7c4abccd7c7823e92bb9}{BOARD}}
+\begin{DoxyCompactList}\small\item\em ゲームのボード情報 \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_game_date}{Game\+Date}} \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}
+\begin{DoxyCompactList}\small\item\em ゲームの状態 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\Hypertarget{set_8h_a1aa9974b5e7986619c487506d12adb50}\index{set.h@{set.h}!BLACK\_PLAYER@{BLACK\_PLAYER}}
+\index{BLACK\_PLAYER@{BLACK\_PLAYER}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{BLACK\_PLAYER}{BLACK\_PLAYER}}
+{\footnotesize\ttfamily \label{set_8h_a1aa9974b5e7986619c487506d12adb50} 
+\#define BLACK\+\_\+\+PLAYER~1}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00008}{8}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_afc28855f97302d38207feabfda45fc97}\index{set.h@{set.h}!rep@{rep}}
+\index{rep@{rep}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{rep}{rep}}
+{\footnotesize\ttfamily \label{set_8h_afc28855f97302d38207feabfda45fc97} 
+\#define rep(\begin{DoxyParamCaption}\item[{}]{i}{, }\item[{}]{n}{}\end{DoxyParamCaption})~for(i=0;i$<$n;i++)}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00012}{12}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_aae64e55d5a04f6f2eea6c83d13d7d9bf}\index{set.h@{set.h}!reps@{reps}}
+\index{reps@{reps}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{reps}{reps}}
+{\footnotesize\ttfamily \label{set_8h_aae64e55d5a04f6f2eea6c83d13d7d9bf} 
+\#define reps(\begin{DoxyParamCaption}\item[{}]{i}{, }\item[{}]{s}{, }\item[{}]{n}{}\end{DoxyParamCaption})~for(i=s;i$<$n;i++)}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00013}{13}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
 \Hypertarget{set_8h_ab35a4d0b09725becad04719feaeb4204}\index{set.h@{set.h}!SUM\_CELL\_H@{SUM\_CELL\_H}}
 \index{SUM\_CELL\_H@{SUM\_CELL\_H}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{SUM\_CELL\_H}{SUM\_CELL\_H}}
 {\footnotesize\ttfamily \label{set_8h_ab35a4d0b09725becad04719feaeb4204} 
-\#define SUM\+\_\+\+CELL\+\_\+H~8;}
+\#define SUM\+\_\+\+CELL\+\_\+H~8}
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00004}{4}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00005}{5}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_aafbd7073c46e2b8c686c35bb70b08116}\index{set.h@{set.h}!SUM\_CELL\_W@{SUM\_CELL\_W}}
 \index{SUM\_CELL\_W@{SUM\_CELL\_W}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{SUM\_CELL\_W}{SUM\_CELL\_W}}
 {\footnotesize\ttfamily \label{set_8h_aafbd7073c46e2b8c686c35bb70b08116} 
-\#define SUM\+\_\+\+CELL\+\_\+W~8;}
+\#define SUM\+\_\+\+CELL\+\_\+W~8}
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00003}{3}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00004}{4}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_aa4c8ef3afd761b8f8df8b7be3ee61957}\index{set.h@{set.h}!WALL\_SUM\_NUMBER@{WALL\_SUM\_NUMBER}}
+\index{WALL\_SUM\_NUMBER@{WALL\_SUM\_NUMBER}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{WALL\_SUM\_NUMBER}{WALL\_SUM\_NUMBER}}
+{\footnotesize\ttfamily \label{set_8h_aa4c8ef3afd761b8f8df8b7be3ee61957} 
+\#define WALL\+\_\+\+SUM\+\_\+\+NUMBER~5}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00010}{10}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_a27d423ce517555d16c00a82c40806c25}\index{set.h@{set.h}!WHITE\_PLAYER@{WHITE\_PLAYER}}
+\index{WHITE\_PLAYER@{WHITE\_PLAYER}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{WHITE\_PLAYER}{WHITE\_PLAYER}}
+{\footnotesize\ttfamily \label{set_8h_a27d423ce517555d16c00a82c40806c25} 
+\#define WHITE\+\_\+\+PLAYER~0}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00007}{7}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 
 
 \doxysubsection{Typedef Documentation}
-\Hypertarget{set_8h_ab8568934239b1ad0a2dd443522d61ca1}\index{set.h@{set.h}!BOARD@{BOARD}}
+\Hypertarget{set_8h_a20e826fa1a9a7c4abccd7c7823e92bb9}\index{set.h@{set.h}!BOARD@{BOARD}}
 \index{BOARD@{BOARD}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{BOARD}{BOARD}}
-{\footnotesize\ttfamily \label{set_8h_ab8568934239b1ad0a2dd443522d61ca1} 
-typedef struct \mbox{\hyperlink{struct_student}{Student}} \mbox{\hyperlink{set_8h_ab8568934239b1ad0a2dd443522d61ca1}{BOARD}}}
+{\footnotesize\ttfamily \label{set_8h_a20e826fa1a9a7c4abccd7c7823e92bb9} 
+typedef struct \mbox{\hyperlink{struct_board}{Board}} \mbox{\hyperlink{set_8h_a20e826fa1a9a7c4abccd7c7823e92bb9}{BOARD}}}
+
+
+
+ゲームのボード情報 
+
+\Hypertarget{set_8h_a666ee3310647bfcbc80dc10db790866e}\index{set.h@{set.h}!GAME\_DATE@{GAME\_DATE}}
+\index{GAME\_DATE@{GAME\_DATE}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{GAME\_DATE}{GAME\_DATE}}
+{\footnotesize\ttfamily \label{set_8h_a666ee3310647bfcbc80dc10db790866e} 
+typedef struct \mbox{\hyperlink{struct_game_date}{Game\+Date}} \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}
+
+
+
+ゲームの状態 
+
+\Hypertarget{set_8h_a08b38b334eca063d45019fe9df7776bf}\index{set.h@{set.h}!POINT@{POINT}}
+\index{POINT@{POINT}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{POINT}{POINT}}
+{\footnotesize\ttfamily \label{set_8h_a08b38b334eca063d45019fe9df7776bf} 
+typedef struct \mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}
+
+
+
+座標表示 
 

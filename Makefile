@@ -3,7 +3,8 @@ SRC = main.c
 SRCDIR = .
 MAIN_FILE = src/c/
 GAME_FILE = src/c/game/
-SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c}
+PROG_FILE = src/c/prog/
+SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c $(SRCDIR)/$(PROG_FILE)*.c}
 OBJS = $(SRCS:.c=.o)
 CC = gcc
 

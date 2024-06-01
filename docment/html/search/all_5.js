@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_0',['README',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['num_5fwall_0',['num_wall',['../struct_board.html#a7233af66b44ec8c1ad504b92bf978dcb',1,'Board']]]
 ];

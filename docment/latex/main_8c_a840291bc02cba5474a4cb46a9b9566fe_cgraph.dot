@@ -6,6 +6,8 @@ digraph "main"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
   Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="main関数"];
-  Node1 -> Node2 [id="edge2_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947",tooltip="ゲームの初期化（メイン）"];
+  Node1 -> Node2 [id="edge3_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="display_table",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc",tooltip="2次元半列をコンソールに表示"];
+  Node1 -> Node3 [id="edge4_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5",tooltip="ゲームの初期化（メイン）"];
 }

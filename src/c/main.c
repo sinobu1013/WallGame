@@ -9,7 +9,10 @@
  * 
  */
 #include <stdio.h>
+#include "set.h"
 #include "./game/init.h"
+#include "./prog/print_value.h"
+
 
 /**
  * @brief main関数
@@ -17,6 +20,9 @@
  * @return int 実行成功判定
  */
 int main(void){
-    init();
+    GAME_DATE game_date;
+    init(&game_date);
+    game_free(&game_date);
+    display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
     return 0;
 }
