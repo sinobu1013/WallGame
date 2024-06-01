@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_0',['init',['../init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c'],['../init_8h.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c']]]
+  ['display_5ftable_0',['display_table',['../print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c'],['../print__value_8h.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c']]]
 ];

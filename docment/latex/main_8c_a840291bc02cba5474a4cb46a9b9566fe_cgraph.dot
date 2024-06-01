@@ -6,8 +6,20 @@ digraph "main"
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
   Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="main関数"];
-  Node1 -> Node2 [id="edge3_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node2 [id="edge9_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="display_table",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc",tooltip="2次元半列をコンソールに表示"];
-  Node1 -> Node3 [id="edge4_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5",tooltip="ゲームの初期化（メイン）"];
+  Node1 -> Node3 [id="edge10_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="game_free",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8c.html#a720b51e9bd80836bb89ca1d0d2b1da5b",tooltip="ゲーム中に確保した領域の開放"];
+  Node1 -> Node4 [id="edge11_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="game_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d",tooltip="ゲーム進行関数（メイン）"];
+  Node4 -> Node5 [id="edge12_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="move",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369",tooltip="プレイヤーの移動関数"];
+  Node5 -> Node6 [id="edge13_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="act_conversion",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#ac77787cbf2de49e998e34a7dbe58202b",tooltip="移動向きから座標の変化値に変換"];
+  Node5 -> Node7 [id="edge14_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="outside_player",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a6b0341d04d731d716876aa81039d5ab2",tooltip="プレイヤーの座標がボードの範囲外かどうかを判定する"];
+  Node5 -> Node8 [id="edge15_Node000005_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="win_or_loss_decision",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a8700dfc16655e8e84138731f440fea48",tooltip="勝敗判定"];
+  Node1 -> Node9 [id="edge16_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5",tooltip="ゲームの初期化（メイン）"];
 }

@@ -16,7 +16,7 @@ Collaboration diagram for Game\+Date\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=206pt]{struct_game_date__coll__graph}
+\includegraphics[width=199pt]{struct_game_date__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Attributes}
@@ -28,44 +28,18 @@ int \mbox{\hyperlink{struct_game_date_a3eb991a473ad46d51d78ee0efa1a7f46}{turn}}
 \item 
 int \mbox{\hyperlink{struct_game_date_ae87ac98798739c4d345fa1b654deeb4e}{main\+\_\+player}}
 \item 
-\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} \mbox{\hyperlink{struct_game_date_afb54569202e945117a576a009247d15c}{black\+\_\+player}}
-\item 
-\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} \mbox{\hyperlink{struct_game_date_a9209ff27689e2af6987919319c4f5a97}{white\+\_\+player}}
-\item 
-int \mbox{\hyperlink{struct_game_date_a1ccf0f67e54bb256fa43f8f8315d791c}{black\+\_\+wall\+\_\+num}}
-\item 
-int \mbox{\hyperlink{struct_game_date_a0fa7a5c4e9bb07abb6f5665a314b62dc}{white\+\_\+wall\+\_\+num}}
+\mbox{\hyperlink{set_8h_a07c10e4dca045acf9025061569b88f32}{PLAYER}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_game_date_a70e8e87d9ef92850200aa90103bc205f}{player}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 ゲームの状態 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00039}{39}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00063}{63}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{struct_game_date_afb54569202e945117a576a009247d15c}\index{GameDate@{GameDate}!black\_player@{black\_player}}
-\index{black\_player@{black\_player}!GameDate@{GameDate}}
-\doxysubsubsection{\texorpdfstring{black\_player}{black\_player}}
-{\footnotesize\ttfamily \label{struct_game_date_afb54569202e945117a576a009247d15c} 
-\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} Game\+Date\+::black\+\_\+player}
-
-黒（プレイヤー）の座標 
-
-Definition at line \mbox{\hyperlink{set_8h_source_l00043}{43}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
-
-\Hypertarget{struct_game_date_a1ccf0f67e54bb256fa43f8f8315d791c}\index{GameDate@{GameDate}!black\_wall\_num@{black\_wall\_num}}
-\index{black\_wall\_num@{black\_wall\_num}!GameDate@{GameDate}}
-\doxysubsubsection{\texorpdfstring{black\_wall\_num}{black\_wall\_num}}
-{\footnotesize\ttfamily \label{struct_game_date_a1ccf0f67e54bb256fa43f8f8315d791c} 
-int Game\+Date\+::black\+\_\+wall\+\_\+num}
-
-黒側の残りの壁の枚数 
-
-Definition at line \mbox{\hyperlink{set_8h_source_l00045}{45}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
-
 \Hypertarget{struct_game_date_a567fd0f5aea2ae4b800040e5844139a1}\index{GameDate@{GameDate}!board@{board}}
 \index{board@{board}!GameDate@{GameDate}}
 \doxysubsubsection{\texorpdfstring{board}{board}}
@@ -74,7 +48,7 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00045}{45}} of file \mbox{\hy
 
 ボード情報 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00041}{41}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00065}{65}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{struct_game_date_ae87ac98798739c4d345fa1b654deeb4e}\index{GameDate@{GameDate}!main\_player@{main\_player}}
 \index{main\_player@{main\_player}!GameDate@{GameDate}}
@@ -84,7 +58,17 @@ int Game\+Date\+::main\+\_\+player}
 
 現ターンのプレイヤー 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00042}{42}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00066}{66}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{struct_game_date_a70e8e87d9ef92850200aa90103bc205f}\index{GameDate@{GameDate}!player@{player}}
+\index{player@{player}!GameDate@{GameDate}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{struct_game_date_a70e8e87d9ef92850200aa90103bc205f} 
+\mbox{\hyperlink{set_8h_a07c10e4dca045acf9025061569b88f32}{PLAYER}}\texorpdfstring{$\ast$}{*} Game\+Date\+::player}
+
+プレイヤー情報 
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00067}{67}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{struct_game_date_a3eb991a473ad46d51d78ee0efa1a7f46}\index{GameDate@{GameDate}!turn@{turn}}
 \index{turn@{turn}!GameDate@{GameDate}}
@@ -94,27 +78,7 @@ int Game\+Date\+::turn}
 
 現在のターン数 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00040}{40}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
-
-\Hypertarget{struct_game_date_a9209ff27689e2af6987919319c4f5a97}\index{GameDate@{GameDate}!white\_player@{white\_player}}
-\index{white\_player@{white\_player}!GameDate@{GameDate}}
-\doxysubsubsection{\texorpdfstring{white\_player}{white\_player}}
-{\footnotesize\ttfamily \label{struct_game_date_a9209ff27689e2af6987919319c4f5a97} 
-\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} Game\+Date\+::white\+\_\+player}
-
-白（プレイヤー）の座標 
-
-Definition at line \mbox{\hyperlink{set_8h_source_l00044}{44}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
-
-\Hypertarget{struct_game_date_a0fa7a5c4e9bb07abb6f5665a314b62dc}\index{GameDate@{GameDate}!white\_wall\_num@{white\_wall\_num}}
-\index{white\_wall\_num@{white\_wall\_num}!GameDate@{GameDate}}
-\doxysubsubsection{\texorpdfstring{white\_wall\_num}{white\_wall\_num}}
-{\footnotesize\ttfamily \label{struct_game_date_a0fa7a5c4e9bb07abb6f5665a314b62dc} 
-int Game\+Date\+::white\+\_\+wall\+\_\+num}
-
-白側の残りの壁の枚数 
-
-Definition at line \mbox{\hyperlink{set_8h_source_l00046}{46}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00064}{64}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 
 

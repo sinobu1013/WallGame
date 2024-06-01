@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fwall_0',['num_wall',['../struct_board.html#a7233af66b44ec8c1ad504b92bf978dcb',1,'Board']]]
+  ['goal_5fh_0',['goal_h',['../struct_player.html#a6c0806d33ecef331fa4b82251a70d7be',1,'Player']]]
 ];

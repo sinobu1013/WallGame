@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point_0',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]]
+  ['game_5fdate_0',['GAME_DATE',['../set_8h.html#a666ee3310647bfcbc80dc10db790866e',1,'set.h']]]
 ];

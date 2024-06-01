@@ -1,0 +1,225 @@
+\doxysection{src/c/game/game.c File Reference}
+\hypertarget{game_8c}{}\label{game_8c}\index{src/c/game/game.c@{src/c/game/game.c}}
+
+
+ゲームプログラム  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}./../set.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+Include dependency graph for game.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{game_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} \mbox{\hyperlink{game_8c_ac77787cbf2de49e998e34a7dbe58202b}{act\+\_\+conversion}} (int act)
+\begin{DoxyCompactList}\small\item\em 移動向きから座標の変化値に変換 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a6b0341d04d731d716876aa81039d5ab2}{outside\+\_\+player}} (\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} point)
+\begin{DoxyCompactList}\small\item\em プレイヤーの座標がボードの範囲外かどうかを判定する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a8700dfc16655e8e84138731f440fea48}{win\+\_\+or\+\_\+loss\+\_\+decision}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date)
+\begin{DoxyCompactList}\small\item\em 勝敗判定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a3c8bc1cd598e6d4535061d375b6f4369}{move}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
+\begin{DoxyCompactList}\small\item\em プレイヤーの移動関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d}{game\+\_\+main}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
+\begin{DoxyCompactList}\small\item\em ゲーム進行関数（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ゲームプログラム 
+
+\begin{DoxyAuthor}{Author}
+okajima 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/06-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8c_ac77787cbf2de49e998e34a7dbe58202b}\index{game.c@{game.c}!act\_conversion@{act\_conversion}}
+\index{act\_conversion@{act\_conversion}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{act\_conversion()}{act\_conversion()}}
+{\footnotesize\ttfamily \label{game_8c_ac77787cbf2de49e998e34a7dbe58202b} 
+\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} act\+\_\+conversion (\begin{DoxyParamCaption}\item[{int}]{act}{}\end{DoxyParamCaption})}
+
+
+
+移動向きから座標の変化値に変換 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & 移動向き \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+POINT 座標の変化値 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00022}{22}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d}\index{game.c@{game.c}!game\_main@{game\_main}}
+\index{game\_main@{game\_main}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_main()}{game\_main()}}
+{\footnotesize\ttfamily \label{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d} 
+int game\+\_\+main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+date}{, }\item[{\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+ゲーム進行関数（メイン） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em activity} & 行動 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 行動成功かどうか 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00095}{95}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a3c8bc1cd598e6d4535061d375b6f4369}\index{game.c@{game.c}!move@{move}}
+\index{move@{move}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{game_8c_a3c8bc1cd598e6d4535061d375b6f4369} 
+int move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+date}{, }\item[{\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+プレイヤーの移動関数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em activity} & 行動情報 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 行動成功かどうか 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00071}{71}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{game_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{game_8c_a3c8bc1cd598e6d4535061d375b6f4369_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a6b0341d04d731d716876aa81039d5ab2}\index{game.c@{game.c}!outside\_player@{outside\_player}}
+\index{outside\_player@{outside\_player}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{outside\_player()}{outside\_player()}}
+{\footnotesize\ttfamily \label{game_8c_a6b0341d04d731d716876aa81039d5ab2} 
+int outside\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}]{point}{}\end{DoxyParamCaption})}
+
+
+
+プレイヤーの座標がボードの範囲外かどうかを判定する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & プレイヤーの座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 範囲外なら\+True、範囲内なら\+False 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00046}{46}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a6b0341d04d731d716876aa81039d5ab2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_a8700dfc16655e8e84138731f440fea48}\index{game.c@{game.c}!win\_or\_loss\_decision@{win\_or\_loss\_decision}}
+\index{win\_or\_loss\_decision@{win\_or\_loss\_decision}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{win\_or\_loss\_decision()}{win\_or\_loss\_decision()}}
+{\footnotesize\ttfamily \label{game_8c_a8700dfc16655e8e84138731f440fea48} 
+int win\+\_\+or\+\_\+loss\+\_\+decision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{}\end{DoxyParamCaption})}
+
+
+
+勝敗判定 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 勝利したかどうか 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00058}{58}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a8700dfc16655e8e84138731f440fea48_icgraph}
+\end{center}
+\end{figure}

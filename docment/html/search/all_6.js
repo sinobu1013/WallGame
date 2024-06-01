@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['player_0',['player',['../struct_board.html#adeca488dc1067909a7afd298cd94e6c3',1,'Board']]],
-  ['point_1',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]],
-  ['point_2',['Point',['../struct_point.html',1,'']]],
-  ['print_5fvalue_2ec_3',['print_value.c',['../print__value_8c.html',1,'']]],
-  ['print_5fvalue_2eh_4',['print_value.h',['../print__value_8h.html',1,'']]]
+  ['init_0',['init',['../init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c'],['../init_8h.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c']]],
+  ['init_2ec_1',['init.c',['../init_8c.html',1,'']]],
+  ['init_2eh_2',['init.h',['../init_8h.html',1,'']]],
+  ['init_5fvalue_5fh_3',['INIT_VALUE_H',['../init_8h.html#abc0d6e196d173931ca417949cc378e95',1,'init.h']]]
 ];

@@ -13,4 +13,6 @@ digraph "src/c/main.c"
   Node4 [id="Node000004",label="./game/init.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$init_8h.html",tooltip=" "];
   Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node5 [id="Node000005",label="./prog/print_value.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__value_8h.html",tooltip=" "];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="./game/game.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8h.html",tooltip=" "];
 }

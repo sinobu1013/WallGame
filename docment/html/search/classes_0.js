@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['board_0',['Board',['../struct_board.html',1,'']]]
+  ['activity_0',['Activity',['../struct_activity.html',1,'']]]
 ];

@@ -108,13 +108,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="set_8h__dep__incl.png" border="0" usemap="#asrc_2c_2set_8hdep" alt=""/></div>
 <map name="asrc_2c_2set_8hdep" id="asrc_2c_2set_8hdep">
-<area shape="rect" title=" " alt="" coords="152,5,236,32"/>
-<area shape="rect" href="init_8c.html" title="ゲームの初期化" alt="" coords="5,80,124,107"/>
-<area shape="poly" title=" " alt="" coords="159,42,89,82,86,77,157,38"/>
-<area shape="rect" href="main_8c.html" title="main関数" alt="" coords="147,80,241,107"/>
-<area shape="poly" title=" " alt="" coords="197,48,197,80,191,80,191,48"/>
-<area shape="rect" href="print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="264,80,420,107"/>
-<area shape="poly" title=" " alt="" coords="234,37,317,77,315,82,232,42"/>
+<area shape="rect" title=" " alt="" coords="244,5,327,32"/>
+<area shape="rect" href="game_8c.html" title="ゲームプログラム" alt="" coords="5,80,139,107"/>
+<area shape="poly" title=" " alt="" coords="235,40,110,82,109,77,233,35"/>
+<area shape="rect" href="init_8c.html" title="ゲームの初期化" alt="" coords="162,80,281,107"/>
+<area shape="poly" title=" " alt="" coords="266,46,234,81,230,78,262,42"/>
+<area shape="rect" href="main_8c.html" title="main関数" alt="" coords="304,80,397,107"/>
+<area shape="poly" title=" " alt="" coords="309,42,341,78,337,81,305,45"/>
+<area shape="rect" href="print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="421,80,576,107"/>
+<area shape="poly" title=" " alt="" coords="338,35,462,77,460,82,336,40"/>
 </map>
 </div>
 </div>
@@ -128,26 +130,56 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_board.html">Board</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームのボード情報  <a href="struct_board.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_player.html">Player</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤー情報  <a href="struct_player.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_date.html">GameDate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームの状態  <a href="struct_game_date.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_activity.html">Activity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">行動情報  <a href="struct_activity.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aafbd7073c46e2b8c686c35bb70b08116" id="r_aafbd7073c46e2b8c686c35bb70b08116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafbd7073c46e2b8c686c35bb70b08116">SUM_CELL_W</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:aafbd7073c46e2b8c686c35bb70b08116" id="r_aafbd7073c46e2b8c686c35bb70b08116"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafbd7073c46e2b8c686c35bb70b08116">SUM_CELL_W</a>&#160;&#160;&#160;9</td></tr>
 <tr class="separator:aafbd7073c46e2b8c686c35bb70b08116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab35a4d0b09725becad04719feaeb4204" id="r_ab35a4d0b09725becad04719feaeb4204"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab35a4d0b09725becad04719feaeb4204">SUM_CELL_H</a>&#160;&#160;&#160;8</td></tr>
 <tr class="separator:ab35a4d0b09725becad04719feaeb4204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d423ce517555d16c00a82c40806c25" id="r_a27d423ce517555d16c00a82c40806c25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d423ce517555d16c00a82c40806c25">WHITE_PLAYER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a5ff6e798033f03e74730e99f01936f84" id="r_a5ff6e798033f03e74730e99f01936f84"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff6e798033f03e74730e99f01936f84">SPACE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a5ff6e798033f03e74730e99f01936f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d423ce517555d16c00a82c40806c25" id="r_a27d423ce517555d16c00a82c40806c25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d423ce517555d16c00a82c40806c25">WHITE_PLAYER</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a27d423ce517555d16c00a82c40806c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa9974b5e7986619c487506d12adb50" id="r_a1aa9974b5e7986619c487506d12adb50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa9974b5e7986619c487506d12adb50">BLACK_PLAYER</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a1aa9974b5e7986619c487506d12adb50" id="r_a1aa9974b5e7986619c487506d12adb50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa9974b5e7986619c487506d12adb50">BLACK_PLAYER</a>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a1aa9974b5e7986619c487506d12adb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acdc4aa0f128c9b2788707db3e6935e" id="r_a2acdc4aa0f128c9b2788707db3e6935e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2acdc4aa0f128c9b2788707db3e6935e">MOVE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a2acdc4aa0f128c9b2788707db3e6935e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6b87853cbaf189fe1e484706ae1875" id="r_a4c6b87853cbaf189fe1e484706ae1875"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c6b87853cbaf189fe1e484706ae1875">CREATE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a4c6b87853cbaf189fe1e484706ae1875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec2744aad7c39b26ee68b61c87f5220" id="r_a4ec2744aad7c39b26ee68b61c87f5220"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec2744aad7c39b26ee68b61c87f5220">STAY</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a4ec2744aad7c39b26ee68b61c87f5220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1965eaca47dbf3f87acdafc2208f04eb" id="r_a1965eaca47dbf3f87acdafc2208f04eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1965eaca47dbf3f87acdafc2208f04eb">UP</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a1965eaca47dbf3f87acdafc2208f04eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4193cd1c8c2e6ebd0e056fa2364a663f" id="r_a4193cd1c8c2e6ebd0e056fa2364a663f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4193cd1c8c2e6ebd0e056fa2364a663f">DOWN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a4193cd1c8c2e6ebd0e056fa2364a663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fb826a684cf3f0d306b22aa100ddac" id="r_a80fb826a684cf3f0d306b22aa100ddac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80fb826a684cf3f0d306b22aa100ddac">RIGHT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a80fb826a684cf3f0d306b22aa100ddac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437ef08681e7210d6678427030446a54" id="r_a437ef08681e7210d6678427030446a54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a437ef08681e7210d6678427030446a54">LEFT</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a437ef08681e7210d6678427030446a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43105771f16e2da3078149f0de528e9b" id="r_a43105771f16e2da3078149f0de528e9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43105771f16e2da3078149f0de528e9b">WIN</a>&#160;&#160;&#160;999</td></tr>
+<tr class="separator:a43105771f16e2da3078149f0de528e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4c8ef3afd761b8f8df8b7be3ee61957" id="r_aa4c8ef3afd761b8f8df8b7be3ee61957"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4c8ef3afd761b8f8df8b7be3ee61957">WALL_SUM_NUMBER</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:aa4c8ef3afd761b8f8df8b7be3ee61957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76237eff655a402aff8063b131a37d45" id="r_a76237eff655a402aff8063b131a37d45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76237eff655a402aff8063b131a37d45">SUM_PLAYER_NUMBER</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a76237eff655a402aff8063b131a37d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc28855f97302d38207feabfda45fc97" id="r_afc28855f97302d38207feabfda45fc97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc28855f97302d38207feabfda45fc97">rep</a>(i,  n)&#160;&#160;&#160;for(i=0;i&lt;n;i++)</td></tr>
 <tr class="separator:afc28855f97302d38207feabfda45fc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae64e55d5a04f6f2eea6c83d13d7d9bf" id="r_aae64e55d5a04f6f2eea6c83d13d7d9bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae64e55d5a04f6f2eea6c83d13d7d9bf">reps</a>(i,  s,  n)&#160;&#160;&#160;for(i=s;i&lt;n;i++)</td></tr>
 <tr class="separator:aae64e55d5a04f6f2eea6c83d13d7d9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3ca9eefe3b5b754426f51d3043e579" id="r_add3ca9eefe3b5b754426f51d3043e579"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3ca9eefe3b5b754426f51d3043e579">True</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:add3ca9eefe3b5b754426f51d3043e579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306ebd41c0cd1303b1372c6153f0caf8" id="r_a306ebd41c0cd1303b1372c6153f0caf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306ebd41c0cd1303b1372c6153f0caf8">False</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a306ebd41c0cd1303b1372c6153f0caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -157,9 +189,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a20e826fa1a9a7c4abccd7c7823e92bb9" id="r_a20e826fa1a9a7c4abccd7c7823e92bb9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_board.html">Board</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20e826fa1a9a7c4abccd7c7823e92bb9">BOARD</a></td></tr>
 <tr class="memdesc:a20e826fa1a9a7c4abccd7c7823e92bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームのボード情報  <br /></td></tr>
 <tr class="separator:a20e826fa1a9a7c4abccd7c7823e92bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c10e4dca045acf9025061569b88f32" id="r_a07c10e4dca045acf9025061569b88f32"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c10e4dca045acf9025061569b88f32">PLAYER</a></td></tr>
+<tr class="memdesc:a07c10e4dca045acf9025061569b88f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤー情報  <br /></td></tr>
+<tr class="separator:a07c10e4dca045acf9025061569b88f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a666ee3310647bfcbc80dc10db790866e" id="r_a666ee3310647bfcbc80dc10db790866e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_game_date.html">GameDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a></td></tr>
 <tr class="memdesc:a666ee3310647bfcbc80dc10db790866e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームの状態  <br /></td></tr>
 <tr class="separator:a666ee3310647bfcbc80dc10db790866e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d0fe08bae53a014d212153cad489ee" id="r_a54d0fe08bae53a014d212153cad489ee"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_activity.html">Activity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54d0fe08bae53a014d212153cad489ee">ACT</a></td></tr>
+<tr class="memdesc:a54d0fe08bae53a014d212153cad489ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">行動情報  <br /></td></tr>
+<tr class="separator:a54d0fe08bae53a014d212153cad489ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1aa9974b5e7986619c487506d12adb50" name="a1aa9974b5e7986619c487506d12adb50"></a>
@@ -169,12 +207,97 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BLACK_PLAYER&#160;&#160;&#160;1</td>
+          <td class="memname">#define BLACK_PLAYER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>黒のプレイヤー </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00009">9</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a4c6b87853cbaf189fe1e484706ae1875" name="a4c6b87853cbaf189fe1e484706ae1875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6b87853cbaf189fe1e484706ae1875">&#9670;&#160;</a></span>CREATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CREATE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>壁の設置 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00012">12</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a4193cd1c8c2e6ebd0e056fa2364a663f" name="a4193cd1c8c2e6ebd0e056fa2364a663f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4193cd1c8c2e6ebd0e056fa2364a663f">&#9670;&#160;</a></span>DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DOWN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>下 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00016">16</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a306ebd41c0cd1303b1372c6153f0caf8" name="a306ebd41c0cd1303b1372c6153f0caf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306ebd41c0cd1303b1372c6153f0caf8">&#9670;&#160;</a></span>False</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define False&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00008">8</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00027">27</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a437ef08681e7210d6678427030446a54" name="a437ef08681e7210d6678427030446a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437ef08681e7210d6678427030446a54">&#9670;&#160;</a></span>LEFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEFT&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>左 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00018">18</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a2acdc4aa0f128c9b2788707db3e6935e" name="a2acdc4aa0f128c9b2788707db3e6935e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acdc4aa0f128c9b2788707db3e6935e">&#9670;&#160;</a></span>MOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>移動 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00011">11</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +320,7 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00012">12</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00024">24</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>
@@ -225,6 +348,57 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00025">25</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a80fb826a684cf3f0d306b22aa100ddac" name="a80fb826a684cf3f0d306b22aa100ddac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fb826a684cf3f0d306b22aa100ddac">&#9670;&#160;</a></span>RIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RIGHT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>右 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00017">17</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ff6e798033f03e74730e99f01936f84" name="a5ff6e798033f03e74730e99f01936f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff6e798033f03e74730e99f01936f84">&#9670;&#160;</a></span>SPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPACE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>空白 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00007">7</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a4ec2744aad7c39b26ee68b61c87f5220" name="a4ec2744aad7c39b26ee68b61c87f5220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec2744aad7c39b26ee68b61c87f5220">&#9670;&#160;</a></span>STAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STAY&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>滞在 </p>
+
 <p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00013">13</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
@@ -240,6 +414,7 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>縦のマスの数 </p>
 
 <p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00005">5</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
@@ -252,12 +427,63 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SUM_CELL_W&#160;&#160;&#160;8</td>
+          <td class="memname">#define SUM_CELL_W&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>横のマスの数 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00004">4</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a76237eff655a402aff8063b131a37d45" name="a76237eff655a402aff8063b131a37d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76237eff655a402aff8063b131a37d45">&#9670;&#160;</a></span>SUM_PLAYER_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUM_PLAYER_NUMBER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>プレイヤー数 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00022">22</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="add3ca9eefe3b5b754426f51d3043e579" name="add3ca9eefe3b5b754426f51d3043e579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3ca9eefe3b5b754426f51d3043e579">&#9670;&#160;</a></span>True</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define True&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00004">4</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00026">26</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a1965eaca47dbf3f87acdafc2208f04eb" name="a1965eaca47dbf3f87acdafc2208f04eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1965eaca47dbf3f87acdafc2208f04eb">&#9670;&#160;</a></span>UP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UP&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>上 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00015">15</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>
@@ -272,8 +498,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>壁の枚数（初期値） </p>
 
-<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00010">10</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00021">21</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>
@@ -284,16 +511,50 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define WHITE_PLAYER&#160;&#160;&#160;0</td>
+          <td class="memname">#define WHITE_PLAYER&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>白のプレイヤー </p>
 
-<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00007">7</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00008">8</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="a43105771f16e2da3078149f0de528e9b" name="a43105771f16e2da3078149f0de528e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43105771f16e2da3078149f0de528e9b">&#9670;&#160;</a></span>WIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIN&#160;&#160;&#160;999</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>勝利 </p>
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00020">20</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="a54d0fe08bae53a014d212153cad489ee" name="a54d0fe08bae53a014d212153cad489ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d0fe08bae53a014d212153cad489ee">&#9670;&#160;</a></span>ACT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_activity.html">Activity</a> <a class="el" href="#a54d0fe08bae53a014d212153cad489ee">ACT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>行動情報 </p>
+
+</div>
+</div>
 <a id="a20e826fa1a9a7c4abccd7c7823e92bb9" name="a20e826fa1a9a7c4abccd7c7823e92bb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20e826fa1a9a7c4abccd7c7823e92bb9">&#9670;&#160;</a></span>BOARD</h2>
 
@@ -323,6 +584,22 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ゲームの状態 </p>
+
+</div>
+</div>
+<a id="a07c10e4dca045acf9025061569b88f32" name="a07c10e4dca045acf9025061569b88f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c10e4dca045acf9025061569b88f32">&#9670;&#160;</a></span>PLAYER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_player.html">Player</a> <a class="el" href="#a07c10e4dca045acf9025061569b88f32">PLAYER</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プレイヤー情報 </p>
 
 </div>
 </div>

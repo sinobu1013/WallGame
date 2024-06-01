@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['turn_0',['turn',['../struct_game_date.html#a3eb991a473ad46d51d78ee0efa1a7f46',1,'GameDate']]]
+  ['num_5fwall_0',['num_wall',['../struct_board.html#a7233af66b44ec8c1ad504b92bf978dcb',1,'Board']]]
 ];

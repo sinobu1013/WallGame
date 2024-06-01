@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point_0',['Point',['../struct_point.html',1,'']]]
+  ['gamedate_0',['GameDate',['../struct_game_date.html',1,'']]]
 ];

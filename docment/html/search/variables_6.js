@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../struct_point.html#a8c779e11e694b20e0946105a9f5de842',1,'Point']]]
+  ['turn_0',['turn',['../struct_game_date.html#a3eb991a473ad46d51d78ee0efa1a7f46',1,'GameDate']]],
+  ['type_1',['type',['../struct_activity.html#a7d576e59bf499e108e9c2cbac9175af7',1,'Activity']]]
 ];
