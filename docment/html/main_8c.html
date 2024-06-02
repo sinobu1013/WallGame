@@ -109,22 +109,25 @@ $(function(){initNavTree('main_8c.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="init_8h_source.html">./game/init.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="print__value_8h_source.html">./prog/print_value.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">./game/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gui_8h_source.html">./gui/gui.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2c_2main_8c" alt=""/></div>
 <map name="asrc_2c_2main_8c" id="asrc_2c_2main_8c">
-<area shape="rect" title="main関数" alt="" coords="165,5,258,32"/>
+<area shape="rect" title="main関数" alt="" coords="233,5,326,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,66,107"/>
-<area shape="poly" title=" " alt="" coords="182,35,81,76,79,71,180,30"/>
+<area shape="poly" title=" " alt="" coords="238,35,81,81,80,76,236,30"/>
 <area shape="rect" href="set_8h.html" title=" " alt="" coords="90,80,141,107"/>
-<area shape="poly" title=" " alt="" coords="196,35,146,73,143,68,193,30"/>
+<area shape="poly" title=" " alt="" coords="252,35,156,77,154,72,250,30"/>
 <area shape="rect" href="init_8h.html" title=" " alt="" coords="165,80,258,107"/>
-<area shape="poly" title=" " alt="" coords="214,33,214,64,209,64,209,33"/>
+<area shape="poly" title=" " alt="" coords="270,34,236,70,232,67,266,31"/>
 <area shape="rect" href="print__value_8h.html" title=" " alt="" coords="282,80,413,107"/>
-<area shape="poly" title=" " alt="" coords="236,30,312,70,309,75,234,35"/>
+<area shape="poly" title=" " alt="" coords="293,31,327,67,323,70,289,34"/>
 <area shape="rect" href="game_8h.html" title=" " alt="" coords="437,80,546,107"/>
-<area shape="poly" title=" " alt="" coords="259,29,429,73,427,78,258,35"/>
+<area shape="poly" title=" " alt="" coords="317,30,441,72,439,77,316,35"/>
+<area shape="rect" href="gui_8h.html" title=" " alt="" coords="570,80,648,107"/>
+<area shape="poly" title=" " alt="" coords="327,27,555,77,554,82,326,32"/>
 </map>
 </div>
 </div>
@@ -163,21 +166,23 @@ Functions</h2></td></tr>
 <p>main関数 </p>
 <dl class="section return"><dt>Returns</dt><dd>int 実行成功判定 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00023">23</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00024">24</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" alt=""/></div>
 <map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
-<area shape="rect" title="main関数" alt="" coords="5,81,55,108"/>
+<area shape="rect" title="main関数" alt="" coords="5,107,55,133"/>
 <area shape="rect" href="print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc" title="2次元半列をコンソールに表示" alt="" coords="103,5,200,32"/>
-<area shape="poly" title=" " alt="" coords="48,78,101,42,108,38,111,42,104,46,51,83"/>
+<area shape="poly" title=" " alt="" coords="40,105,66,74,101,42,106,38,110,42,104,46,70,78,44,108"/>
 <area shape="rect" href="init_8c.html#a720b51e9bd80836bb89ca1d0d2b1da5b" title="ゲーム中に確保した領域の開放" alt="" coords="111,56,192,83"/>
-<area shape="poly" title=" " alt="" coords="54,87,95,78,96,84,55,92"/>
+<area shape="poly" title=" " alt="" coords="54,108,103,87,105,91,56,112"/>
 <area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="107,107,196,133"/>
-<area shape="poly" title=" " alt="" coords="55,97,93,105,92,110,54,102"/>
-<area shape="rect" href="init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5" title="ゲームの初期化（メイン）" alt="" coords="132,157,171,184"/>
-<area shape="poly" title=" " alt="" coords="51,106,104,143,120,152,117,157,101,148,48,111"/>
+<area shape="poly" title=" " alt="" coords="55,117,92,117,92,123,55,123"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="132,157,171,184"/>
+<area shape="poly" title=" " alt="" coords="56,128,119,154,117,159,54,132"/>
+<area shape="rect" href="init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5" title="ゲームの初期化（メイン）" alt="" coords="132,208,171,235"/>
+<area shape="poly" title=" " alt="" coords="44,132,70,162,104,194,120,204,117,209,101,198,66,166,40,135"/>
 <area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="248,107,299,133"/>
 <area shape="poly" title=" " alt="" coords="196,117,233,117,233,123,196,123"/>
 <area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="366,56,473,83"/>

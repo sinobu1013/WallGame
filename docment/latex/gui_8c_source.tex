@@ -1,0 +1,57 @@
+\doxysection{gui.\+c}
+\hypertarget{gui_8c_source}{}\label{gui_8c_source}\index{src/c/gui/gui.c@{src/c/gui/gui.c}}
+\mbox{\hyperlink{gui_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <tk.h>}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{./../set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00017}00017\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ proc(ClientData\ ClinetDate,\ Tcl\_Interp\ *interp,\ \textcolor{keywordtype}{int}\ argc,\ Tcl\_Obj\ *\textcolor{keyword}{const}\ argv[])\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}(argc\ !=\ 1)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *retmsg\ =\ \textcolor{stringliteral}{"{}argument:error"{}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ Tcl\_SetResult(interp,\ retmsg,\ TCL\_VOLATILE);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}command:\ error\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TCL\_ERROR;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00027}\mbox{\hyperlink{gui_8c_aea1315ebe856d197f3bc487d6d6b2894}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_8c_aea1315ebe856d197f3bc487d6d6b2894}{game\_conversion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ *date)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ y,\ x;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00037}\mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{00037}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{gui}}()\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ gui}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00040}00040\ \ \ \ \ Tcl\_Interp\ *interp\ =\ Tcl\_CreateInterp();\ \ \textcolor{comment}{//\ インタプリタを作成}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_Init(interp)\ ==\ TCL\_ERROR)\{\ \ \ \textcolor{comment}{//\ tclを初期化（スタンダードライブラリinit.tclをロード）}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Interpreter\ initialization\ fails\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{if}(Tk\_Init(interp)\ ==\ TCL\_ERROR)\ \{\ \ \textcolor{comment}{//\ tkを初期化（ＧＵＩライブラリをロード）}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GUI\ initialization\ fails\ :\ \%s\(\backslash\)n\ "{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_EvalFile(interp,\ \textcolor{stringliteral}{"{}./src/c/gui/game.tcl"{}})\ ==\ TCL\_ERROR)\{\ \ \textcolor{comment}{//\ インタプリタを実行}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Execution\ Failure:\ Error\ Description\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00058}00058\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}success!\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00063}00063\ \ \ \ \ Tk\_MainLoop();}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00064}00064\ \ \ \ \ Tcl\_DeleteInterp(interp);\ \ \textcolor{comment}{//\ インタプリタを片付ける}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00066}00066\ \}}
+
+\end{DoxyCode}

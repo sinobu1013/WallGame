@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['digesterrors_5f00008_0',['DigestErrors_00008',['../_wmi_ap_rpl_8h.html#a2b27c61ed574f96f849c647f9adee9e3',1,'WmiApRpl.h']]],
-  ['dischargerate_5f00000_1',['DischargeRate_00000',['../_wmi_ap_rpl_8h.html#ad8f4aa62ae36657212c39a9351eee504',1,'WmiApRpl.h']]]
+  ['direction_0',['direction',['../struct_activity.html#a5c8fbfd70366eee6bc9df3c515707202',1,'Activity']]],
+  ['display_5ftable_1',['display_table',['../print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c'],['../print__value_8h.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c']]],
+  ['down_2',['DOWN',['../set_8h.html#a4193cd1c8c2e6ebd0e056fa2364a663f',1,'set.h']]]
 ];
