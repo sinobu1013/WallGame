@@ -14,6 +14,20 @@
 #include <stdlib.h>
 #include "./../set.h"
 
+static int proc(ClientData ClinetDate, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
+
+    if(argc != 1){
+        char *retmsg = "argument:error";
+        Tcl_SetResult(interp, retmsg, TCL_VOLATILE);
+        printf("command: error\n");
+        return TCL_ERROR;
+    }
+}
+
+void game_conversion(const GAME_DATE game_date, int *date){
+    int y, x;
+    int i;
+}
 
 /**
  * @brief guiを表示する（メイン）
