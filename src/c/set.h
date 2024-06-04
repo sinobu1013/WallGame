@@ -25,6 +25,7 @@
 #define reps(i,s,n) for(i=s;i<n;i++)
 #define True 1
 #define False 0
+#define DATE 200
 
 /**
  * @brief 座標表示

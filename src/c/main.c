@@ -9,6 +9,7 @@
  * 
  */
 #include <stdio.h>
+#include <tcl.h>
 #include "set.h"
 #include "./game/init.h"
 #include "./prog/print_value.h"
@@ -22,21 +23,6 @@
  * @return int 実行成功判定
  */
 int main(void){
-    GAME_DATE game_date;
-    init(&game_date);
-    int i;
-    rep(i, 10){
-        ACT activity;
-        activity.move = DOWN;
-        activity.type = MOVE;
-        game_date.main_player = BLACK_PLAYER;
-        game_main(&game_date, activity);
-
-        printf("\n");
-        display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
-    }
-    
-    game_free(&game_date);
     gui();
     return 0;
 }
