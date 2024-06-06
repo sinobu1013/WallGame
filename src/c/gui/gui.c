@@ -28,7 +28,7 @@
  * @param argv 先頭は実行するコマンド、それ以降にコマンドの引数がセットされる
  * @return int 完了コード
  */
-static int proc(ClientData ClientDate, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
+static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
 
     if(argc != 1){
         char *retmsg = "argument:error";
@@ -37,9 +37,11 @@ static int proc(ClientData ClientDate, Tcl_Interp *interp, int argc, Tcl_Obj *co
         return TCL_ERROR;
     }
 
-    int *list = (int *)ClientDate;
+    int *list = (int *)ClientData;
+    if(list == NULL) printf("\nyabai\n");
     Tcl_Obj *listObj = Tcl_NewListObj(0, NULL);
     int i;
+    rep(i, DATE) printf("%d ", list[i]);
     rep(i, DATE){
         Tcl_ListObjAppendElement(interp, listObj, Tcl_NewIntObj(list[i]));
     }
@@ -96,6 +98,7 @@ int game_conversion(const GAME_DATE game_date, int *date){
 void gui_main(Tcl_Interp *interp){
     static GAME_DATE game_date;
     static int count = 0;
+    static int date[DATE] = {0};
 
     if(!count)
         init(&game_date);
@@ -104,8 +107,9 @@ void gui_main(Tcl_Interp *interp){
     ACT activity;
     activity.type = MOVE;
     activity.move = UP;
-    int date[DATE] = {0};
+    
     printf("game date number : %d\n",game_conversion(game_date, date));
+    
     game_main(&game_date, activity);
     display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
 
@@ -113,6 +117,7 @@ void gui_main(Tcl_Interp *interp){
     count++;
     printf("%d\n",count);
     if(count == 10) game_free(&game_date);
+    int i;
 
     Tcl_CreateObjCommand(interp, "game_proc", proc, (ClientData)date, NULL);
 }

@@ -11,7 +11,7 @@ proc draw_board {} {
     set sum_square_w  [lindex $game_date 3]
     set sum_square_h  [lindex $game_date 2]
 
-    puts "sum_square_w : $sum_square_h"
+    puts "sum_square_w : $sum_square_w"
 
     set square_size_w [expr {int($canvas_size / $sum_square_w)}]
     set square_size_h [expr {int($canvas_size / $sum_square_h)}]
@@ -66,7 +66,7 @@ proc draw_board {} {
 
     pack .board
 
-    after 500 draw_board
+    after 1000 draw_board
 
 }
 

@@ -34,6 +34,8 @@ void init(GAME_DATE *game_date){
     game_date->player[BLACK_PLAYER].position.y = 0;
     game_date->player[BLACK_PLAYER].position.x = SUM_CELL_W / 2;
     game_date->player[BLACK_PLAYER].goal_h = SUM_CELL_H - 1;
+    game_date->player[WHITE_PLAYER].wall_num = WALL_SUM_NUMBER;
+    game_date->player[BLACK_PLAYER].wall_num = WALL_SUM_NUMBER;
 
     int i, j;
 
