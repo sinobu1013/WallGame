@@ -50,6 +50,25 @@ int outside_player(POINT point){
 }
 
 /**
+ * @brief 引数の座標にプレイヤーが存在するか判定する
+ * 
+ * @param point プレイヤーの座標
+ * @param game_date ゲーム情報
+ * @return int 有：True、無：False
+ */
+int player_check(POINT point, const GAME_DATE game_date){
+    int x = game_date.player[WHITE_PLAYER].position.x;
+    int y = game_date.player[WHITE_PLAYER].position.y;
+    if(x == point.x && y == point.y) return True;
+    
+    x = game_date.player[BLACK_PLAYER].position.x;
+    y = game_date.player[BLACK_PLAYER].position.y;
+    if(x == point.x && y == point.y) return True;
+    
+    return False;
+}
+
+/**
  * @brief 勝敗判定
  * 
  * @param game_date ゲーム情報
@@ -75,6 +94,7 @@ int move(GAME_DATE *game_date, ACT activity){
         move_change.y + game_date->player[game_date->main_player].position.y
         };
     if(outside_player(move_position)) return False;     // 範囲内か判定
+    if(player_check(move_position, *game_date)) return False;  // プレイヤーが有かの判定
 
     game_date->board.player[game_date->player[game_date->main_player].position.y][game_date->player[game_date->main_player].position.x] = SPACE;
     game_date->board.player[move_position.y][move_position.x] = game_date->main_player;
