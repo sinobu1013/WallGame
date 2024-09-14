@@ -11,10 +11,10 @@ CFLAGS = -ltcl86 -ltk86
 CC = gcc
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(CFLAGS)
+	$(CC) -O3 -o $(NAME) $(OBJS) $(CFLAGS)
 
 %.o: %.c %.h
-	$(CC) -c -o $*.o $<
+	$(CC) -c -O3 -Os -o $*.o $<
 
 all: clean $(NAME) exe
 
