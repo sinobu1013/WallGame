@@ -1,14 +1,13 @@
 \doxysection{src/c/set.h File Reference}
 \hypertarget{set_8h}{}\label{set_8h}\index{src/c/set.h@{src/c/set.h}}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{set_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_point}{Point}}
@@ -24,7 +23,7 @@ struct \mbox{\hyperlink{struct_activity}{Activity}}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\+\_\+\+CELL\+\_\+W}}~9
+\#define \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\+\_\+\+CELL\+\_\+W}}~8
 \item 
 \#define \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\+\_\+\+CELL\+\_\+H}}~8
 \item 
@@ -38,17 +37,21 @@ struct \mbox{\hyperlink{struct_activity}{Activity}}
 \item 
 \#define \mbox{\hyperlink{set_8h_a4c6b87853cbaf189fe1e484706ae1875}{CREATE}}~1
 \item 
-\#define \mbox{\hyperlink{set_8h_a4ec2744aad7c39b26ee68b61c87f5220}{STAY}}~2
+\#define \mbox{\hyperlink{set_8h_a4ec2744aad7c39b26ee68b61c87f5220}{STAY}}~0
 \item 
-\#define \mbox{\hyperlink{set_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}~0
+\#define \mbox{\hyperlink{set_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}~1
 \item 
-\#define \mbox{\hyperlink{set_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}~1
+\#define \mbox{\hyperlink{set_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}~2
 \item 
-\#define \mbox{\hyperlink{set_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}~2
+\#define \mbox{\hyperlink{set_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}~3
 \item 
-\#define \mbox{\hyperlink{set_8h_a437ef08681e7210d6678427030446a54}{LEFT}}~3
+\#define \mbox{\hyperlink{set_8h_a437ef08681e7210d6678427030446a54}{LEFT}}~4
 \item 
 \#define \mbox{\hyperlink{set_8h_a43105771f16e2da3078149f0de528e9b}{WIN}}~999
+\item 
+\#define \mbox{\hyperlink{set_8h_aaf8ff255013f3f77a19ac934f7e4f6aa}{WHITE\+\_\+\+WIN}}~\mbox{\hyperlink{set_8h_a43105771f16e2da3078149f0de528e9b}{WIN}} + \mbox{\hyperlink{set_8h_a27d423ce517555d16c00a82c40806c25}{WHITE\+\_\+\+PLAYER}}
+\item 
+\#define \mbox{\hyperlink{set_8h_a4f08aa9676f55492cbf1f9f43ce43f77}{BLACK\+\_\+\+WIN}}~\mbox{\hyperlink{set_8h_a43105771f16e2da3078149f0de528e9b}{WIN}} + \mbox{\hyperlink{set_8h_a1aa9974b5e7986619c487506d12adb50}{BLACK\+\_\+\+PLAYER}}
 \item 
 \#define \mbox{\hyperlink{set_8h_aa4c8ef3afd761b8f8df8b7be3ee61957}{WALL\+\_\+\+SUM\+\_\+\+NUMBER}}~5
 \item 
@@ -61,6 +64,10 @@ struct \mbox{\hyperlink{struct_activity}{Activity}}
 \#define \mbox{\hyperlink{set_8h_add3ca9eefe3b5b754426f51d3043e579}{True}}~1
 \item 
 \#define \mbox{\hyperlink{set_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False}}~0
+\item 
+\#define \mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}}~200
+\item 
+\#define \mbox{\hyperlink{set_8h_ace38c071c18e7c43292e2c31175a678b}{SUM\+\_\+\+TURN}}~30
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -88,6 +95,16 @@ typedef struct \mbox{\hyperlink{struct_activity}{Activity}} \mbox{\hyperlink{set
 
 Definition at line \mbox{\hyperlink{set_8h_source_l00009}{9}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
+\Hypertarget{set_8h_a4f08aa9676f55492cbf1f9f43ce43f77}\index{set.h@{set.h}!BLACK\_WIN@{BLACK\_WIN}}
+\index{BLACK\_WIN@{BLACK\_WIN}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{BLACK\_WIN}{BLACK\_WIN}}
+{\footnotesize\ttfamily \label{set_8h_a4f08aa9676f55492cbf1f9f43ce43f77} 
+\#define BLACK\+\_\+\+WIN~\mbox{\hyperlink{set_8h_a43105771f16e2da3078149f0de528e9b}{WIN}} + \mbox{\hyperlink{set_8h_a1aa9974b5e7986619c487506d12adb50}{BLACK\+\_\+\+PLAYER}}}
+
+黒の勝利 
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00022}{22}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
 \Hypertarget{set_8h_a4c6b87853cbaf189fe1e484706ae1875}\index{set.h@{set.h}!CREATE@{CREATE}}
 \index{CREATE@{CREATE}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{CREATE}{CREATE}}
@@ -98,11 +115,21 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00009}{9}} of file \mbox{\hyp
 
 Definition at line \mbox{\hyperlink{set_8h_source_l00012}{12}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
+\Hypertarget{set_8h_a30b328ca499f27b3d0f8111b495834ca}\index{set.h@{set.h}!DATE@{DATE}}
+\index{DATE@{DATE}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{DATE}{DATE}}
+{\footnotesize\ttfamily \label{set_8h_a30b328ca499f27b3d0f8111b495834ca} 
+\#define DATE~200}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00030}{30}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
 \Hypertarget{set_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}\index{set.h@{set.h}!DOWN@{DOWN}}
 \index{DOWN@{DOWN}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
 {\footnotesize\ttfamily \label{set_8h_a4193cd1c8c2e6ebd0e056fa2364a663f} 
-\#define DOWN~1}
+\#define DOWN~2}
 
 下 
 
@@ -116,13 +143,13 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00016}{16}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00027}{27}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00029}{29}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_a437ef08681e7210d6678427030446a54}\index{set.h@{set.h}!LEFT@{LEFT}}
 \index{LEFT@{LEFT}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{LEFT}{LEFT}}
 {\footnotesize\ttfamily \label{set_8h_a437ef08681e7210d6678427030446a54} 
-\#define LEFT~3}
+\#define LEFT~4}
 
 左 
 
@@ -146,7 +173,7 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00011}{11}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00024}{24}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00026}{26}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_aae64e55d5a04f6f2eea6c83d13d7d9bf}\index{set.h@{set.h}!reps@{reps}}
 \index{reps@{reps}!set.h@{set.h}}
@@ -156,13 +183,13 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00024}{24}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00025}{25}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00027}{27}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_a80fb826a684cf3f0d306b22aa100ddac}\index{set.h@{set.h}!RIGHT@{RIGHT}}
 \index{RIGHT@{RIGHT}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{RIGHT}{RIGHT}}
 {\footnotesize\ttfamily \label{set_8h_a80fb826a684cf3f0d306b22aa100ddac} 
-\#define RIGHT~2}
+\#define RIGHT~3}
 
 右 
 
@@ -182,7 +209,7 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00007}{7}} of file \mbox{\hyp
 \index{STAY@{STAY}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{STAY}{STAY}}
 {\footnotesize\ttfamily \label{set_8h_a4ec2744aad7c39b26ee68b61c87f5220} 
-\#define STAY~2}
+\#define STAY~0}
 
 滞在 
 
@@ -202,7 +229,7 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00005}{5}} of file \mbox{\hyp
 \index{SUM\_CELL\_W@{SUM\_CELL\_W}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{SUM\_CELL\_W}{SUM\_CELL\_W}}
 {\footnotesize\ttfamily \label{set_8h_aafbd7073c46e2b8c686c35bb70b08116} 
-\#define SUM\+\_\+\+CELL\+\_\+W~9}
+\#define SUM\+\_\+\+CELL\+\_\+W~8}
 
 横のマスの数 
 
@@ -216,7 +243,17 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00004}{4}} of file \mbox{\hyp
 
 プレイヤー数 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00022}{22}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00024}{24}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_ace38c071c18e7c43292e2c31175a678b}\index{set.h@{set.h}!SUM\_TURN@{SUM\_TURN}}
+\index{SUM\_TURN@{SUM\_TURN}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{SUM\_TURN}{SUM\_TURN}}
+{\footnotesize\ttfamily \label{set_8h_ace38c071c18e7c43292e2c31175a678b} 
+\#define SUM\+\_\+\+TURN~30}
+
+
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00032}{32}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_add3ca9eefe3b5b754426f51d3043e579}\index{set.h@{set.h}!True@{True}}
 \index{True@{True}!set.h@{set.h}}
@@ -226,13 +263,13 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00022}{22}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00026}{26}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00028}{28}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_a1965eaca47dbf3f87acdafc2208f04eb}\index{set.h@{set.h}!UP@{UP}}
 \index{UP@{UP}!set.h@{set.h}}
 \doxysubsubsection{\texorpdfstring{UP}{UP}}
 {\footnotesize\ttfamily \label{set_8h_a1965eaca47dbf3f87acdafc2208f04eb} 
-\#define UP~0}
+\#define UP~1}
 
 上 
 
@@ -246,7 +283,7 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00015}{15}} of file \mbox{\hy
 
 壁の枚数（初期値） 
 
-Definition at line \mbox{\hyperlink{set_8h_source_l00021}{21}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+Definition at line \mbox{\hyperlink{set_8h_source_l00023}{23}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_a27d423ce517555d16c00a82c40806c25}\index{set.h@{set.h}!WHITE\_PLAYER@{WHITE\_PLAYER}}
 \index{WHITE\_PLAYER@{WHITE\_PLAYER}!set.h@{set.h}}
@@ -257,6 +294,16 @@ Definition at line \mbox{\hyperlink{set_8h_source_l00021}{21}} of file \mbox{\hy
 白のプレイヤー 
 
 Definition at line \mbox{\hyperlink{set_8h_source_l00008}{8}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
+
+\Hypertarget{set_8h_aaf8ff255013f3f77a19ac934f7e4f6aa}\index{set.h@{set.h}!WHITE\_WIN@{WHITE\_WIN}}
+\index{WHITE\_WIN@{WHITE\_WIN}!set.h@{set.h}}
+\doxysubsubsection{\texorpdfstring{WHITE\_WIN}{WHITE\_WIN}}
+{\footnotesize\ttfamily \label{set_8h_aaf8ff255013f3f77a19ac934f7e4f6aa} 
+\#define WHITE\+\_\+\+WIN~\mbox{\hyperlink{set_8h_a43105771f16e2da3078149f0de528e9b}{WIN}} + \mbox{\hyperlink{set_8h_a27d423ce517555d16c00a82c40806c25}{WHITE\+\_\+\+PLAYER}}}
+
+白の勝利 
+
+Definition at line \mbox{\hyperlink{set_8h_source_l00021}{21}} of file \mbox{\hyperlink{set_8h_source}{set.\+h}}.
 
 \Hypertarget{set_8h_a43105771f16e2da3078149f0de528e9b}\index{set.h@{set.h}!WIN@{WIN}}
 \index{WIN@{WIN}!set.h@{set.h}}

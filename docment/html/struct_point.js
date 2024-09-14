@@ -1,5 +1,5 @@
 var struct_point =
 [
-    [ "x", "struct_point.html#a8c779e11e694b20e0946105a9f5de842", null ],
-    [ "y", "struct_point.html#a2e1b5fb2b2a83571f5c0bc0f66a73cf7", null ]
+    [ "x", "struct_point.html#a6150e0515f7202e2fb518f7206ed97dc", null ],
+    [ "y", "struct_point.html#a0a2f84ed7838f07779ae24c5a9086d33", null ]
 ];

@@ -6,22 +6,28 @@ guiを表示する
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$tcl.\+h$>$}\newline
 {\ttfamily \#include $<$tk.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include "{}./../set.\+h"{}}\newline
-Include dependency graph for gui.\+c\+:
-\nopagebreak
+{\ttfamily \#include "{}gui.\+h"{}}\newline
+{\ttfamily \#include "{}./../game/init.\+h"{}}\newline
+{\ttfamily \#include "{}./../game/game.\+h"{}}\newline
+{\ttfamily \#include "{}./../prog/print\+\_\+value.\+h"{}}\newline
+Include dependency graph for gui.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{gui_8c__incl}
+\includegraphics[width=350pt]{gui_8c__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{gui_8c_aea1315ebe856d197f3bc487d6d6b2894}{game\+\_\+conversion}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int \texorpdfstring{$\ast$}{*}date)
-\item 
+int \mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{game\+\_\+conversion}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int \texorpdfstring{$\ast$}{*}date)
+\begin{DoxyCompactList}\small\item\em tclファイルに送信するデータを作成 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp)
+\begin{DoxyCompactList}\small\item\em ゲームを進める関数 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{gui}} ()
 \begin{DoxyCompactList}\small\item\em guiを表示する（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -48,16 +54,38 @@ Definition in file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{gui_8c_aea1315ebe856d197f3bc487d6d6b2894}\index{gui.c@{gui.c}!game\_conversion@{game\_conversion}}
+\Hypertarget{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}\index{gui.c@{gui.c}!game\_conversion@{game\_conversion}}
 \index{game\_conversion@{game\_conversion}!gui.c@{gui.c}}
 \doxysubsubsection{\texorpdfstring{game\_conversion()}{game\_conversion()}}
-{\footnotesize\ttfamily \label{gui_8c_aea1315ebe856d197f3bc487d6d6b2894} 
-void game\+\_\+conversion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{date}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11} 
+int game\+\_\+conversion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{date}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00027}{27}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+tclファイルに送信するデータを作成 
 
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em date} & 送信データ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int データの要素数 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gui_8c_source_l00062}{62}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}\index{gui.c@{gui.c}!gui@{gui}}
 \index{gui@{gui}!gui.c@{gui.c}}
 \doxysubsubsection{\texorpdfstring{gui()}{gui()}}
@@ -68,18 +96,65 @@ int gui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 guiを表示する（メイン） 
 
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int エラーの場合、-\/1を返す 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00037}{37}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00131}{131}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}\index{gui.c@{gui.c}!gui\_main@{gui\_main}}
+\index{gui\_main@{gui\_main}!gui.c@{gui.c}}
+\doxysubsubsection{\texorpdfstring{gui\_main()}{gui\_main()}}
+{\footnotesize\ttfamily \label{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35} 
+void gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{}\end{DoxyParamCaption})}
+
+
+
+ゲームを進める関数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interp} & インタプリタ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gui_8c_source_l00097}{97}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
+\includegraphics[width=273pt]{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph}
 \end{center}
 \end{figure}

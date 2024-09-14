@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['win_5for_5floss_5fdecision_0',['win_or_loss_decision',['../game_8c.html#a8700dfc16655e8e84138731f440fea48',1,'game.c']]]
+  ['outside_5fplayer_0',['outside_player',['../game_8c.html#a6b0341d04d731d716876aa81039d5ab2',1,'game.c']]]
 ];

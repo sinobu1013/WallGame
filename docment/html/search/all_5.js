@@ -1,14 +1,4 @@
 var searchData=
 [
-  ['game_2ec_0',['game.c',['../game_8c.html',1,'']]],
-  ['game_2eh_1',['game.h',['../game_8h.html',1,'']]],
-  ['game_5fconversion_2',['game_conversion',['../gui_8c.html#aea1315ebe856d197f3bc487d6d6b2894',1,'gui.c']]],
-  ['game_5fdate_3',['GAME_DATE',['../set_8h.html#a666ee3310647bfcbc80dc10db790866e',1,'set.h']]],
-  ['game_5ffree_4',['game_free',['../init_8c.html#a720b51e9bd80836bb89ca1d0d2b1da5b',1,'game_free(GAME_DATE *game_date):&#160;init.c'],['../init_8h.html#a720b51e9bd80836bb89ca1d0d2b1da5b',1,'game_free(GAME_DATE *game_date):&#160;init.c']]],
-  ['game_5fmain_5',['game_main',['../game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d',1,'game_main(GAME_DATE *game_date, ACT activity):&#160;game.c'],['../game_8h.html#a441d4f282398c2c2cfe4d27151ef2d0d',1,'game_main(GAME_DATE *game_date, ACT activity):&#160;game.c']]],
-  ['gamedate_6',['GameDate',['../struct_game_date.html',1,'']]],
-  ['goal_5fh_7',['goal_h',['../struct_player.html#a6c0806d33ecef331fa4b82251a70d7be',1,'Player']]],
-  ['gui_8',['gui',['../gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c'],['../gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c']]],
-  ['gui_2ec_9',['gui.c',['../gui_8c.html',1,'']]],
-  ['gui_2eh_10',['gui.h',['../gui_8h.html',1,'']]]
+  ['false_0',['False',['../set_8h.html#a306ebd41c0cd1303b1372c6153f0caf8',1,'set.h']]]
 ];

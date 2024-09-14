@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['set_2eh_0',['set.h',['../set_8h.html',1,'']]],
-  ['space_1',['SPACE',['../set_8h.html#a5ff6e798033f03e74730e99f01936f84',1,'set.h']]],
-  ['stay_2',['STAY',['../set_8h.html#a4ec2744aad7c39b26ee68b61c87f5220',1,'set.h']]],
-  ['sum_5fcell_5fh_3',['SUM_CELL_H',['../set_8h.html#ab35a4d0b09725becad04719feaeb4204',1,'set.h']]],
-  ['sum_5fcell_5fw_4',['SUM_CELL_W',['../set_8h.html#aafbd7073c46e2b8c686c35bb70b08116',1,'set.h']]],
-  ['sum_5fplayer_5fnumber_5',['SUM_PLAYER_NUMBER',['../set_8h.html#a76237eff655a402aff8063b131a37d45',1,'set.h']]]
+  ['readme_0',['README',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['rep_2',['rep',['../set_8h.html#afc28855f97302d38207feabfda45fc97',1,'set.h']]],
+  ['reps_3',['reps',['../set_8h.html#aae64e55d5a04f6f2eea6c83d13d7d9bf',1,'set.h']]],
+  ['right_4',['RIGHT',['../set_8h.html#a80fb826a684cf3f0d306b22aa100ddac',1,'set.h']]]
 ];

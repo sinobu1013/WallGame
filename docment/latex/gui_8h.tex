@@ -1,16 +1,17 @@
 \doxysection{src/c/gui/gui.h File Reference}
 \hypertarget{gui_8h}{}\label{gui_8h}\index{src/c/gui/gui.h@{src/c/gui/gui.h}}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=158pt]{gui_8h__dep__incl}
+\includegraphics[width=246pt]{gui_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp)
+\begin{DoxyCompactList}\small\item\em ゲームを進める関数 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13}{gui}} ()
 \begin{DoxyCompactList}\small\item\em guiを表示する（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -26,18 +27,65 @@ int gui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 guiを表示する（メイン） 
 
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int エラーの場合、-\/1を返す 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00037}{37}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00131}{131}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35}\index{gui.h@{gui.h}!gui\_main@{gui\_main}}
+\index{gui\_main@{gui\_main}!gui.h@{gui.h}}
+\doxysubsubsection{\texorpdfstring{gui\_main()}{gui\_main()}}
+{\footnotesize\ttfamily \label{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35} 
+void gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{}\end{DoxyParamCaption})}
+
+
+
+ゲームを進める関数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interp} & インタプリタ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gui_8c_source_l00097}{97}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
+\includegraphics[width=273pt]{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph}
 \end{center}
 \end{figure}

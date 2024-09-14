@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outside_5fplayer_0',['outside_player',['../game_8c.html#a6b0341d04d731d716876aa81039d5ab2',1,'game.c']]]
+  ['num_5fwall_0',['num_wall',['../struct_board.html#a612c322c12531171d00039aba30a275a',1,'Board']]]
 ];

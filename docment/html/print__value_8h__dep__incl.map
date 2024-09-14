@@ -1,7 +1,9 @@
 <map id="src/c/prog/print_value.h" name="src/c/prog/print_value.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="48,5,203,32"/>
-<area shape="rect" id="Node000002" href="$main_8c.html" title="main関数" alt="" coords="5,80,99,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,45,66,82,63,78,100,41"/>
-<area shape="rect" id="Node000003" href="$print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="122,80,278,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,41,189,78,185,82,147,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="102,5,257,32"/>
+<area shape="rect" id="Node000002" href="$gui_8c.html" title="guiを表示する" alt="" coords="5,80,109,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,43,80,82,77,77,144,38"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="main関数" alt="" coords="133,80,226,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,48,182,80,177,80,177,48"/>
+<area shape="rect" id="Node000004" href="$print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="250,80,405,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="220,37,303,77,301,82,218,42"/>
 </map>

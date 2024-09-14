@@ -1,7 +1,7 @@
 var struct_game_date =
 [
-    [ "board", "struct_game_date.html#a567fd0f5aea2ae4b800040e5844139a1", null ],
-    [ "main_player", "struct_game_date.html#ae87ac98798739c4d345fa1b654deeb4e", null ],
-    [ "player", "struct_game_date.html#a70e8e87d9ef92850200aa90103bc205f", null ],
-    [ "turn", "struct_game_date.html#a3eb991a473ad46d51d78ee0efa1a7f46", null ]
+    [ "board", "struct_game_date.html#a6d7928635054e378da8fea2722146c00", null ],
+    [ "main_player", "struct_game_date.html#a74a2d6184f22f573b3b1c28db96e1c85", null ],
+    [ "player", "struct_game_date.html#ae96e06119c091b0428e3054a90c1f713", null ],
+    [ "turn", "struct_game_date.html#aaefa47f4fdf865c2358c22b542a993e4", null ]
 ];

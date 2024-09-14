@@ -132,9 +132,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a6b0341d04d731d716876aa81039d5ab2" id="r_a6b0341d04d731d716876aa81039d5ab2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b0341d04d731d716876aa81039d5ab2">outside_player</a> (<a class="el" href="set_8h.html#a08b38b334eca063d45019fe9df7776bf">POINT</a> point)</td></tr>
 <tr class="memdesc:a6b0341d04d731d716876aa81039d5ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーの座標がボードの範囲外かどうかを判定する  <br /></td></tr>
 <tr class="separator:a6b0341d04d731d716876aa81039d5ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0c88e07a242a8c3082ecdfc66a8ff3" id="r_afd0c88e07a242a8c3082ecdfc66a8ff3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd0c88e07a242a8c3082ecdfc66a8ff3">player_check</a> (<a class="el" href="set_8h.html#a08b38b334eca063d45019fe9df7776bf">POINT</a> point, const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_date)</td></tr>
+<tr class="memdesc:afd0c88e07a242a8c3082ecdfc66a8ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数の座標にプレイヤーが存在するか判定する  <br /></td></tr>
+<tr class="separator:afd0c88e07a242a8c3082ecdfc66a8ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8700dfc16655e8e84138731f440fea48" id="r_a8700dfc16655e8e84138731f440fea48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8700dfc16655e8e84138731f440fea48">win_or_loss_decision</a> (<a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_date)</td></tr>
 <tr class="memdesc:a8700dfc16655e8e84138731f440fea48"><td class="mdescLeft">&#160;</td><td class="mdescRight">勝敗判定  <br /></td></tr>
 <tr class="separator:a8700dfc16655e8e84138731f440fea48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f3e530c2aa129d300511879650ea51" id="r_a12f3e530c2aa129d300511879650ea51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12f3e530c2aa129d300511879650ea51">end_decision</a> (const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_date)</td></tr>
+<tr class="memdesc:a12f3e530c2aa129d300511879650ea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームの終了判定  <br /></td></tr>
+<tr class="separator:a12f3e530c2aa129d300511879650ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8bc1cd598e6d4535061d375b6f4369" id="r_a3c8bc1cd598e6d4535061d375b6f4369"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c8bc1cd598e6d4535061d375b6f4369">move</a> (<a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> *game_date, <a class="el" href="set_8h.html#a54d0fe08bae53a014d212153cad489ee">ACT</a> activity)</td></tr>
 <tr class="memdesc:a3c8bc1cd598e6d4535061d375b6f4369"><td class="mdescLeft">&#160;</td><td class="mdescRight">プレイヤーの移動関数  <br /></td></tr>
 <tr class="separator:a3c8bc1cd598e6d4535061d375b6f4369"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,11 +187,67 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph.png" border="0" usemap="#agame_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph" alt=""/></div>
 <map name="agame_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph" id="agame_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph">
-<area shape="rect" title="移動向きから座標の変化値に変換" alt="" coords="338,5,446,32"/>
-<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="239,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="323,21,290,21,290,16,323,16"/>
-<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="103,5,191,32"/>
-<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
+<area shape="rect" title="移動向きから座標の変化値に変換" alt="" coords="546,5,653,32"/>
+<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="447,5,498,32"/>
+<area shape="poly" title=" " alt="" coords="530,21,498,21,498,16,530,16"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="431,21,399,21,399,16,431,16"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12f3e530c2aa129d300511879650ea51" name="a12f3e530c2aa129d300511879650ea51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f3e530c2aa129d300511879650ea51">&#9670;&#160;</a></span>end_decision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int end_decision </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a></td>          <td class="paramname"><span class="paramname"><em>game_date</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ゲームの終了判定 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game_date</td><td>ゲーム情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int ゲーム終了ならTrue、まだ続くならFalse </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00092">92</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8c_a12f3e530c2aa129d300511879650ea51_cgraph.png" border="0" usemap="#agame_8c_a12f3e530c2aa129d300511879650ea51_cgraph" alt=""/></div>
+<map name="agame_8c_a12f3e530c2aa129d300511879650ea51_cgraph" id="agame_8c_a12f3e530c2aa129d300511879650ea51_cgraph">
+<area shape="rect" title="ゲームの終了判定" alt="" coords="5,5,103,32"/>
+<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="151,5,295,32"/>
+<area shape="poly" title=" " alt="" coords="103,16,135,16,135,21,103,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8c_a12f3e530c2aa129d300511879650ea51_icgraph.png" border="0" usemap="#agame_8c_a12f3e530c2aa129d300511879650ea51_icgraph" alt=""/></div>
+<map name="agame_8c_a12f3e530c2aa129d300511879650ea51_icgraph" id="agame_8c_a12f3e530c2aa129d300511879650ea51_icgraph">
+<area shape="rect" title="ゲームの終了判定" alt="" coords="310,5,408,32"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -222,21 +284,23 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 行動成功かどうか </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00095">95</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00131">131</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph.png" border="0" usemap="#agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph" alt=""/></div>
 <map name="agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph" id="agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph">
-<area shape="rect" title="ゲーム進行関数（メイン）" alt="" coords="5,56,94,83"/>
-<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="142,56,193,83"/>
-<area shape="poly" title=" " alt="" coords="94,67,126,67,126,72,94,72"/>
+<area shape="rect" title="ゲーム進行関数（メイン）" alt="" coords="5,81,94,108"/>
+<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="142,81,193,108"/>
+<area shape="poly" title=" " alt="" coords="94,92,126,92,126,97,94,97"/>
 <area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="260,5,367,32"/>
-<area shape="poly" title=" " alt="" coords="193,58,258,35,259,40,194,63"/>
+<area shape="poly" title=" " alt="" coords="184,79,240,42,252,36,254,41,242,46,187,83"/>
 <area shape="rect" href="game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="261,56,366,83"/>
-<area shape="poly" title=" " alt="" coords="194,67,245,67,245,72,194,72"/>
-<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="241,107,385,133"/>
-<area shape="poly" title=" " alt="" coords="194,76,259,99,258,104,193,81"/>
+<area shape="poly" title=" " alt="" coords="193,88,245,78,246,84,194,93"/>
+<area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="264,107,362,133"/>
+<area shape="poly" title=" " alt="" coords="194,96,249,106,248,111,193,102"/>
+<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="241,157,385,184"/>
+<area shape="poly" title=" " alt="" coords="187,106,242,143,254,149,252,153,240,148,184,111"/>
 </map>
 </div>
 <div class="dynheader">
@@ -244,7 +308,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph.png" border="0" usemap="#agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph" alt=""/></div>
 <map name="agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph" id="agame_8c_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph">
-<area shape="rect" title="ゲーム進行関数（メイン）" alt="" coords="103,5,191,32"/>
+<area shape="rect" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -281,19 +349,21 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 行動成功かどうか </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00071">71</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00106">106</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph.png" border="0" usemap="#agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph" alt=""/></div>
 <map name="agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph" id="agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph">
-<area shape="rect" title="プレイヤーの移動関数" alt="" coords="5,56,57,83"/>
+<area shape="rect" title="プレイヤーの移動関数" alt="" coords="5,81,57,108"/>
 <area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="123,5,231,32"/>
-<area shape="poly" title=" " alt="" coords="56,58,121,35,123,40,58,63"/>
+<area shape="poly" title=" " alt="" coords="48,79,103,42,116,36,118,41,106,46,51,83"/>
 <area shape="rect" href="game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="124,56,230,83"/>
-<area shape="poly" title=" " alt="" coords="57,67,108,67,108,72,57,72"/>
-<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="105,107,249,133"/>
-<area shape="poly" title=" " alt="" coords="58,76,123,99,121,104,56,81"/>
+<area shape="poly" title=" " alt="" coords="57,88,109,78,109,84,58,93"/>
+<area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="128,107,226,133"/>
+<area shape="poly" title=" " alt="" coords="58,96,113,106,112,111,57,102"/>
+<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="105,157,249,184"/>
+<area shape="poly" title=" " alt="" coords="51,106,106,143,118,149,116,153,103,148,48,111"/>
 </map>
 </div>
 <div class="dynheader">
@@ -301,9 +371,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a3c8bc1cd598e6d4535061d375b6f4369_icgraph.png" border="0" usemap="#agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_icgraph" alt=""/></div>
 <map name="agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_icgraph" id="agame_8c_a3c8bc1cd598e6d4535061d375b6f4369_icgraph">
-<area shape="rect" title="プレイヤーの移動関数" alt="" coords="239,5,290,32"/>
-<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="103,5,191,32"/>
-<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
+<area shape="rect" title="プレイヤーの移動関数" alt="" coords="447,5,498,32"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="431,21,399,21,399,16,431,16"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -341,11 +415,66 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a6b0341d04d731d716876aa81039d5ab2_icgraph.png" border="0" usemap="#agame_8c_a6b0341d04d731d716876aa81039d5ab2_icgraph" alt=""/></div>
 <map name="agame_8c_a6b0341d04d731d716876aa81039d5ab2_icgraph" id="agame_8c_a6b0341d04d731d716876aa81039d5ab2_icgraph">
-<area shape="rect" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="338,5,444,32"/>
-<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="239,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="323,21,291,21,291,16,323,16"/>
-<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="103,5,191,32"/>
-<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
+<area shape="rect" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="546,5,651,32"/>
+<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="447,5,498,32"/>
+<area shape="poly" title=" " alt="" coords="531,21,498,21,498,16,531,16"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="431,21,399,21,399,16,431,16"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd0c88e07a242a8c3082ecdfc66a8ff3" name="afd0c88e07a242a8c3082ecdfc66a8ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0c88e07a242a8c3082ecdfc66a8ff3">&#9670;&#160;</a></span>player_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int player_check </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set_8h.html#a08b38b334eca063d45019fe9df7776bf">POINT</a></td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a></td>          <td class="paramname"><span class="paramname"><em>game_date</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引数の座標にプレイヤーが存在するか判定する </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>プレイヤーの座標 </td></tr>
+    <tr><td class="paramname">game_date</td><td>ゲーム情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 有：True、無：False </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00059">59</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="game_8c_afd0c88e07a242a8c3082ecdfc66a8ff3_icgraph.png" border="0" usemap="#agame_8c_afd0c88e07a242a8c3082ecdfc66a8ff3_icgraph" alt=""/></div>
+<map name="agame_8c_afd0c88e07a242a8c3082ecdfc66a8ff3_icgraph" id="agame_8c_afd0c88e07a242a8c3082ecdfc66a8ff3_icgraph">
+<area shape="rect" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="546,5,644,32"/>
+<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="447,5,498,32"/>
+<area shape="poly" title=" " alt="" coords="531,21,498,21,498,16,531,16"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="431,21,399,21,399,16,431,16"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
+<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
@@ -375,21 +504,28 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 勝利したかどうか </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int 勝者がいる場合は、勝者側を返す。いない場合はFalse </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00058">58</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game_8c_source.html#l00077">77</a> of file <a class="el" href="game_8c_source.html">game.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="game_8c_a8700dfc16655e8e84138731f440fea48_icgraph.png" border="0" usemap="#agame_8c_a8700dfc16655e8e84138731f440fea48_icgraph" alt=""/></div>
 <map name="agame_8c_a8700dfc16655e8e84138731f440fea48_icgraph" id="agame_8c_a8700dfc16655e8e84138731f440fea48_icgraph">
-<area shape="rect" title="勝敗判定" alt="" coords="338,5,483,32"/>
-<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="239,5,290,32"/>
-<area shape="poly" title=" " alt="" coords="323,21,290,21,290,16,323,16"/>
-<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="103,5,191,32"/>
-<area shape="poly" title=" " alt="" coords="223,21,191,21,191,16,223,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="勝敗判定" alt="" coords="555,31,699,57"/>
+<area shape="rect" href="game_8c.html#a12f3e530c2aa129d300511879650ea51" title="ゲームの終了判定" alt="" coords="310,5,408,32"/>
+<area shape="poly" title=" " alt="" coords="539,38,408,26,408,21,540,33"/>
+<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="456,56,507,83"/>
+<area shape="poly" title=" " alt="" coords="540,62,508,68,507,62,540,57"/>
+<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,31,262,57"/>
+<area shape="poly" title=" " alt="" coords="295,33,263,40,262,34,294,28"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,31,141,57"/>
+<area shape="poly" title=" " alt="" coords="173,47,141,47,141,41,173,41"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="315,56,403,83"/>
+<area shape="poly" title=" " alt="" coords="440,72,404,72,404,67,440,67"/>
+<area shape="poly" title=" " alt="" coords="299,61,262,54,263,48,300,55"/>
 </map>
 </div>
 
