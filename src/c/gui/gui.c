@@ -29,7 +29,7 @@
  * @return int 完了コード
  */
 static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
-    if(argc != 1){
+    if(argc != 2){
         char *retmsg = "argument:error";
         Tcl_SetResult(interp, retmsg, TCL_VOLATILE);
         printf("command: error\n");

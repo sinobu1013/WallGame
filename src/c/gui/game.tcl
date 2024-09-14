@@ -8,33 +8,36 @@ set turn_text_x [expr $canvas_size + ($game_info_size / 2)]
 set turn_text_y 25
 .board create text $turn_text_x $turn_text_y -text "GAME START" -tags turn -font {{ＭＳ 明朝} 20}
 
+set button_value 0
+
 set button_font {{ＭＳ 明朝} 20}
 set button_w 6
 set up_button_x [expr $canvas_size + ($game_info_size / 2)]
 set up_button_y [expr $canvas_size / 2 - 50]
-set up_button [button .up_Button -text "UP" -width $button_w -bg red -font $button_font]
+set up_button [button .up_Button -text "UP" -width $button_w -bg red -font $button_font -command "push_button 1"]
 .board create window $up_button_x $up_button_y -window $up_button
 set left_button_x [expr $canvas_size + ($game_info_size / 2) -50]
 set left_button_y [expr $canvas_size / 2 - 50 + 50]
-set left_button [button .left_Button -text "LEFT" -width $button_w -bg red -font $button_font]
+set left_button [button .left_Button -text "LEFT" -width $button_w -bg red -font $button_font -command "push_button 4"]
 .board create window $left_button_x $left_button_y -window $left_button
 set right_button_x [expr $canvas_size + ($game_info_size / 2) + 50]
 set right_button_y [expr $canvas_size / 2 - 50 + 50]
-set right_button [button .right_Button -text "LEFT" -width $button_w -bg red -font $button_font]
+set right_button [button .right_Button -text "LEFT" -width $button_w -bg red -font $button_font -command "push_button 3"]
 .board create window $right_button_x $right_button_y -window $right_button
 set down_button_x [expr $canvas_size + ($game_info_size / 2)]
 set down_button_y [expr $canvas_size / 2 - 50 + 100]
-set down_button [button .down_Button -text "DOWN" -width $button_w -bg red -font $button_font]
+set down_button [button .down_Button -text "DOWN" -width $button_w -bg red -font $button_font -command "push_button 2"]
 .board create window $down_button_x $down_button_y -window $down_button
 
 update idletasks
 puts "up_button_size_h : [winfo height $up_button]"
 
-proc draw_board {} {
+proc draw_board {button_value} {
     set canvas_size 700
     set game_info_size 300
+    puts "button_value : $button_value"
 
-    set game_date [game_proc]
+    set game_date [game_proc $button_value]
 
     set sum_square_w  [lindex $game_date 3]
     set sum_square_h  [lindex $game_date 2]
@@ -102,4 +105,10 @@ proc draw_board {} {
 
 }
 
-draw_board
+proc push_button {n} {
+    global button_value
+    set button_value $n
+    draw_board $button_value
+}
+
+draw_board 0

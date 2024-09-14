@@ -10,12 +10,12 @@
 
 #define MOVE 0      /**< 移動 */
 #define CREATE 1    /**< 壁の設置 */
-#define STAY 2      /**< 滞在 */
+#define STAY 0      /**< 滞在 */
 
-#define UP 0        /**< 上 */
-#define DOWN 1      /**< 下 */
-#define RIGHT 2     /**< 右 */
-#define LEFT 3      /**< 左 */
+#define UP 1        /**< 上 */
+#define DOWN 2      /**< 下 */
+#define RIGHT 3     /**< 右 */
+#define LEFT 4      /**< 左 */
 
 #define WIN 999     /**< 勝利 */
 #define WHITE_WIN WIN + WHITE_PLAYER    /**< 白の勝利 */
