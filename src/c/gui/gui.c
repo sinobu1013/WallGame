@@ -29,7 +29,6 @@
  * @return int 完了コード
  */
 static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
-
     if(argc != 1){
         char *retmsg = "argument:error";
         Tcl_SetResult(interp, retmsg, TCL_VOLATILE);
@@ -97,8 +96,8 @@ int game_conversion(const GAME_DATE game_date, int *date){
  */
 void gui_main(Tcl_Interp *interp){
     static GAME_DATE game_date;
-    static int count = 0;
     static int date[DATE] = {0};
+    static int count = 0;
 
     if(!count)
         init(&game_date);
@@ -110,14 +109,15 @@ void gui_main(Tcl_Interp *interp){
     
     printf("game date number : %d\n",game_conversion(game_date, date));
     
-    game_main(&game_date, activity);
+    if(!end_decision(game_date))
+        game_main(&game_date, activity);
     display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
 
     //game_free(&game_date);
-    count++;
-    printf("%d\n",count);
-    if(count == 10) game_free(&game_date);
+    printf("turn : %d\n",game_date.turn);
+    //if(count == 10) game_free(&game_date);
     int i;
+    count++;
 
     Tcl_CreateObjCommand(interp, "game_proc", proc, (ClientData)date, NULL);
 }

@@ -72,13 +72,29 @@ int player_check(POINT point, const GAME_DATE game_date){
  * @brief 勝敗判定
  * 
  * @param game_date ゲーム情報
- * @return int 勝利したかどうか
+ * @return int 勝者がいる場合は、勝者側を返す。いない場合はFalse
  */
 int win_or_loss_decision(GAME_DATE game_date){
-    if(game_date.player[game_date.main_player].goal_h == game_date.player[game_date.main_player].position.y)
-        return True;
+    if(game_date.player[game_date.main_player].goal_h == game_date.player[game_date.main_player].position.y) // 自分の勝敗判定
+        return WHITE_WIN;
+    if(game_date.player[BLACK_PLAYER].goal_h == game_date.player[BLACK_PLAYER].position.y)  // 相手の勝敗判定
+        return BLACK_PLAYER;
     return False;
 }
+
+
+/**
+ * @brief ゲームの終了判定
+ * 
+ * @param game_date ゲーム情報
+ * @return int ゲーム終了ならTrue、まだ続くならFalse
+ */
+int end_decision(const GAME_DATE game_date){
+    if(win_or_loss_decision(game_date)) return True;  // 勝敗判定
+    if(game_date.turn == SUM_TURN) return True;  // ターン判定
+    return False;
+}
+
 
 /**
  * @brief プレイヤーの移動関数

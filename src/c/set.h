@@ -1,7 +1,7 @@
 #ifndef SET_H 
 #define SET_H
 
-#define SUM_CELL_W 9    /**< 横のマスの数 */
+#define SUM_CELL_W 8    /**< 横のマスの数 */
 #define SUM_CELL_H 8    /**< 縦のマスの数 */
 
 #define SPACE 0         /**< 空白 */
@@ -18,6 +18,8 @@
 #define LEFT 3      /**< 左 */
 
 #define WIN 999     /**< 勝利 */
+#define WHITE_WIN WIN + WHITE_PLAYER    /**< 白の勝利 */
+#define BLACK_WIN WIN + BLACK_PLAYER    /**< 黒の勝利 */
 #define WALL_SUM_NUMBER 5   /**< 壁の枚数（初期値） */
 #define SUM_PLAYER_NUMBER 2 /**< プレイヤー数 */
 
@@ -26,6 +28,8 @@
 #define True 1
 #define False 0
 #define DATE 200
+
+#define SUM_TURN 30
 
 /**
  * @brief 座標表示
