@@ -1,28 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title="main関数" alt="" coords="5,107,55,133"/>
-<area shape="rect" id="Node000002" href="$gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,107,141,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,117,87,117,87,123,55,123"/>
-<area shape="rect" id="Node000003" href="$gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,107,262,133"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,117,173,117,173,123,141,123"/>
-<area shape="rect" id="Node000004" href="$print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc" title="2次元半列をコンソールに表示" alt="" coords="322,5,420,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="240,104,309,48,327,37,330,42,312,53,243,108"/>
-<area shape="rect" id="Node000005" href="$game_8c.html#a12f3e530c2aa129d300511879650ea51" title="ゲームの終了判定" alt="" coords="480,56,577,83"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="262,105,310,92,390,79,464,71,464,76,390,84,311,97,263,110"/>
-<area shape="rect" id="Node000007" href="$gui_8c.html#acbf1fc7b7e24f2736178e5acefa95a11" title="tclファイルに送信するデータを作成" alt="" coords="310,107,432,133"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="263,117,295,117,295,123,263,123"/>
-<area shape="rect" id="Node000008" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="327,157,415,184"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="264,130,317,149,316,154,262,135"/>
-<area shape="rect" id="Node000013" href="$init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5" title="ゲームの初期化（メイン）" alt="" coords="352,208,390,235"/>
-<area shape="poly" id="edge13_Node000003_Node000013" title=" " alt="" coords="241,132,272,162,312,194,338,207,336,212,309,198,268,166,238,136"/>
-<area shape="rect" id="Node000006" href="$game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="625,56,769,83"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="577,67,610,67,610,72,577,72"/>
-<area shape="rect" id="Node000009" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="503,157,554,184"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="416,168,487,168,487,173,416,173"/>
-<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="542,155,577,124,624,92,635,87,637,91,626,97,581,128,545,159"/>
-<area shape="rect" id="Node000010" href="$game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="644,107,751,133"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="554,161,635,136,636,141,555,166"/>
-<area shape="rect" id="Node000011" href="$game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="645,157,750,184"/>
-<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="555,168,629,168,629,173,555,173"/>
-<area shape="rect" id="Node000012" href="$game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="648,208,746,235"/>
-<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="555,176,636,200,635,205,554,181"/>
+<area shape="rect" id="Node000001" title="main関数" alt="" coords="5,5,55,32"/>
+<area shape="rect" id="Node000002" href="$gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,16,87,16,87,21,55,21"/>
 </map>

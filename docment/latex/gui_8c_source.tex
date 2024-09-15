@@ -20,112 +20,118 @@
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}command:\ error\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TCL\_ERROR;}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00037}00037\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ *list\ =\ (\textcolor{keywordtype}{int}\ *)ClientData;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(list\ ==\ NULL)\ printf(\textcolor{stringliteral}{"{}\(\backslash\)nyabai\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00041}00041\ \ \ \ \ Tcl\_Obj\ *listObj\ =\ Tcl\_NewListObj(0,\ NULL);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}})\ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ list[i]);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}})\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ Tcl\_ListObjAppendElement(interp,\ listObj,\ Tcl\_NewIntObj(list[i]));}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00046}00046\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\_main}}(interp);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00050}00050\ \ \ \ \ Tcl\_SetObjResult(interp,\ listObj);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ TCL\_OK;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ 引数からデータを取り出す}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{int}\ action\ =\ \mbox{\hyperlink{set_8h_a4ec2744aad7c39b26ee68b61c87f5220}{STAY}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00041}00041\ \ \ \ \ Tcl\_GetIntFromObj(interp,\ argv[1],\ \&action);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ *date\ =\ \mbox{\hyperlink{gui_8c_aad906cad8d5a8d0970780267bed9afaf}{gui\_main}}(interp,\ action);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ *list\ =\ date;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}(list\ ==\ NULL)\ printf(\textcolor{stringliteral}{"{}\(\backslash\)nyabai\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00046}00046\ \ \ \ \ Tcl\_Obj\ *listObj\ =\ Tcl\_NewListObj(0,\ NULL);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}})\ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ list[i]);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}})\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ Tcl\_ListObjAppendElement(interp,\ listObj,\ Tcl\_NewIntObj(list[i]));}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00053}00053\ \ \ \ \ Tcl\_SetObjResult(interp,\ listObj);}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00062}\mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{00062}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{game\_conversion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ *date)\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{int}\ y,\ x;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00065}00065\ \ \ \ \ date[0]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_aaefa47f4fdf865c2358c22b542a993e4}{turn}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00066}00066\ \ \ \ \ date[1]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00067}00067\ \ \ \ \ date[2]\ =\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00068}00068\ \ \ \ \ date[3]\ =\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00069}00069\ \ \ \ \ date[4]\ =\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}})\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 5]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 6]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 7]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a590ec5341899a975ef548c82605cb658}{wall\_num}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00074}00074\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00075}00075\ \ \ \ \ date[3\ *\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}}\ +\ 5]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a612c322c12531171d00039aba30a275a}{num\_wall}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ 3\ *\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}}\ +\ 6;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(y,\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}}+1)\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(x,\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}})\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ date[num]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_ae0f7d2f4684b0e19e1f4a347e3ff46a2}{wall\_h}}[y][x];}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ num++;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00082}00082\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(y,\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}})\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(x,\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}}\ +\ 1)\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ date[num]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a5c4f26d29038f2cf492a36a08d4e6e62}{wall\_w}}[y][x];}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ num++;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00088}00088\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ num;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00090}00090\ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00097}\mbox{\hyperlink{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\_main}}(Tcl\_Interp\ *interp)\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00099}00099\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ date[\mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}}]\ =\ \{0\};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00100}00100\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ count\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{if}(!count)}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_aa0ebe7a80a7886951288e41439bd9ce5}{init}}(\&game\_date);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00104}00104\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00105}00105\ \ \ \ \ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}}\ =\ \mbox{\hyperlink{set_8h_a27d423ce517555d16c00a82c40806c25}{WHITE\_PLAYER}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{struct_activity}{ACT}}\ activity;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00107}00107\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ac765329451135abec74c45e1897abf26}{type}}\ =\ \mbox{\hyperlink{set_8h_a2acdc4aa0f128c9b2788707db3e6935e}{MOVE}};}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00108}00108\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ae9ba364c0145d7a82155e034f355635f}{move}}\ =\ \mbox{\hyperlink{set_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ TCL\_OK;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00065}\mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{00065}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{game\_conversion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ *date)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{int}\ y,\ x;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00068}00068\ \ \ \ \ date[0]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_aaefa47f4fdf865c2358c22b542a993e4}{turn}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00069}00069\ \ \ \ \ date[1]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00070}00070\ \ \ \ \ date[2]\ =\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00071}00071\ \ \ \ \ date[3]\ =\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00072}00072\ \ \ \ \ date[4]\ =\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}})\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 5]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 6]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ date[i\ *\ 3\ +\ 7]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i+1].\mbox{\hyperlink{struct_player_a590ec5341899a975ef548c82605cb658}{wall\_num}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00078}00078\ \ \ \ \ date[3\ *\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}}\ +\ 5]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a612c322c12531171d00039aba30a275a}{num\_wall}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ 3\ *\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}}\ +\ 6;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(y,\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}}+1)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(x,\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}})\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ date[num]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_ae0f7d2f4684b0e19e1f4a347e3ff46a2}{wall\_h}}[y][x];}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ num++;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(y,\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}})\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(x,\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}}\ +\ 1)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ date[num]\ =\ game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a5c4f26d29038f2cf492a36a08d4e6e62}{wall\_w}}[y][x];}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ num++;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ num;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00102}\mbox{\hyperlink{gui_8c_aad906cad8d5a8d0970780267bed9afaf}{00102}}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{gui_8c_aad906cad8d5a8d0970780267bed9afaf}{gui\_main}}(Tcl\_Interp\ *interp,\ \textcolor{keywordtype}{int}\ action)\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ date[\mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}}]\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00105}00105\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}(!count)}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_aa0ebe7a80a7886951288e41439bd9ce5}{init}}(\&game\_date);}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00109}00109\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00110}00110\ \ \ \ \ printf(\textcolor{stringliteral}{"{}game\ date\ number\ :\ \%d\(\backslash\)n"{}},\mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{game\_conversion}}(game\_date,\ date));}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00111}00111\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{game_8c_a12f3e530c2aa129d300511879650ea51}{end\_decision}}(game\_date))}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d}{game\_main}}(\&game\_date,\ activity);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{print__value_8c_aaefd78200bfd4f13ca59f2c02529bdfc}{display\_table}}(game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a09025d453eae0b3b054c61717362ebfc}{player}},\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}},\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}});}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00116}00116\ \ \ \ \ \textcolor{comment}{//game\_free(\&game\_date);}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00117}00117\ \ \ \ \ printf(\textcolor{stringliteral}{"{}turn\ :\ \%d\(\backslash\)n"{}},game\_date.\mbox{\hyperlink{struct_game_date_aaefa47f4fdf865c2358c22b542a993e4}{turn}});}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00118}00118\ \ \ \ \ \textcolor{comment}{//if(count\ ==\ 10)\ game\_free(\&game\_date);}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00119}00119\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00120}00120\ \ \ \ \ count++;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00121}00121\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00122}00122\ \ \ \ \ Tcl\_CreateObjCommand(interp,\ \textcolor{stringliteral}{"{}game\_proc"{}},\ proc,\ (ClientData)date,\ NULL);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00123}00123\ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00124}00124\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00131}\mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{00131}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{gui}}()\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00132}00132\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ gui}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00134}00134\ \ \ \ \ Tcl\_Interp\ *interp\ =\ Tcl\_CreateInterp();\ \ \textcolor{comment}{//\ インタプリタを作成}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00135}00135\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_Init(interp)\ ==\ TCL\_ERROR)\{\ \ \ \textcolor{comment}{//\ tclを初期化（スタンダードライブラリinit.tclをロード）}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Interpreter\ initialization\ fails\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00140}00140\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00110}00110\ \ \ \ \ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}}\ =\ \mbox{\hyperlink{set_8h_a27d423ce517555d16c00a82c40806c25}{WHITE\_PLAYER}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{struct_activity}{ACT}}\ activity;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00112}00112\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ac765329451135abec74c45e1897abf26}{type}}\ =\ \mbox{\hyperlink{set_8h_a2acdc4aa0f128c9b2788707db3e6935e}{MOVE}};}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00113}00113\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ae9ba364c0145d7a82155e034f355635f}{move}}\ =\ action;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{game_8c_a12f3e530c2aa129d300511879650ea51}{end\_decision}}(game\_date))}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d}{game\_main}}(\&game\_date,\ activity);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00117}00117\ \ \ \ \ \mbox{\hyperlink{print__value_8c_aaefd78200bfd4f13ca59f2c02529bdfc}{display\_table}}(game\_date.\mbox{\hyperlink{struct_game_date_a6d7928635054e378da8fea2722146c00}{board}}.\mbox{\hyperlink{struct_board_a09025d453eae0b3b054c61717362ebfc}{player}},\ \mbox{\hyperlink{set_8h_ab35a4d0b09725becad04719feaeb4204}{SUM\_CELL\_H}},\ \mbox{\hyperlink{set_8h_aafbd7073c46e2b8c686c35bb70b08116}{SUM\_CELL\_W}});}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00119}00119\ \ \ \ \ printf(\textcolor{stringliteral}{"{}game\ date\ number\ :\ \%d\(\backslash\)n"{}},\mbox{\hyperlink{gui_8c_acbf1fc7b7e24f2736178e5acefa95a11}{game\_conversion}}(game\_date,\ date));}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//game\_free(\&game\_date);}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00122}00122\ \ \ \ \ printf(\textcolor{stringliteral}{"{}turn\ :\ \%d\(\backslash\)n"{}},game\_date.\mbox{\hyperlink{struct_game_date_aaefa47f4fdf865c2358c22b542a993e4}{turn}});}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00123}00123\ \ \ \ \ \textcolor{comment}{//if(count\ ==\ 10)\ game\_free(\&game\_date);}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00125}00125\ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00127}00127\ \ \ \ \ Tcl\_CreateObjCommand(interp,\ \textcolor{stringliteral}{"{}game\_proc"{}},\ proc,\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{return}\ date;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00137}\mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{00137}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gui_8c_a3ce77eece6653ebcb6f1e59c36030b13}{gui}}()\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00139}00139\ \ \ \ \ \textcolor{comment}{//\ gui}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00140}00140\ \ \ \ \ Tcl\_Interp\ *interp\ =\ Tcl\_CreateInterp();\ \ \textcolor{comment}{//\ インタプリタを作成}}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00141}00141\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{if}(Tk\_Init(interp)\ ==\ TCL\_ERROR)\ \{\ \ \textcolor{comment}{//\ tkを初期化（ＧＵＩライブラリをロード）}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_Init(interp)\ ==\ TCL\_ERROR)\{\ \ \ \textcolor{comment}{//\ tclを初期化（スタンダードライブラリinit.tclをロード）}}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GUI\ initialization\ fails\ :\ \%s\(\backslash\)n\ "{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Interpreter\ initialization\ fails\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00146}00146\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{gui_8c_source_l00147}00147\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00148}00148\ \ \ \ \ \mbox{\hyperlink{gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\_main}}(interp);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00149}00149\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_EvalFile(interp,\ \textcolor{stringliteral}{"{}./src/c/gui/game.tcl"{}})\ ==\ TCL\_ERROR)\{\ \ \textcolor{comment}{//\ インタプリタを実行}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00152}00152\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Execution\ Failure:\ Error\ Description\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00154}00154\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}success!\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00157}00157\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00159}00159\ \ \ \ \ Tk\_MainLoop();}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00160}00160\ \ \ \ \ Tcl\_DeleteInterp(interp);\ \ \textcolor{comment}{//\ インタプリタを片付ける}}
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{gui_8c_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00148}00148\ \ \ \ \ \textcolor{keywordflow}{if}(Tk\_Init(interp)\ ==\ TCL\_ERROR)\ \{\ \ \textcolor{comment}{//\ tkを初期化（ＧＵＩライブラリをロード）}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GUI\ initialization\ fails\ :\ \%s\(\backslash\)n\ "{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00152}00152\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00154}00154\ \ \ \ \ \textcolor{comment}{//gui\_main(interp,\ STAY);}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00155}00155\ \ \ \ \ Tcl\_CreateObjCommand(interp,\ \textcolor{stringliteral}{"{}game\_proc"{}},\ proc,\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00158}00158\ \ \ \ \ \textcolor{keywordflow}{if}(Tcl\_EvalFile(interp,\ \textcolor{stringliteral}{"{}./src/c/gui/game.tcl"{}})\ ==\ TCL\_ERROR)\{\ \ \textcolor{comment}{//\ インタプリタを実行}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);\ \ \textcolor{comment}{//\ エラーメッセージを取得}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00160}00160\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Execution\ Failure:\ Error\ Description\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00162}00162\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *errmsg\ =\ Tcl\_GetStringResult(interp);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}success!\ :\ \%s\(\backslash\)n"{}},\ errmsg);}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00167}00167\ \ \ \ \ Tk\_MainLoop();}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00168}00168\ \ \ \ \ Tcl\_DeleteInterp(interp);\ \ \textcolor{comment}{//\ インタプリタを片付ける}}
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{gui_8c_source_l00170}00170\ \}}
 
 \end{DoxyCode}

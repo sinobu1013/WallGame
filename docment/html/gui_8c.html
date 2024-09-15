@@ -147,9 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acbf1fc7b7e24f2736178e5acefa95a11" id="r_acbf1fc7b7e24f2736178e5acefa95a11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbf1fc7b7e24f2736178e5acefa95a11">game_conversion</a> (const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_date, int *date)</td></tr>
 <tr class="memdesc:acbf1fc7b7e24f2736178e5acefa95a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">tclファイルに送信するデータを作成  <br /></td></tr>
 <tr class="separator:acbf1fc7b7e24f2736178e5acefa95a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e42046dc1f8d765ed582fe0e8f3c35" id="r_ad2e42046dc1f8d765ed582fe0e8f3c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2e42046dc1f8d765ed582fe0e8f3c35">gui_main</a> (Tcl_Interp *interp)</td></tr>
-<tr class="memdesc:ad2e42046dc1f8d765ed582fe0e8f3c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームを進める関数  <br /></td></tr>
-<tr class="separator:ad2e42046dc1f8d765ed582fe0e8f3c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad906cad8d5a8d0970780267bed9afaf" id="r_aad906cad8d5a8d0970780267bed9afaf"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad906cad8d5a8d0970780267bed9afaf">gui_main</a> (Tcl_Interp *interp, int action)</td></tr>
+<tr class="memdesc:aad906cad8d5a8d0970780267bed9afaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームを進める関数  <br /></td></tr>
+<tr class="separator:aad906cad8d5a8d0970780267bed9afaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ce77eece6653ebcb6f1e59c36030b13" id="r_a3ce77eece6653ebcb6f1e59c36030b13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce77eece6653ebcb6f1e59c36030b13">gui</a> ()</td></tr>
 <tr class="memdesc:a3ce77eece6653ebcb6f1e59c36030b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">guiを表示する（メイン）  <br /></td></tr>
 <tr class="separator:a3ce77eece6653ebcb6f1e59c36030b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,19 +192,15 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int データの要素数 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00062">62</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00065">65</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gui_8c_acbf1fc7b7e24f2736178e5acefa95a11_icgraph.png" border="0" usemap="#agui_8c_acbf1fc7b7e24f2736178e5acefa95a11_icgraph" alt=""/></div>
 <map name="agui_8c_acbf1fc7b7e24f2736178e5acefa95a11_icgraph" id="agui_8c_acbf1fc7b7e24f2736178e5acefa95a11_icgraph">
-<area shape="rect" title="tclファイルに送信するデータを作成" alt="" coords="310,5,432,32"/>
-<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
-<area shape="poly" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
-<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
-<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" title="tclファイルに送信するデータを作成" alt="" coords="127,5,248,32"/>
+<area shape="rect" href="gui_8c.html#aad906cad8d5a8d0970780267bed9afaf" title="ゲームを進める関数" alt="" coords="5,5,79,32"/>
+<area shape="poly" title=" " alt="" coords="111,21,79,21,79,16,111,16"/>
 </map>
 </div>
 
@@ -234,38 +230,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int エラーの場合、-1を返す </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00131">131</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="gui_8c_a3ce77eece6653ebcb6f1e59c36030b13_cgraph.png" border="0" usemap="#agui_8c_a3ce77eece6653ebcb6f1e59c36030b13_cgraph" alt=""/></div>
-<map name="agui_8c_a3ce77eece6653ebcb6f1e59c36030b13_cgraph" id="agui_8c_a3ce77eece6653ebcb6f1e59c36030b13_cgraph">
-<area shape="rect" title="guiを表示する（メイン）" alt="" coords="5,107,44,133"/>
-<area shape="rect" href="gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="92,107,165,133"/>
-<area shape="poly" title=" " alt="" coords="44,117,76,117,76,123,44,123"/>
-<area shape="rect" href="print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc" title="2次元半列をコンソールに表示" alt="" coords="225,5,322,32"/>
-<area shape="poly" title=" " alt="" coords="143,104,212,48,229,37,232,42,215,53,146,108"/>
-<area shape="rect" href="game_8c.html#a12f3e530c2aa129d300511879650ea51" title="ゲームの終了判定" alt="" coords="382,56,480,83"/>
-<area shape="poly" title=" " alt="" coords="165,105,213,92,292,79,366,71,367,76,293,84,214,97,166,110"/>
-<area shape="rect" href="gui_8c.html#acbf1fc7b7e24f2736178e5acefa95a11" title="tclファイルに送信するデータを作成" alt="" coords="213,107,334,133"/>
-<area shape="poly" title=" " alt="" coords="165,117,198,117,198,123,165,123"/>
-<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="230,157,318,184"/>
-<area shape="poly" title=" " alt="" coords="166,130,220,149,218,154,164,135"/>
-<area shape="rect" href="init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5" title="ゲームの初期化（メイン）" alt="" coords="255,208,293,235"/>
-<area shape="poly" title=" " alt="" coords="144,132,175,162,215,194,241,207,239,212,212,198,171,166,140,136"/>
-<area shape="rect" href="game_8c.html#a8700dfc16655e8e84138731f440fea48" title="勝敗判定" alt="" coords="528,56,672,83"/>
-<area shape="poly" title=" " alt="" coords="480,67,512,67,512,72,480,72"/>
-<area shape="rect" href="game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="405,157,457,184"/>
-<area shape="poly" title=" " alt="" coords="319,168,390,168,390,173,319,173"/>
-<area shape="poly" title=" " alt="" coords="444,155,480,124,526,92,538,87,540,91,529,97,483,128,448,159"/>
-<area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="546,107,654,133"/>
-<area shape="poly" title=" " alt="" coords="456,161,537,136,539,141,458,166"/>
-<area shape="rect" href="game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="547,157,653,184"/>
-<area shape="poly" title=" " alt="" coords="457,168,532,168,532,173,457,173"/>
-<area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="551,208,649,235"/>
-<area shape="poly" title=" " alt="" coords="458,176,539,200,537,205,456,181"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00137">137</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -279,17 +244,21 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad2e42046dc1f8d765ed582fe0e8f3c35" name="ad2e42046dc1f8d765ed582fe0e8f3c35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2e42046dc1f8d765ed582fe0e8f3c35">&#9670;&#160;</a></span>gui_main()</h2>
+<a id="aad906cad8d5a8d0970780267bed9afaf" name="aad906cad8d5a8d0970780267bed9afaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad906cad8d5a8d0970780267bed9afaf">&#9670;&#160;</a></span>gui_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gui_main </td>
+          <td class="memname">int * gui_main </td>
           <td>(</td>
-          <td class="paramtype">Tcl_Interp *</td>          <td class="paramname"><span class="paramname"><em>interp</em></span></td><td>)</td>
+          <td class="paramtype">Tcl_Interp *</td>          <td class="paramname"><span class="paramname"><em>interp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -298,16 +267,18 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">interp</td><td>インタプリタ </td></tr>
+    <tr><td class="paramname">action</td><td>行動（tclからの返却値） </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>int ゲーム情報を配列に変換して返却 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00097">97</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gui_8c_source.html#l00102">102</a> of file <a class="el" href="gui_8c_source.html">gui.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph.png" border="0" usemap="#agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph" alt=""/></div>
-<map name="agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph" id="agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph">
+<div class="center"><img src="gui_8c_aad906cad8d5a8d0970780267bed9afaf_cgraph.png" border="0" usemap="#agui_8c_aad906cad8d5a8d0970780267bed9afaf_cgraph" alt=""/></div>
+<map name="agui_8c_aad906cad8d5a8d0970780267bed9afaf_cgraph" id="agui_8c_aad906cad8d5a8d0970780267bed9afaf_cgraph">
 <area shape="rect" title="ゲームを進める関数" alt="" coords="5,107,79,133"/>
 <area shape="rect" href="print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc" title="2次元半列をコンソールに表示" alt="" coords="139,5,236,32"/>
 <area shape="poly" title=" " alt="" coords="56,104,125,48,143,37,146,42,128,53,60,108"/>
@@ -330,18 +301,6 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="371,168,445,168,445,173,371,173"/>
 <area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="464,208,563,235"/>
 <area shape="poly" title=" " alt="" coords="372,176,453,200,451,205,370,181"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="gui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph.png" border="0" usemap="#agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph" alt=""/></div>
-<map name="agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph" id="agui_8c_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph">
-<area shape="rect" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
-<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
-<area shape="poly" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
-<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>
 </div>
 

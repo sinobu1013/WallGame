@@ -1,13 +1,9 @@
 <map id="outside_player" name="outside_player">
-<area shape="rect" id="Node000001" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="546,5,651,32"/>
-<area shape="rect" id="Node000002" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="447,5,498,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="531,21,498,21,498,16,531,16"/>
-<area shape="rect" id="Node000003" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="310,5,399,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,21,399,21,399,16,431,16"/>
-<area shape="rect" id="Node000004" href="$gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35" title="ゲームを進める関数" alt="" coords="189,5,262,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="295,21,263,21,263,16,295,16"/>
-<area shape="rect" id="Node000005" href="$gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
-<area shape="rect" id="Node000006" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000001" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="362,5,468,32"/>
+<area shape="rect" id="Node000002" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="263,5,314,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,21,315,21,315,16,347,16"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="127,5,215,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,21,215,21,215,16,247,16"/>
+<area shape="rect" id="Node000004" href="$gui_8c.html#aad906cad8d5a8d0970780267bed9afaf" title="ゲームを進める関数" alt="" coords="5,5,79,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,21,79,21,79,16,111,16"/>
 </map>

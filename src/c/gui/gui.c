@@ -97,6 +97,7 @@ int game_conversion(const GAME_DATE game_date, int *date){
  * 
  * @param interp インタプリタ
  * @param action 行動（tclからの返却値）
+ * @return int ゲーム情報を配列に変換して返却
  */
 int *gui_main(Tcl_Interp *interp, int action){
     static GAME_DATE game_date;

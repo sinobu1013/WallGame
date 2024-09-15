@@ -102,13 +102,15 @@ $(function(){initNavTree('gui_8h_source.html',''); initResizable(true); });
 <a href="gui_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GUI_H </span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GUI_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keywordtype">void</span> <a class="code hl_function" href="gui_8h.html#ad2e42046dc1f8d765ed582fe0e8f3c35">gui_main</a>(Tcl_Interp *interp);</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">static</span> <span class="keywordtype">int</span> proc(ClientData ClientData, Tcl_Interp *interp, <span class="keywordtype">int</span> argc, Tcl_Obj *<span class="keyword">const</span> argv[]);</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">int</span> <a class="code hl_function" href="gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a>();</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">int</span> *<a class="code hl_function" href="gui_8h.html#aad906cad8d5a8d0970780267bed9afaf">gui_main</a>(Tcl_Interp *interp, <span class="keywordtype">int</span> action);</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agui_8h_html_a3ce77eece6653ebcb6f1e59c36030b13"><div class="ttname"><a href="gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a></div><div class="ttdeci">int gui()</div><div class="ttdoc">guiを表示する（メイン）</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00131">gui.c:131</a></div></div>
-<div class="ttc" id="agui_8h_html_ad2e42046dc1f8d765ed582fe0e8f3c35"><div class="ttname"><a href="gui_8h.html#ad2e42046dc1f8d765ed582fe0e8f3c35">gui_main</a></div><div class="ttdeci">void gui_main(Tcl_Interp *interp)</div><div class="ttdoc">ゲームを進める関数</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00097">gui.c:97</a></div></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">int</span> <a class="code hl_function" href="gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agui_8h_html_a3ce77eece6653ebcb6f1e59c36030b13"><div class="ttname"><a href="gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a></div><div class="ttdeci">int gui()</div><div class="ttdoc">guiを表示する（メイン）</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00137">gui.c:137</a></div></div>
+<div class="ttc" id="agui_8h_html_aad906cad8d5a8d0970780267bed9afaf"><div class="ttname"><a href="gui_8h.html#aad906cad8d5a8d0970780267bed9afaf">gui_main</a></div><div class="ttdeci">int * gui_main(Tcl_Interp *interp, int action)</div><div class="ttdoc">ゲームを進める関数</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00102">gui.c:102</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

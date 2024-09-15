@@ -9,14 +9,10 @@ digraph "win_or_loss_decision"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="end_decision",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a12f3e530c2aa129d300511879650ea51",tooltip="ゲームの終了判定"];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="gui_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#ad2e42046dc1f8d765ed582fe0e8f3c35",tooltip="ゲームを進める関数"];
-  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="gui",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13",tooltip="guiを表示する（メイン）"];
+  Node3 [id="Node000003",label="gui_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#aad906cad8d5a8d0970780267bed9afaf",tooltip="ゲームを進める関数"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="move",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369",tooltip="プレイヤーの移動関数"];
   Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip="main関数"];
-  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="move",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369",tooltip="プレイヤーの移動関数"];
-  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="game_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d",tooltip="ゲーム進行関数（メイン）"];
-  Node7 -> Node3 [id="edge7_Node000007_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="game_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d",tooltip="ゲーム進行関数（メイン）"];
+  Node5 -> Node3 [id="edge5_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -10,7 +10,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp)
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_8h_aad906cad8d5a8d0970780267bed9afaf}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp, int action)
 \begin{DoxyCompactList}\small\item\em ゲームを進める関数 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13}{gui}} ()
 \begin{DoxyCompactList}\small\item\em guiを表示する（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -37,16 +37,8 @@ int エラーの場合、-\/1を返す
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00131}{131}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00137}{137}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -54,11 +46,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=182pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35}\index{gui.h@{gui.h}!gui\_main@{gui\_main}}
+\Hypertarget{gui_8h_aad906cad8d5a8d0970780267bed9afaf}\index{gui.h@{gui.h}!gui\_main@{gui\_main}}
 \index{gui\_main@{gui\_main}!gui.h@{gui.h}}
 \doxysubsubsection{\texorpdfstring{gui\_main()}{gui\_main()}}
-{\footnotesize\ttfamily \label{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35} 
-void gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{gui_8h_aad906cad8d5a8d0970780267bed9afaf} 
+int \texorpdfstring{$\ast$}{*} gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{, }\item[{int}]{action}{}\end{DoxyParamCaption})}
 
 
 
@@ -68,24 +60,20 @@ void gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfst
 \begin{DoxyParams}{Parameters}
 {\em interp} & インタプリタ \\
 \hline
+{\em action} & 行動（tclからの返却値） \\
+\hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int ゲーム情報を配列に変換して返却 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00097}{97}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00102}{102}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=273pt]{gui_8h_ad2e42046dc1f8d765ed582fe0e8f3c35_icgraph}
+\includegraphics[width=350pt]{gui_8h_aad906cad8d5a8d0970780267bed9afaf_cgraph}
 \end{center}
 \end{figure}
