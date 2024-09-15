@@ -22,7 +22,7 @@ set left_button [button .left_Button -text "LEFT" -width $button_w -bg red -font
 .board create window $left_button_x $left_button_y -window $left_button
 set right_button_x [expr $canvas_size + ($game_info_size / 2) + 50]
 set right_button_y [expr $canvas_size / 2 - 50 + 50]
-set right_button [button .right_Button -text "LEFT" -width $button_w -bg red -font $button_font -command "push_button 3"]
+set right_button [button .right_Button -text "RIGHT" -width $button_w -bg red -font $button_font -command "push_button 3"]
 .board create window $right_button_x $right_button_y -window $right_button
 set down_button_x [expr $canvas_size + ($game_info_size / 2)]
 set down_button_y [expr $canvas_size / 2 - 50 + 100]

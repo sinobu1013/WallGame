@@ -35,8 +35,13 @@ static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *co
         printf("command: error\n");
         return TCL_ERROR;
     }
+    
+    // 引数からデータを取り出す
+    int action = STAY;
+    Tcl_GetIntFromObj(interp, argv[1], &action);
+    int *date = gui_main(interp, action);
 
-    int *list = (int *)ClientData;
+    int *list = date;
     if(list == NULL) printf("\nyabai\n");
     Tcl_Obj *listObj = Tcl_NewListObj(0, NULL);
     int i;
@@ -44,8 +49,6 @@ static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *co
     rep(i, DATE){
         Tcl_ListObjAppendElement(interp, listObj, Tcl_NewIntObj(list[i]));
     }
-
-    gui_main(interp);
 
     Tcl_SetObjResult(interp, listObj);
 
@@ -93,8 +96,9 @@ int game_conversion(const GAME_DATE game_date, int *date){
  * @brief ゲームを進める関数
  * 
  * @param interp インタプリタ
+ * @param action 行動（tclからの返却値）
  */
-void gui_main(Tcl_Interp *interp){
+int *gui_main(Tcl_Interp *interp, int action){
     static GAME_DATE game_date;
     static int date[DATE] = {0};
     static int count = 0;
@@ -105,13 +109,13 @@ void gui_main(Tcl_Interp *interp){
     game_date.main_player = WHITE_PLAYER;
     ACT activity;
     activity.type = MOVE;
-    activity.move = UP;
-    
-    printf("game date number : %d\n",game_conversion(game_date, date));
-    
+    activity.move = action;
+
     if(!end_decision(game_date))
         game_main(&game_date, activity);
     display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
+
+    printf("game date number : %d\n",game_conversion(game_date, date));
 
     //game_free(&game_date);
     printf("turn : %d\n",game_date.turn);
@@ -119,7 +123,8 @@ void gui_main(Tcl_Interp *interp){
     int i;
     count++;
 
-    Tcl_CreateObjCommand(interp, "game_proc", proc, (ClientData)date, NULL);
+    Tcl_CreateObjCommand(interp, "game_proc", proc, NULL, NULL);
+    return date;
 }
 
 /**
@@ -145,7 +150,9 @@ int gui(){
         return -1;
     }
 
-    gui_main(interp);
+    //gui_main(interp, STAY);
+    Tcl_CreateObjCommand(interp, "game_proc", proc, NULL, NULL);
+
 
     if(Tcl_EvalFile(interp, "./src/c/gui/game.tcl") == TCL_ERROR){  // インタプリタを実行
         const char *errmsg = Tcl_GetStringResult(interp);  // エラーメッセージを取得

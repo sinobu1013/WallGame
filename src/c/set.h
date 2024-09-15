@@ -8,8 +8,8 @@
 #define WHITE_PLAYER 1  /**< 白のプレイヤー */
 #define BLACK_PLAYER 2  /**< 黒のプレイヤー */
 
-#define MOVE 0      /**< 移動 */
-#define CREATE 1    /**< 壁の設置 */
+#define MOVE 1      /**< 移動 */
+#define CREATE 2    /**< 壁の設置 */
 #define STAY 0      /**< 滞在 */
 
 #define UP 1        /**< 上 */

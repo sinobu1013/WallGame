@@ -20,7 +20,7 @@
  * @return POINT 座標の変化値
  */
 POINT act_conversion(int act){
-    POINT ans;
+    POINT ans = {0, 0};
     if(act == UP){
         ans.x = 0, ans.y = -1;
     }
