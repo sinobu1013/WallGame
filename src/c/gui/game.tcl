@@ -1,6 +1,7 @@
 # 初期状態でのゲーム情報の取得ができていないため、タグ名などをグローバル変数として使用できない問題が発生
 # tclファイルのリファクタリングと初期化用のコマンドの作成を行なう
 # 現状：クリックした際のタグ名取得ができていない
+# 壁設置用にブランチを切る
 set canvas_size 700
 set game_info_size 300
 
@@ -115,19 +116,6 @@ proc push_button {n} {
     draw_board $button_value
 }
 
-# クリック時のイベント関数
-bind .board <Button-1> {
-    set x %x
-    set y %y
-    set itme_id [.board find closest $x $y]
-    # 図形が存在する場合、タグを取得
-    if {$item_id ne ""} {
-        set tags [.board gettags $item_id]
-        puts "Clicked on item with tags: $tags"
-    } else {
-        puts "No item found at clicked position."
-    }
-}
 
 draw_board 0
 
