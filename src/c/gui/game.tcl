@@ -1,7 +1,3 @@
-# 初期状態でのゲーム情報の取得ができていないため、タグ名などをグローバル変数として使用できない問題が発生
-# tclファイルのリファクタリングと初期化用のコマンドの作成を行なう
-# 現状：クリックした際のタグ名取得ができていない
-# 壁設置用にブランチを切る
 set canvas_size 700
 set game_info_size 300
 
@@ -35,54 +31,87 @@ set down_button [button .down_Button -text "DOWN" -width $button_w -bg red -font
 update idletasks
 puts "up_button_size_h : [winfo height $up_button]"
 
+set game_date [game_init]
+
+set sum_square_w  [lindex $game_date 3]
+set sum_square_h  [lindex $game_date 2]
+
+puts "sum_square_w : $sum_square_w"
+
+set square_size_w [expr {int($canvas_size / $sum_square_w)}]
+set square_size_h [expr {int($canvas_size / $sum_square_h)}]
+
+for {set n 0; set y 0} {$y < $sum_square_h} {incr y} {
+
+    set xs 15
+    set ys [expr $y * $square_size_h + 10]
+    set xe $canvas_size
+    set ye [expr $y * $square_size_h + 10]
+
+    for {set x 0} {$x < $sum_square_w} {incr x} {
+        set xs [expr $x * $square_size_w + 10 + 5]
+        set ys [expr $y * $square_size_h + 10 + 5]
+        set xe [expr ($x + 1) * $square_size_w + 10 - 5]
+        set ye [expr ($y + 1) * $square_size_h + 10 - 5]
+
+        set tag_name [format "square_%d_%d" $x $y]
+
+        set i [.board create rectangle $xs $ys $xe $ye -tags $tag_name -fill green]
+
+        # 横軸方向の壁
+        if {$y != [expr $sum_square_h - 1]} {
+            set wall_tag_name [format "wall_w_%d_%d" $x $y]
+            .board create rectangle $xs $ye $xe [expr $ye + 10] -tags $wall_tag_name
+        }
+
+        # 縦軸方向の壁
+        if {$x != [expr $sum_square_w - 1]} {
+            set wall_tag_name [format "wall_h_%d_%d" $x $y]
+            .board create rectangle $xe $ys [expr $xe + 10] $ye -tags $wall_tag_name
+        }
+    }
+}
+
+pack .board
+
+set player_number [lindex $game_date 4]
+for {set i 0} {$i < $player_number} {incr i} {
+    set center_x [expr ([lindex $game_date [expr $i * 3 + 5]] + 0.5) * $square_size_w]
+    set center_y [expr ([lindex $game_date [expr $i * 3 + 6]] + 0.5) * $square_size_h]
+    set xs [expr {int($center_x - (($square_size_w * 0.8) / 2))} + 10]
+    set ys [expr {int($center_y - (($square_size_h * 0.8) / 2))} + 10]
+    set xe [expr {int($center_x + (($square_size_w * 0.8) / 2))} + 10]
+    set ye [expr {int($center_y + (($square_size_h * 0.8) / 2))} + 10]
+
+    if {$i == 0} {
+        set color "#FFFFFF"
+    } else {
+        set color "#000000"
+    }
+    .board create oval $xs $ys $xe $ye -fill $color -tags player_$i
+}
+
+pack .board
+
+.board itemconfigure turn -text "turn :[lindex $game_date 0]" -tags "turn"
+
+pack .board
+
+
+# ターンごとに実行される関数
 proc draw_board {button_value} {
     set canvas_size 700
     set game_info_size 300
-    puts "button_value : $button_value"
 
     set game_date [game_proc $button_value]
 
     set sum_square_w  [lindex $game_date 3]
     set sum_square_h  [lindex $game_date 2]
 
-    puts "sum_square_w : $sum_square_w"
-
     set square_size_w [expr {int($canvas_size / $sum_square_w)}]
     set square_size_h [expr {int($canvas_size / $sum_square_h)}]
 
-    for {set n 0; set y 0} {$y < $sum_square_h} {incr y} {
-
-        set xs 15
-        set ys [expr $y * $square_size_h + 10]
-        set xe $canvas_size
-        set ye [expr $y * $square_size_h + 10]
-
-        for {set x 0} {$x < $sum_square_w} {incr x} {
-            set xs [expr $x * $square_size_w + 10 + 5]
-            set ys [expr $y * $square_size_h + 10 + 5]
-            set xe [expr ($x + 1) * $square_size_w + 10 - 5]
-            set ye [expr ($y + 1) * $square_size_h + 10 - 5]
-
-            set tag_name [format "square_%d_%d" $x $y]
-
-            set i [.board create rectangle $xs $ys $xe $ye -tags $tag_name -fill green]
-
-            # 横軸方向の壁
-            if {$y != [expr $sum_square_h - 1]} {
-                set wall_tag_name [format "wall_%d_%d" $xs $ye]
-                .board create rectangle $xs $ye $xe [expr $ye + 10] -tags wall_tag_name
-            }
-
-            # 縦軸方向の壁
-            if {$x != [expr $sum_square_w - 1]} {
-                set wall_tag_name [format "wall_%d_%d" $xe $ys]
-                .board create rectangle $xe $ys [expr $xe + 10] $ye -tags wall_tag_name
-            }
-        }
-    }
-
     pack .board
-
     set player_number [lindex $game_date 4]
     for {set i 0} {$i < $player_number} {incr i} {
         set center_x [expr ([lindex $game_date [expr $i * 3 + 5]] + 0.5) * $square_size_w]
@@ -92,12 +121,7 @@ proc draw_board {button_value} {
         set xe [expr {int($center_x + (($square_size_w * 0.8) / 2))} + 10]
         set ye [expr {int($center_y + (($square_size_h * 0.8) / 2))} + 10]
 
-        if {$i == 0} {
-            set color "#FFFFFF"
-        } else {
-            set color "#000000"
-        }
-        .board create oval $xs $ys $xe $ye -fill $color
+        .board coords player_$i $xs $ys $xe $ye
     }
 
     pack .board
@@ -105,9 +129,6 @@ proc draw_board {button_value} {
     .board itemconfigure turn -text "turn :[lindex $game_date 0]"
 
     pack .board
-
-    #after 1000 draw_board
-
 }
 
 proc push_button {n} {
@@ -116,6 +137,19 @@ proc push_button {n} {
     draw_board $button_value
 }
 
-
-draw_board 0
-
+# クリック時のイベント関数
+bind .board <Button-1> {   
+    set x %x
+    set y %y
+    set item_id [.board find withtag current]
+    set tags [lsearch -all -inline [.board gettags $item_id] "current"]
+    puts $tags
+    .board itemconfig $tags -fill red
+    # 図形が存在する場合、タグを取得
+#    if {$item_id ne ""} {
+#        set tags [.board gettags $item_id]
+#        puts "Clicked on item with tags: $tags"
+#    } else {
+#        puts "No item found at clicked position."
+#    }
+}

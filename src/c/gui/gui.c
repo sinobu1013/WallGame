@@ -45,7 +45,40 @@ static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *co
     if(list == NULL) printf("\nyabai\n");
     Tcl_Obj *listObj = Tcl_NewListObj(0, NULL);
     int i;
-    rep(i, DATE) printf("%d ", list[i]);
+    rep(i, DATE){
+        Tcl_ListObjAppendElement(interp, listObj, Tcl_NewIntObj(list[i]));
+    }
+
+    Tcl_SetObjResult(interp, listObj);
+
+    return TCL_OK;
+}
+
+/**
+ * @brief 独自のコマンド。gui初期化用のコマンド
+ * 
+ * @param ClinetDate コマンドで使用するメモリ領域
+ * @param interp インタプリタ
+ * @param argc 引数の個数＋１
+ * @param argv 先頭は実行するコマンド、それ以降にコマンドの引数がセットされる
+ * @return int 完了コード
+ */
+static int proc_init(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
+    if(argc != 1){
+        char *retmsg = "argument:error(init)";
+        Tcl_SetResult(interp, retmsg, TCL_VOLATILE);
+        printf("command: error\n");
+        return TCL_ERROR;
+    }
+    
+    int data[DATE] = {0};
+    GAME_DATE game_data;
+    init(&game_data);
+    game_conversion(game_data, data);
+    int *list = data;
+    
+    int i;
+    Tcl_Obj *listObj = Tcl_NewListObj(0, NULL);
     rep(i, DATE){
         Tcl_ListObjAppendElement(interp, listObj, Tcl_NewIntObj(list[i]));
     }
@@ -114,13 +147,9 @@ int *gui_main(Tcl_Interp *interp, int action){
 
     if(!end_decision(game_date))
         game_main(&game_date, activity);
-    display_table(game_date.board.player, SUM_CELL_H, SUM_CELL_W);
 
-    printf("game date number : %d\n",game_conversion(game_date, date));
+    game_conversion(game_date, date);
 
-    //game_free(&game_date);
-    printf("turn : %d\n",game_date.turn);
-    //if(count == 10) game_free(&game_date);
     int i;
     count++;
 
@@ -151,7 +180,7 @@ int gui(){
         return -1;
     }
 
-    //gui_main(interp, STAY);
+    Tcl_CreateObjCommand(interp, "game_init", proc_init, NULL, NULL);
     Tcl_CreateObjCommand(interp, "game_proc", proc, NULL, NULL);
 
 
