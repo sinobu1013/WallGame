@@ -54,8 +54,8 @@ proc draw_board {button_value} {
         set xe $canvas_size
         set ye [expr $y * $square_size_h + 10]
 
-        .board create line $xs [expr $ys - 5 + $square_size_h] $xe [expr $ye - 5 + $square_size_h]
-        .board create line $xs [expr $ys + 5] $xe [expr $ye + 5]
+        #.board create line $xs [expr $ys - 5 + $square_size_h] $xe [expr $ye - 5 + $square_size_h]
+        #.board create line $xs [expr $ys + 5] $xe [expr $ye + 5]
 
         for {set x 0} {$x < $sum_square_w} {incr x} {
             set xs [expr $x * $square_size_w + 10 + 5]
@@ -71,8 +71,8 @@ proc draw_board {button_value} {
             set ys 15
             set xe [expr $x * $square_size_w + 10]
             set ye [expr $canvas_size]
-            .board create line [expr $xs - 5 + $square_size_w] $ys [expr $xe - 5 + $square_size_w] $ye
-            .board create line [expr $xs + 5] $ys [expr $xe + 5] $ye
+            #.board create line [expr $xs - 5 + $square_size_w] $ys [expr $xe - 5 + $square_size_w] $ye
+            #.board create line [expr $xs + 5] $ys [expr $xe + 5] $ye
         }
     }
 
@@ -111,4 +111,11 @@ proc push_button {n} {
     draw_board $button_value
 }
 
+# クリック時のイベント関数
+bind .board <Button-1> {
+    
+}
+
+puts [info patchlevel]
 draw_board 0
+
