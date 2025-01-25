@@ -1,4 +1,6 @@
-
+# 初期状態でのゲーム情報の取得ができていないため、タグ名などをグローバル変数として使用できない問題が発生
+# tclファイルのリファクタリングと初期化用のコマンドの作成を行なう
+# 現状：クリックした際のタグ名取得ができていない
 set canvas_size 700
 set game_info_size 300
 
@@ -54,9 +56,6 @@ proc draw_board {button_value} {
         set xe $canvas_size
         set ye [expr $y * $square_size_h + 10]
 
-        #.board create line $xs [expr $ys - 5 + $square_size_h] $xe [expr $ye - 5 + $square_size_h]
-        #.board create line $xs [expr $ys + 5] $xe [expr $ye + 5]
-
         for {set x 0} {$x < $sum_square_w} {incr x} {
             set xs [expr $x * $square_size_w + 10 + 5]
             set ys [expr $y * $square_size_h + 10 + 5]
@@ -67,12 +66,17 @@ proc draw_board {button_value} {
 
             set i [.board create rectangle $xs $ys $xe $ye -tags $tag_name -fill green]
 
-            set xs [expr $x * $square_size_w + 10]
-            set ys 15
-            set xe [expr $x * $square_size_w + 10]
-            set ye [expr $canvas_size]
-            #.board create line [expr $xs - 5 + $square_size_w] $ys [expr $xe - 5 + $square_size_w] $ye
-            #.board create line [expr $xs + 5] $ys [expr $xe + 5] $ye
+            # 横軸方向の壁
+            if {$y != [expr $sum_square_h - 1]} {
+                set wall_tag_name [format "wall_%d_%d" $xs $ye]
+                .board create rectangle $xs $ye $xe [expr $ye + 10] -tags wall_tag_name
+            }
+
+            # 縦軸方向の壁
+            if {$x != [expr $sum_square_w - 1]} {
+                set wall_tag_name [format "wall_%d_%d" $xe $ys]
+                .board create rectangle $xe $ys [expr $xe + 10] $ye -tags wall_tag_name
+            }
         }
     }
 
@@ -113,9 +117,17 @@ proc push_button {n} {
 
 # クリック時のイベント関数
 bind .board <Button-1> {
-    
+    set x %x
+    set y %y
+    set itme_id [.board find closest $x $y]
+    # 図形が存在する場合、タグを取得
+    if {$item_id ne ""} {
+        set tags [.board gettags $item_id]
+        puts "Clicked on item with tags: $tags"
+    } else {
+        puts "No item found at clicked position."
+    }
 }
 
-puts [info patchlevel]
 draw_board 0
 
