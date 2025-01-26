@@ -60,14 +60,14 @@ for {set n 0; set y 0} {$y < $sum_square_h} {incr y} {
 
         # 横軸方向の壁
         if {$y != [expr $sum_square_h - 1]} {
-            set wall_tag_name [format "wall_w_%d_%d" $x $y]
-            .board create rectangle $xs $ye $xe [expr $ye + 10] -tags $wall_tag_name
+            set wall_tag_name [format "wall_w_%d_%d wall" $x $y]
+            .board create rectangle $xs $ye $xe [expr $ye + 10] -tags $wall_tag_name -fill white
         }
 
         # 縦軸方向の壁
         if {$x != [expr $sum_square_w - 1]} {
-            set wall_tag_name [format "wall_h_%d_%d" $x $y]
-            .board create rectangle $xe $ys [expr $xe + 10] $ye -tags $wall_tag_name
+            set wall_tag_name [format "wall_h_%d_%d wall" $x $y]
+            .board create rectangle $xe $ys [expr $xe + 10] $ye -tags $wall_tag_name -fill white
         }
     }
 }
@@ -142,14 +142,11 @@ bind .board <Button-1> {
     set x %x
     set y %y
     set item_id [.board find withtag current]
-    set tags [lsearch -all -inline [.board gettags $item_id] "current"]
+    set tags [.board gettags $item_id]
     puts $tags
-    .board itemconfig $tags -fill red
-    # 図形が存在する場合、タグを取得
-#    if {$item_id ne ""} {
-#        set tags [.board gettags $item_id]
-#        puts "Clicked on item with tags: $tags"
-#    } else {
-#        puts "No item found at clicked position."
-#    }
+
+    # 特定のタグ名（"wall"）を持つか確認
+    if {[lsearch $tags "wall"] >= 0} {
+        .board itemconfig [lindex $tags 0] -fill red
+    }
 }
