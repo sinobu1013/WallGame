@@ -111,7 +111,20 @@ int move(GAME_DATE *game_date, ACT activity){
         };
     if(outside_player(move_position)) return False;     // 範囲内か判定
     if(player_check(move_position, *game_date)) return False;  // プレイヤーが有かの判定
-    // todo 壁が設置されていたら進めないの判定が必要
+    // 壁の場所をまたいで移動できないように
+    if(activity.move == UP){
+        if(game_date->board.wall_w[move_position.y][move_position.x] == WALL)
+            return False;
+    }else if(activity.move == DOWN){
+        if(game_date->board.wall_w[game_date->player[game_date->main_player].position.y][move_position.x] == WALL)
+            return False;
+    }else if(activity.move == LEFT){
+        if(game_date->board.wall_h[move_position.y][move_position.x] == WALL)
+            return False;
+    }else if(activity.move == RIGHT){
+        if(game_date->board.wall_h[move_position.y][game_date->player[game_date->main_player].position.x] == WALL)
+            return False;
+    }
 
     game_date->board.player[game_date->player[game_date->main_player].position.y][game_date->player[game_date->main_player].position.x] = SPACE;
     game_date->board.player[move_position.y][move_position.x] = game_date->main_player;
