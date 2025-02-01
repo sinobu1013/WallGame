@@ -9,10 +9,12 @@
  * 
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <tcl.h>
 #include "set.h"
 #include "./game/init.h"
 #include "./prog/print_value.h"
+#include "./prog/queue.h"
 #include "./game/game.h"
 #include "./gui/gui.h"
 
@@ -23,6 +25,24 @@
  * @return int 実行成功判定
  */
 int main(void){
-    gui();
+    // gui();
+    QUEUE queue = CreateQueue();
+    int a[N] = {0};
+    int i = 0;
+    while(1){
+        printf("%d : ", i);
+        scanf("%d", &a[i]);
+        if(a[i] == -1) break;
+        if(a[i] == 0){
+            int *x = (int*)DeQueue(&queue, sizeof(int*));
+            if(x == NULL) break;
+            printf("x : %d\n", *x);
+            free(x);
+            continue;
+        }
+        EnQueue(&queue, &a[i], sizeof(int*));
+        i++;
+    }
+    printf("end");
     return 0;
 }
