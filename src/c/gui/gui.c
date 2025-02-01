@@ -89,6 +89,33 @@ static int proc_init(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Ob
 }
 
 /**
+ * @brief 独自のコマンド。壁生成用
+ * 
+ * @param ClinetDate コマンドで使用するメモリ領域
+ * @param interp インタプリタ
+ * @param argc 引数の個数＋１
+ * @param argv 先頭は実行するコマンド、それ以降にコマンドの引数がセットされる
+ * @return int 完了コード
+ */
+static int proc_createWall(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *const argv[]){
+    if(argc != 3){
+        char *retmsg = "argument:error(init)";
+        Tcl_SetResult(interp, retmsg, TCL_VOLATILE);
+        printf("command: error\n");
+        return TCL_ERROR;
+    }
+
+    // 引数からデータを取り出す
+    char **wall_data;
+    int len = 0;
+    int i;
+    rep(i, 2){    
+        wall_data[i] = Tcl_GetStringFromObj(argv[i + 1], &len);       
+    }
+    return TCL_OK;
+}
+
+/**
  * @brief tclファイルに送信するデータを作成
  * 
  * @param game_date ゲーム情報
@@ -182,6 +209,7 @@ int gui(){
 
     Tcl_CreateObjCommand(interp, "game_init", proc_init, NULL, NULL);
     Tcl_CreateObjCommand(interp, "game_proc", proc, NULL, NULL);
+    Tcl_CreateObjCommand(interp, "create_wall", proc_createWall, NULL, NULL);
 
 
     if(Tcl_EvalFile(interp, "./src/c/gui/game.tcl") == TCL_ERROR){  // インタプリタを実行
