@@ -60,13 +60,13 @@ for {set n 0; set y 0} {$y < $sum_square_h} {incr y} {
 
         # 横軸方向の壁
         if {$y != [expr $sum_square_h - 1]} {
-            set wall_tag_name [format "wall_w_%d_%d wall" $x $y]
+            set wall_tag_name [format "wall_w_%d_%d wall_w wall" $x $y]
             .board create rectangle $xs $ye $xe [expr $ye + 10] -tags $wall_tag_name -fill white
         }
 
         # 縦軸方向の壁
         if {$x != [expr $sum_square_w - 1]} {
-            set wall_tag_name [format "wall_h_%d_%d wall" $x $y]
+            set wall_tag_name [format "wall_h_%d_%d wall_h wall" $x $y]
             .board create rectangle $xe $ys [expr $xe + 10] $ye -tags $wall_tag_name -fill white
         }
     }
@@ -138,15 +138,42 @@ proc push_button {n} {
 }
 
 # クリック時のイベント関数
-bind .board <Button-1> {   
-    set x %x
-    set y %y
+bind .board <Button-1> {
     set item_id [.board find withtag current]
     set tags [.board gettags $item_id]
     puts $tags
 
     # 特定のタグ名（"wall"）を持つか確認
     if {[lsearch $tags "wall"] >= 0} {
-        .board itemconfig [lindex $tags 0] -fill red
+        # タグをアンダースコアで分割
+
+        if {[lsearch $tags "wall_w"] >= 0} {
+            set parts [split [lindex $tags 0] "_"]
+            # 分割した結果から座標を取得
+            set xt [lindex $parts 2]
+            set yt [lindex $parts 3]
+            set xt [expr {$xt + 1}]
+            set yt [expr {$yt}]
+
+            set puls_tag_name "wall_w_$xt"
+            append puls_tag_name "_$yt"
+            puts $puls_tag_name
+            .board itemconfig [lindex $tags 0] -fill red
+            .board itemconfig $puls_tag_name -fill red
+        }
+        if {[lsearch $tags "wall_h"] >= 0} {
+            set parts [split [lindex $tags 0] "_"]
+            # 分割した結果から座標を取得
+            set xt [lindex $parts 2]
+            set yt [lindex $parts 3]
+            set xt [expr {$xt}]
+            set yt [expr {$yt + 1}]
+
+            set puls_tag_name "wall_h_$xt"
+            append puls_tag_name "_$yt"
+            puts $puls_tag_name
+            .board itemconfig [lindex $tags 0] -fill red
+            .board itemconfig $puls_tag_name -fill red
+        }
     }
 }
