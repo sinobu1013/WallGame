@@ -17,6 +17,7 @@
 #include "gui.h"
 #include "./../game/init.h"
 #include "./../game/game.h"
+#include "./../game/wall.h"
 #include "./../prog/print_value.h"
 
 /**
@@ -39,7 +40,10 @@ static int proc(ClientData ClientData, Tcl_Interp *interp, int argc, Tcl_Obj *co
     // 引数からデータを取り出す
     int action = STAY;
     Tcl_GetIntFromObj(interp, argv[1], &action);
-    int *date = gui_main(interp, action);
+    ACT activity;
+    activity.type = MOVE;
+    activity.move = action;
+    int *date = gui_main(interp, activity);
 
     int *list = date;
     if(list == NULL) printf("\nyabai\n");
@@ -110,8 +114,12 @@ static int proc_createWall(ClientData ClientData, Tcl_Interp *interp, int argc, 
     int len = 0;
     int i;
     rep(i, 2){    
-        wall_data[i] = Tcl_GetStringFromObj(argv[i + 1], &len);       
+        wall_data[i] = Tcl_GetStringFromObj(argv[i + 1], &len);
     }
+    ACT activity = coordinate_from_tag_name(wall_data[0]); 
+    activity.type = CREATE;
+    gui_main(interp, activity); 
+    
     return TCL_OK;
 }
 
@@ -159,7 +167,7 @@ int game_conversion(const GAME_DATE game_date, int *date){
  * @param action 行動（tclからの返却値）
  * @return int ゲーム情報を配列に変換して返却
  */
-int *gui_main(Tcl_Interp *interp, int action){
+int *gui_main(Tcl_Interp *interp, ACT activity){
     static GAME_DATE game_date;
     static int date[DATE] = {0};
     static int count = 0;
@@ -168,12 +176,11 @@ int *gui_main(Tcl_Interp *interp, int action){
         init(&game_date);
     
     game_date.main_player = WHITE_PLAYER;
-    ACT activity;
-    activity.type = MOVE;
-    activity.move = action;
 
     if(!end_decision(game_date))
         game_main(&game_date, activity);
+
+    game_data_showTextFile(game_date);
 
     game_conversion(game_date, date);
 

@@ -175,6 +175,7 @@ bind .board <Button-1> {
             puts $puls_tag_name
             .board itemconfig [lindex $tags 0] -fill red
             .board itemconfig $puls_tag_name -fill red
+            create_wall [lindex $tags 0] $puls_tag_name
         }
     }
 }

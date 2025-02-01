@@ -111,6 +111,7 @@ int move(GAME_DATE *game_date, ACT activity){
         };
     if(outside_player(move_position)) return False;     // 範囲内か判定
     if(player_check(move_position, *game_date)) return False;  // プレイヤーが有かの判定
+    // todo 壁が設置されていたら進めないの判定が必要
 
     game_date->board.player[game_date->player[game_date->main_player].position.y][game_date->player[game_date->main_player].position.x] = SPACE;
     game_date->board.player[move_position.y][move_position.x] = game_date->main_player;
@@ -118,6 +119,38 @@ int move(GAME_DATE *game_date, ACT activity){
     game_date->player[game_date->main_player].position.y = move_position.y;
     if(win_or_loss_decision(*game_date)) return WIN;
 
+    return True;
+}
+
+/**
+ * @brief 壁を設置
+ * 
+ * @param game_date ゲーム情報 
+ * @param activity 行動情報
+ * @return int 設置成功したかどうか
+ */
+int create_wall(GAME_DATE *game_date, ACT activity){
+    if(outside_player(activity.wall_point)) return False;   // 壁設置場所が範囲内か判定
+    // todo ゴール可能か不可能かの判定が必要
+    int x = activity.wall_point.x;
+    int y = activity.wall_point.y;
+    if(activity.direction == WHITE_WALL){
+        game_date->board.wall_w[y][x] = WALL;
+        POINT point = {x + 1, y};
+        if(!outside_player(point)){
+            game_date->board.wall_w[y][x+1] = WALL;
+        }
+    }else if(activity.direction == HEIGHT_WALL){
+        game_date->board.wall_h[y][x] = WALL;
+        POINT point = {x, y + 1};
+        if(!outside_player(point)){
+            game_date->board.wall_h[y+1][x] = WALL;
+        }
+    }else{
+        return False;
+    }
+
+    game_date->board.num_wall++;
     return True;
 }
 
@@ -136,6 +169,9 @@ int game_main(GAME_DATE *game_date, ACT activity){
         if(move_flag == WIN){
             printf("終了");
         }
+    }
+    if(activity.type == CREATE){
+        create_wall(game_date, activity);
     }
 
     return True;

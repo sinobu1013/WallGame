@@ -7,6 +7,7 @@
 #define SPACE 0         /**< 空白 */
 #define WHITE_PLAYER 1  /**< 白のプレイヤー */
 #define BLACK_PLAYER 2  /**< 黒のプレイヤー */
+#define WALL 3
 
 #define MOVE 1      /**< 移動 */
 #define CREATE 2    /**< 壁の設置 */
@@ -16,6 +17,9 @@
 #define DOWN 2      /**< 下 */
 #define RIGHT 3     /**< 右 */
 #define LEFT 4      /**< 左 */
+
+#define WHITE_WALL 1        /**< 横向きの壁 */
+#define HEIGHT_WALL 2       /**< 縦向きの壁 */      
 
 #define WIN 999     /**< 勝利 */
 #define WHITE_WIN WIN + WHITE_PLAYER    /**< 白の勝利 */
@@ -30,6 +34,8 @@
 #define DATE 200
 
 #define SUM_TURN 30
+
+#define N 100
 
 /**
  * @brief 座標表示
