@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "WallGame", "index.html", [
+    [ "日記", "md_daily.html", [
+      [ "2025/01/25", "md_daily.html#autotoc_md1", null ],
+      [ "2025/01/26", "md_daily.html#autotoc_md2", null ]
+    ] ],
     [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -39,6 +43,7 @@ var NAVTREE =
       [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]

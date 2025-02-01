@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['outside_5fplayer_0',['outside_player',['../game_8c.html#a6b0341d04d731d716876aa81039d5ab2',1,'game.c']]]
+  ['main_0',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
+  ['move_1',['move',['../game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369',1,'game.c']]]
 ];

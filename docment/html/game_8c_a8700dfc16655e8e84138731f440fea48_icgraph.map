@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="355,38,224,26,225,21,356,33"/>
 <area shape="rect" id="Node000004" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="272,56,323,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,62,324,68,323,62,356,57"/>
-<area shape="rect" id="Node000003" href="$gui_8c.html#aad906cad8d5a8d0970780267bed9afaf" title="ゲームを進める関数" alt="" coords="5,31,79,57"/>
+<area shape="rect" id="Node000003" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,31,79,57"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,33,79,40,78,34,111,28"/>
 <area shape="rect" id="Node000005" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="131,56,220,83"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="256,72,220,72,220,67,256,67"/>

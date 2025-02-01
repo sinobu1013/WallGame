@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['player_0',['PLAYER',['../set_8h.html#a07c10e4dca045acf9025061569b88f32',1,'set.h']]],
-  ['player_1',['Player',['../struct_player.html',1,'']]],
-  ['player_2',['player',['../struct_board.html#a09025d453eae0b3b054c61717362ebfc',1,'Board::player'],['../struct_game_date.html#ae96e06119c091b0428e3054a90c1f713',1,'GameDate::player']]],
-  ['player_5fcheck_3',['player_check',['../game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3',1,'game.c']]],
-  ['point_4',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]],
-  ['point_5',['Point',['../struct_point.html',1,'']]],
-  ['position_6',['position',['../struct_player.html#a5b6c2afb51c019c53ee73a16f7f012a1',1,'Player']]],
-  ['print_5fvalue_2ec_7',['print_value.c',['../print__value_8c.html',1,'']]],
-  ['print_5fvalue_2eh_8',['print_value.h',['../print__value_8h.html',1,'']]]
+  ['main_0',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
+  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
+  ['main_5fplayer_2',['main_player',['../struct_game_date.html#a74a2d6184f22f573b3b1c28db96e1c85',1,'GameDate']]],
+  ['move_3',['MOVE',['../set_8h.html#a2acdc4aa0f128c9b2788707db3e6935e',1,'set.h']]],
+  ['move_4',['move',['../struct_activity.html#ae9ba364c0145d7a82155e034f355635f',1,'Activity::move'],['../game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369',1,'move():&#160;game.c']]]
 ];

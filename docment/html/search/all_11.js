@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['wall_5fh_0',['wall_h',['../struct_board.html#ae0f7d2f4684b0e19e1f4a347e3ff46a2',1,'Board']]],
-  ['wall_5fnum_1',['wall_num',['../struct_player.html#a590ec5341899a975ef548c82605cb658',1,'Player']]],
-  ['wall_5fpoint_2',['wall_point',['../struct_activity.html#aea71aed662d78a69302b02fc2660802c',1,'Activity']]],
-  ['wall_5fsum_5fnumber_3',['WALL_SUM_NUMBER',['../set_8h.html#aa4c8ef3afd761b8f8df8b7be3ee61957',1,'set.h']]],
-  ['wall_5fw_4',['wall_w',['../struct_board.html#a5c4f26d29038f2cf492a36a08d4e6e62',1,'Board']]],
-  ['white_5fplayer_5',['WHITE_PLAYER',['../set_8h.html#a27d423ce517555d16c00a82c40806c25',1,'set.h']]],
-  ['white_5fwin_6',['WHITE_WIN',['../set_8h.html#aaf8ff255013f3f77a19ac934f7e4f6aa',1,'set.h']]],
-  ['win_7',['WIN',['../set_8h.html#a43105771f16e2da3078149f0de528e9b',1,'set.h']]],
-  ['win_5for_5floss_5fdecision_8',['win_or_loss_decision',['../game_8c.html#a8700dfc16655e8e84138731f440fea48',1,'game.c']]]
+  ['set_2eh_0',['set.h',['../set_8h.html',1,'']]],
+  ['space_1',['SPACE',['../set_8h.html#a5ff6e798033f03e74730e99f01936f84',1,'set.h']]],
+  ['stay_2',['STAY',['../set_8h.html#a4ec2744aad7c39b26ee68b61c87f5220',1,'set.h']]],
+  ['sum_5fcell_5fh_3',['SUM_CELL_H',['../set_8h.html#ab35a4d0b09725becad04719feaeb4204',1,'set.h']]],
+  ['sum_5fcell_5fw_4',['SUM_CELL_W',['../set_8h.html#aafbd7073c46e2b8c686c35bb70b08116',1,'set.h']]],
+  ['sum_5fplayer_5fnumber_5',['SUM_PLAYER_NUMBER',['../set_8h.html#a76237eff655a402aff8063b131a37d45',1,'set.h']]],
+  ['sum_5fturn_6',['SUM_TURN',['../set_8h.html#ace38c071c18e7c43292e2c31175a678b',1,'set.h']]]
 ];

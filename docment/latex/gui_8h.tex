@@ -10,13 +10,47 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_8h_aad906cad8d5a8d0970780267bed9afaf}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp, int action)
+int \mbox{\hyperlink{gui_8h_acbf1fc7b7e24f2736178e5acefa95a11}{game\+\_\+conversion}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int \texorpdfstring{$\ast$}{*}date)
+\begin{DoxyCompactList}\small\item\em tclファイルに送信するデータを作成 \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gui_8h_a8254690620cce75aaa7da148bad48922}{gui\+\_\+main}} (Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}interp, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} action)
 \begin{DoxyCompactList}\small\item\em ゲームを進める関数 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13}{gui}} ()
 \begin{DoxyCompactList}\small\item\em guiを表示する（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{gui_8h_acbf1fc7b7e24f2736178e5acefa95a11}\index{gui.h@{gui.h}!game\_conversion@{game\_conversion}}
+\index{game\_conversion@{game\_conversion}!gui.h@{gui.h}}
+\doxysubsubsection{\texorpdfstring{game\_conversion()}{game\_conversion()}}
+{\footnotesize\ttfamily \label{gui_8h_acbf1fc7b7e24f2736178e5acefa95a11} 
+int game\+\_\+conversion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{date}{}\end{DoxyParamCaption})}
+
+
+
+tclファイルに送信するデータを作成 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em date} & 送信データ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int データの要素数 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gui_8c_source_l00133}{133}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{gui_8h_acbf1fc7b7e24f2736178e5acefa95a11_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13}\index{gui.h@{gui.h}!gui@{gui}}
 \index{gui@{gui}!gui.h@{gui.h}}
 \doxysubsubsection{\texorpdfstring{gui()}{gui()}}
@@ -37,7 +71,7 @@ int エラーの場合、-\/1を返す
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00137}{137}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00200}{200}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -46,11 +80,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=182pt]{gui_8h_a3ce77eece6653ebcb6f1e59c36030b13_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{gui_8h_aad906cad8d5a8d0970780267bed9afaf}\index{gui.h@{gui.h}!gui\_main@{gui\_main}}
+\Hypertarget{gui_8h_a8254690620cce75aaa7da148bad48922}\index{gui.h@{gui.h}!gui\_main@{gui\_main}}
 \index{gui\_main@{gui\_main}!gui.h@{gui.h}}
 \doxysubsubsection{\texorpdfstring{gui\_main()}{gui\_main()}}
-{\footnotesize\ttfamily \label{gui_8h_aad906cad8d5a8d0970780267bed9afaf} 
-int \texorpdfstring{$\ast$}{*} gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{, }\item[{int}]{action}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{gui_8h_a8254690620cce75aaa7da148bad48922} 
+int \texorpdfstring{$\ast$}{*} gui\+\_\+main (\begin{DoxyParamCaption}\item[{Tcl\+\_\+\+Interp \texorpdfstring{$\ast$}{*}}]{interp}{, }\item[{\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}}}]{activity}{}\end{DoxyParamCaption})}
 
 
 
@@ -68,12 +102,13 @@ int ゲーム情報を配列に変換して返却
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{gui_8c_source_l00102}{102}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
+Definition at line \mbox{\hyperlink{gui_8c_source_l00170}{170}} of file \mbox{\hyperlink{gui_8c_source}{gui.\+c}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{gui_8h_aad906cad8d5a8d0970780267bed9afaf_cgraph}
+\includegraphics[width=350pt]{gui_8h_a8254690620cce75aaa7da148bad48922_cgraph}
 \end{center}
 \end{figure}

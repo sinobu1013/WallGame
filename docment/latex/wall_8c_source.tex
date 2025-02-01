@@ -1,0 +1,42 @@
+\doxysection{wall.\+c}
+\hypertarget{wall_8c_source}{}\label{wall_8c_source}\index{src/c/game/wall.c@{src/c/game/wall.c}}
+\mbox{\hyperlink{wall_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{./../set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{wall_8h}{wall.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00024}\mbox{\hyperlink{wall_8c_acb13434e47e857e3800f64eb75ad91c5}{00024}}\ \mbox{\hyperlink{struct_activity}{ACT}}\ \mbox{\hyperlink{wall_8c_acb13434e47e857e3800f64eb75ad91c5}{coordinate\_from\_tag\_name}}(\textcolor{keywordtype}{char}\ *tag\_name)\{}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j,\ k;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{char}\ str[\mbox{\hyperlink{set_8h_a0240ac851181b84ac374872dc5434ee4}{N}}][\mbox{\hyperlink{set_8h_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{struct_activity}{ACT}}\ ans;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00028}00028\ \ \ \ \ i\ =\ j\ =\ k\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{while}(tag\_name[i])\{}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(tag\_name[i]\ ==\ \textcolor{charliteral}{'\_'})\{}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ str[j][k]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ k\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ str[j][k]\ =\ tag\_name[i];}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00041}00041\ \ \ \ \ str[j][k]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}(str[1][0]\ ==\ \textcolor{charliteral}{'w'})\{}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ ans.\mbox{\hyperlink{struct_activity_a886d551d5381dc3e53f17825ffc51641}{direction}}\ =\ \mbox{\hyperlink{set_8h_a76c43ac15e3a1ce9155decad097809e6}{WHITE\_WALL}};}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00045}00045\ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(str[1][0]\ =\ \textcolor{charliteral}{'h'})\{}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ ans.\mbox{\hyperlink{struct_activity_a886d551d5381dc3e53f17825ffc51641}{direction}}\ =\ \mbox{\hyperlink{set_8h_a26b0b7ebaa6ba6b54689a50e754a3387}{HEIGHT\_WALL}};}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00048}00048\ \ \ \ \ ans.\mbox{\hyperlink{struct_activity_aea71aed662d78a69302b02fc2660802c}{wall\_point}}.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ atoi(str[2]);}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00049}00049\ \ \ \ \ ans.\mbox{\hyperlink{struct_activity_aea71aed662d78a69302b02fc2660802c}{wall\_point}}.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ atoi(str[3]);}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ ans;}
+\DoxyCodeLine{\Hypertarget{wall_8c_source_l00052}00052\ \}}
+
+\end{DoxyCode}

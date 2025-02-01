@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['readme_0',['README',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_1',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rep_2',['rep',['../set_8h.html#afc28855f97302d38207feabfda45fc97',1,'set.h']]],
-  ['reps_3',['reps',['../set_8h.html#aae64e55d5a04f6f2eea6c83d13d7d9bf',1,'set.h']]],
-  ['right_4',['RIGHT',['../set_8h.html#a80fb826a684cf3f0d306b22aa100ddac',1,'set.h']]]
+  ['n_0',['N',['../set_8h.html#a0240ac851181b84ac374872dc5434ee4',1,'set.h']]],
+  ['num_5fwall_1',['num_wall',['../struct_board.html#a612c322c12531171d00039aba30a275a',1,'Board']]]
 ];

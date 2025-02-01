@@ -30,6 +30,8 @@ int \mbox{\hyperlink{game_8c_a12f3e530c2aa129d300511879650ea51}{end\+\_\+decisio
 \begin{DoxyCompactList}\small\item\em ゲームの終了判定 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{game_8c_a3c8bc1cd598e6d4535061d375b6f4369}{move}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
 \begin{DoxyCompactList}\small\item\em プレイヤーの移動関数 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8c_aa87725c2189bc2de03543ba29d6bdff2}{create\+\_\+wall}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
+\begin{DoxyCompactList}\small\item\em 壁を設置 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d}{game\+\_\+main}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
 \begin{DoxyCompactList}\small\item\em ゲーム進行関数（メイン） \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -78,11 +80,52 @@ POINT 座標の変化値
 
 Definition at line \mbox{\hyperlink{game_8c_source_l00022}{22}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{game_8c_ac77787cbf2de49e998e34a7dbe58202b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8c_aa87725c2189bc2de03543ba29d6bdff2}\index{game.c@{game.c}!create\_wall@{create\_wall}}
+\index{create\_wall@{create\_wall}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{create\_wall()}{create\_wall()}}
+{\footnotesize\ttfamily \label{game_8c_aa87725c2189bc2de03543ba29d6bdff2} 
+int create\+\_\+wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+date}{, }\item[{\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+壁を設置 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em activity} & 行動情報 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 設置成功したかどうか 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00132}{132}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{game_8c_aa87725c2189bc2de03543ba29d6bdff2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{game_8c_aa87725c2189bc2de03543ba29d6bdff2_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{game_8c_a12f3e530c2aa129d300511879650ea51}\index{game.c@{game.c}!end\_decision@{end\_decision}}
@@ -114,7 +157,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=297pt]{game_8c_a12f3e530c2aa129d300511879650ea51_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,16 +187,18 @@ int 行動成功かどうか
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{game_8c_source_l00131}{131}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+Definition at line \mbox{\hyperlink{game_8c_source_l00164}{164}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{game_8c_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -190,7 +236,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=263pt]{game_8c_a3c8bc1cd598e6d4535061d375b6f4369_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -219,7 +266,8 @@ int 範囲外なら\+True、範囲内なら\+False
 
 Definition at line \mbox{\hyperlink{game_8c_source_l00046}{46}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -250,7 +298,8 @@ int 有：\+True、無：\+False
 
 Definition at line \mbox{\hyperlink{game_8c_source_l00059}{59}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -279,7 +328,8 @@ int 勝者がいる場合は、勝者側を返す。いない場合は\+False
 
 Definition at line \mbox{\hyperlink{game_8c_source_l00077}{77}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

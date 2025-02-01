@@ -1,21 +1,23 @@
 <map id="src/c/gui/gui.c" name="src/c/gui/gui.c">
-<area shape="rect" id="Node000001" title="guiを表示する" alt="" coords="299,5,402,32"/>
+<area shape="rect" id="Node000001" title="guiを表示する" alt="" coords="340,5,443,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,66,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,33,81,82,80,77,298,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,31,225,52,81,82,80,77,224,47,339,26"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="90,80,136,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="307,35,152,82,150,77,306,30"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="340,34,152,82,150,77,339,29"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="161,80,204,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="322,35,219,79,217,74,320,30"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,35,220,81,218,76,353,30"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="228,80,291,107"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="336,35,288,72,285,68,333,30"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="370,35,297,75,294,70,367,30"/>
 <area shape="rect" id="Node000006" href="$set_8h.html" title=" " alt="" coords="315,80,385,107"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="353,33,353,64,348,64,348,33"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="387,34,367,68,362,65,382,31"/>
 <area shape="rect" id="Node000007" href="$gui_8h.html" title=" " alt="" coords="410,80,459,107"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="367,31,410,68,406,72,363,35"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="401,31,421,65,417,68,397,34"/>
 <area shape="rect" id="Node000008" href="$init_8h.html" title=" " alt="" coords="483,80,588,107"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="383,30,490,71,488,76,381,35"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="418,30,498,70,495,75,415,35"/>
 <area shape="rect" id="Node000009" href="$game_8h.html" title=" " alt="" coords="613,80,733,107"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="403,29,602,74,601,79,402,34"/>
-<area shape="rect" id="Node000010" href="$print__value_8h.html" title=" " alt="" coords="758,80,900,107"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="403,25,743,76,742,82,402,30"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="441,30,610,73,608,78,440,35"/>
+<area shape="rect" id="Node000010" href="$wall_8h.html" title=" " alt="" coords="758,80,868,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="444,26,743,77,742,82,443,31"/>
+<area shape="rect" id="Node000011" href="$print__value_8h.html" title=" " alt="" coords="892,80,1035,107"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="444,23,877,77,877,82,443,29"/>
 </map>

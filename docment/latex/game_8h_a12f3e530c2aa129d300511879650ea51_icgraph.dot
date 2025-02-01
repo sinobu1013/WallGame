@@ -7,5 +7,5 @@ digraph "end_decision"
   rankdir="RL";
   Node1 [id="Node000001",label="end_decision",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="ゲームの終了判定"];
   Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="gui_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#aad906cad8d5a8d0970780267bed9afaf",tooltip="ゲームを進める関数"];
+  Node2 [id="Node000002",label="gui_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40",tooltip="ゲームを進める関数"];
 }

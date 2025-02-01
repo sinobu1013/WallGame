@@ -1,6 +1,7 @@
 var game_8c =
 [
     [ "act_conversion", "game_8c.html#ac77787cbf2de49e998e34a7dbe58202b", null ],
+    [ "create_wall", "game_8c.html#aa87725c2189bc2de03543ba29d6bdff2", null ],
     [ "end_decision", "game_8c.html#a12f3e530c2aa129d300511879650ea51", null ],
     [ "game_main", "game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d", null ],
     [ "move", "game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369", null ],
