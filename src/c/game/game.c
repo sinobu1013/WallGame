@@ -162,17 +162,17 @@ int create_wall(GAME_DATE *game_date, ACT activity){
  * @return int 行動成功かどうか
  */
 int game_main(GAME_DATE *game_date, ACT activity){
-    game_date->turn++;
+    int action_flag = False;
     if(activity.type == MOVE){
-        int move_flag = move(game_date, activity);
-        printf("%d\n", move_flag);
-        if(move_flag == WIN){
+        action_flag = move(game_date, activity);
+        if(action_flag == WIN){
             printf("終了");
         }
     }
     if(activity.type == CREATE){
-        create_wall(game_date, activity);
+        action_flag = create_wall(game_date, activity);
     }
 
-    return True;
+    if(action_flag) game_date->turn++;  // 行動を起こせた時に、ターンを上げる
+    return action_flag;
 }
