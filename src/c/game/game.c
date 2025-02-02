@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "./../set.h"
+#include "wall.h"
 #include "game.h"
 
 /**
@@ -97,6 +98,34 @@ int end_decision(const GAME_DATE game_date){
 
 
 /**
+ * @brief nextの座標に壁がないかの判定
+ * 
+ * @param game_date ゲーム情報
+ * @param next 次に移動する座標
+ * @param move_type 移動する向き
+ * @return int 移動が可能か（壁がないか）
+ */
+int check_NotWall_way(const GAME_DATE *game_date, POINT now, POINT next, int move_type){
+    // 壁の場所をまたいで移動できないように
+    if(move_type == UP){
+        if(game_date->board.wall_w[next.y][next.x] == WALL)
+            return True;
+    }else if(move_type == DOWN){
+        if(game_date->board.wall_w[now.y][next.x] == WALL)
+            return True;
+    }else if(move_type == LEFT){
+        if(game_date->board.wall_h[next.y][next.x] == WALL)
+            return True;
+    }else if(move_type == RIGHT){
+        if(game_date->board.wall_h[next.y][now.x] == WALL)
+            return True;
+    }
+
+    return False;
+}
+
+
+/**
  * @brief プレイヤーの移動関数
  * 
  * @param game_date ゲーム情報
@@ -111,20 +140,7 @@ int move(GAME_DATE *game_date, ACT activity){
         };
     if(outside_player(move_position)) return False;     // 範囲内か判定
     if(player_check(move_position, *game_date)) return False;  // プレイヤーが有かの判定
-    // 壁の場所をまたいで移動できないように
-    if(activity.move == UP){
-        if(game_date->board.wall_w[move_position.y][move_position.x] == WALL)
-            return False;
-    }else if(activity.move == DOWN){
-        if(game_date->board.wall_w[game_date->player[game_date->main_player].position.y][move_position.x] == WALL)
-            return False;
-    }else if(activity.move == LEFT){
-        if(game_date->board.wall_h[move_position.y][move_position.x] == WALL)
-            return False;
-    }else if(activity.move == RIGHT){
-        if(game_date->board.wall_h[move_position.y][game_date->player[game_date->main_player].position.x] == WALL)
-            return False;
-    }
+    if(check_NotWall_way(game_date, game_date->player[game_date->main_player].position, move_position, activity.move)) return False;    // 壁がないかの判定
 
     game_date->board.player[game_date->player[game_date->main_player].position.y][game_date->player[game_date->main_player].position.x] = SPACE;
     game_date->board.player[move_position.y][move_position.x] = game_date->main_player;
@@ -144,7 +160,6 @@ int move(GAME_DATE *game_date, ACT activity){
  */
 int create_wall(GAME_DATE *game_date, ACT activity){
     if(outside_player(activity.wall_point)) return False;   // 壁設置場所が範囲内か判定
-    // todo ゴール可能か不可能かの判定が必要
     int x = activity.wall_point.x;
     int y = activity.wall_point.y;
     if(activity.direction == WHITE_WALL){
@@ -163,6 +178,8 @@ int create_wall(GAME_DATE *game_date, ACT activity){
         return False;
     }
 
+    int deep = shortest_distance(*game_date);
+    printf("deep : %d\n", deep);
     game_date->board.num_wall++;
     return True;
 }

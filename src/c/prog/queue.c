@@ -43,8 +43,7 @@ void FreeQueue(Qdata *data){
  */
 void EnQueue(QUEUE *queue, void *data, size_t size){
     Qdata *tmp = (Qdata*)malloc(sizeof(Qdata));
-    tmp->data = malloc(size);
-    if(tmp->data == NULL){
+    if(tmp == NULL){
         perror("Enqueue malloc failed");
         return;
     }
@@ -67,20 +66,15 @@ void EnQueue(QUEUE *queue, void *data, size_t size){
  * @return void* キューのデータ
  */
 void *DeQueue(QUEUE *queue, size_t size){
-    Qdata *tmp = (Qdata*)malloc(size);
-    if(tmp->data == NULL){
-        perror("Dequeue malloc failed");
-        return NULL;
-    }
+    void *tmp;
     if(queue->top == NULL){
         queue->end = NULL;
         return NULL;
     }
-    *tmp = *queue->top;
+    tmp = queue->top->data;
     Qdata *tmp_free = queue->top;
     queue->top = tmp_free->next;
-    free(tmp_free->data);
     free(tmp_free);
     if(queue->top == NULL) queue->end = NULL;
-    return tmp->data;
+    return tmp;
 }
