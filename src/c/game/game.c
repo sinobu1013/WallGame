@@ -38,6 +38,7 @@ POINT act_conversion(int act){
     return ans;
 }
 
+
 /**
  * @brief プレイヤーの座標がボードの範囲外かどうかを判定する
  * 
@@ -49,6 +50,7 @@ int outside_player(POINT point){
     if(point.y < 0 || point.y >= SUM_CELL_H) return True;
     return False;
 }
+
 
 /**
  * @brief 引数の座標にプレイヤーが存在するか判定する
@@ -68,6 +70,7 @@ int player_check(POINT point, const GAME_DATE game_date){
     
     return False;
 }
+
 
 /**
  * @brief 勝敗判定
@@ -151,6 +154,7 @@ int move(GAME_DATE *game_date, ACT activity){
     return True;
 }
 
+
 /**
  * @brief 壁を設置
  * 
@@ -200,6 +204,7 @@ int create_wall(GAME_DATE *game_date, ACT activity){
     return True;
 }
 
+
 /**
  * @brief ゲーム進行関数（メイン）
  * 
@@ -212,7 +217,18 @@ int game_main(GAME_DATE *game_date, ACT activity){
     if(activity.type == MOVE){
         action_flag = move(game_date, activity);
         if(action_flag == WIN){
-            printf("終了");
+            printf("end\n");
+            int white_deep = shortest_distance(*game_date, WHITE_PLAYER);
+            printf("White player deep : %d\n", white_deep);
+            int black_deep = shortest_distance(*game_date, BLACK_PLAYER);
+            printf("Black player deep : %d\n", black_deep);
+            if(white_deep < black_deep){
+                printf("Winer : White Player!!\n");
+            }else if(black_deep < white_deep){
+                printf("Winer : Black Player!!\n");
+            }else{
+                printf("Draw\n");
+            }
         }
     }
     if(activity.type == CREATE){
