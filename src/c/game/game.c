@@ -162,24 +162,40 @@ int create_wall(GAME_DATE *game_date, ACT activity){
     if(outside_player(activity.wall_point)) return False;   // 壁設置場所が範囲内か判定
     int x = activity.wall_point.x;
     int y = activity.wall_point.y;
+    // 横方向の壁設置の場合
     if(activity.direction == WHITE_WALL){
         game_date->board.wall_w[y][x] = WALL;
         POINT point = {x + 1, y};
         if(!outside_player(point)){
             game_date->board.wall_w[y][x+1] = WALL;
         }
+
+        // 迷路探索(設置可能場所か探索)
+        int deep = shortest_distance(*game_date);
+        if(!deep){
+            game_date->board.wall_w[y][x] = SPACE;
+            game_date->board.wall_w[y][x+1] = SPACE;
+            return False;
+        }
+    // 縦方向の壁設置の場合
     }else if(activity.direction == HEIGHT_WALL){
         game_date->board.wall_h[y][x] = WALL;
         POINT point = {x, y + 1};
         if(!outside_player(point)){
             game_date->board.wall_h[y+1][x] = WALL;
         }
+        
+        // 迷路探索(設置可能場所か探索)
+        int deep = shortest_distance(*game_date);
+        if(!deep){
+            game_date->board.wall_h[y][x] = SPACE;
+            game_date->board.wall_h[y+1][x] = SPACE;
+            return False;
+        }
     }else{
         return False;
     }
 
-    int deep = shortest_distance(*game_date);
-    printf("deep : %d\n", deep);
     game_date->board.num_wall++;
     return True;
 }
