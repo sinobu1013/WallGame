@@ -17,6 +17,7 @@
 #include "./prog/queue.h"
 #include "./game/game.h"
 #include "./gui/gui.h"
+#include "./Strategy/random.h"
 
 
 /**
