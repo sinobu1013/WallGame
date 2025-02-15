@@ -58,9 +58,10 @@ ACT coordinate_from_tag_name(char *tag_name){
  * @brief 現在のプレイヤーの位置からゴールまでの最短距離を探索
  * 
  * @param game_data ゲーム情報
+ * @param player 探索側（黒か白か）
  * @return int ゴールまでの最短距離
  */
-int shortest_distance(const GAME_DATE game_data){
+int shortest_distance(const GAME_DATE game_data, int player){
     int i, j;
     SEARCH_NODE *now_player = (SEARCH_NODE*)malloc(sizeof(SEARCH_NODE));
     QUEUE queue = CreateQueue();    // キュー
@@ -71,7 +72,7 @@ int shortest_distance(const GAME_DATE game_data){
     rep(i, SUM_CELL_H){
         rep(j, SUM_CELL_W) check_board[i][j] = 0;
     }
-    now_player->now_point = game_data.player[game_data.main_player].position;    //プレイヤーの現在位置を格納
+    now_player->now_point = game_data.player[player].position;    //プレイヤーの現在位置を格納
     now_player->deep = 0;    // 最短距離は0で初期化
     check_board[now_player->now_point.y][now_player->now_point.x]++;
     EnQueue(&queue, now_player, sizeof(SEARCH_NODE*));
@@ -93,7 +94,7 @@ int shortest_distance(const GAME_DATE game_data){
             if(check_board[next.y][next.x]) continue;
 
             // 終了判定
-            if(next.y == game_data.player[game_data.main_player].goal_h){
+            if(next.y == game_data.player[player].goal_h){
                 int ans = node->deep + 1;
                 free(node);
                 return ans;
@@ -114,4 +115,23 @@ int shortest_distance(const GAME_DATE game_data){
     }while(node != NULL);
 
     return 0;   // ゴール不可
+}
+
+/**
+ * @brief 壁の設置の仕方が問題ないか判定
+ * 
+ * @param game_data ゲーム情報
+ * @return int 設置ＯＫかどうか
+ */
+int check_wall(GAME_DATE game_data){
+    int deep;
+    deep = shortest_distance(game_data, WHITE_PLAYER);
+    if(!deep)
+        return False;
+
+    deep = shortest_distance(game_data, BLACK_PLAYER);
+    if(!deep)
+        return False;
+
+    return True;
 }

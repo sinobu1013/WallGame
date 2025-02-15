@@ -18,6 +18,7 @@
 #include "./../game/init.h"
 #include "./../game/game.h"
 #include "./../game/wall.h"
+#include "./../Strategy/random.h"
 #include "./../prog/print_value.h"
 
 /**
@@ -171,14 +172,22 @@ int *gui_main(Tcl_Interp *interp, ACT activity){
     static GAME_DATE game_date;
     static int date[DATE] = {0};
     static int count = 0;
+    static int after_flag = False;
 
     if(!count)
         init(&game_date);
-    
-    game_date.main_player = WHITE_PLAYER;
 
-    if(!end_decision(game_date))
-        game_main(&game_date, activity);
+    if(!end_decision(game_date)){
+        if(after_flag){
+            game_date.main_player =  BLACK_PLAYER;
+            activity = random_move(game_date);
+            int flag = game_main(&game_date, activity);
+            if(flag) after_flag = False;
+        }else{
+            game_date.main_player = WHITE_PLAYER;
+            after_flag = game_main(&game_date, activity);
+        }
+    }
 
     game_data_showTextFile(game_date);
 

@@ -12,6 +12,8 @@ typedef struct{
 
 ACT coordinate_from_tag_name(char *tag_name);
 
-int shortest_distance(const GAME_DATE game_data);
+int check_wall(GAME_DATE game_data);
+
+int shortest_distance(const GAME_DATE game_data, int player);
 
 #endif

@@ -171,7 +171,7 @@ int create_wall(GAME_DATE *game_date, ACT activity){
         }
 
         // 迷路探索(設置可能場所か探索)
-        int deep = shortest_distance(*game_date);
+        int deep = check_wall(*game_date);
         if(!deep){
             game_date->board.wall_w[y][x] = SPACE;
             game_date->board.wall_w[y][x+1] = SPACE;
@@ -186,7 +186,7 @@ int create_wall(GAME_DATE *game_date, ACT activity){
         }
         
         // 迷路探索(設置可能場所か探索)
-        int deep = shortest_distance(*game_date);
+        int deep = check_wall(*game_date);
         if(!deep){
             game_date->board.wall_h[y][x] = SPACE;
             game_date->board.wall_h[y+1][x] = SPACE;

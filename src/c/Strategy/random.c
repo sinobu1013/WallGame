@@ -35,9 +35,11 @@ ACT random_move(GAME_DATE game_data){
             game_data.player[game_data.main_player].position.x + action.x,
             game_data.player[game_data.main_player].position.y + action.y
         };
-        if(!outside_player(next)) break;
-        if(!check_NotWall_way(&game_data, game_data.player[game_data.main_player].position, next, move_type[ran]))
-            break;
+        if(outside_player(next)) continue;;
+        if(check_NotWall_way(&game_data, game_data.player[game_data.main_player].position, next, move_type[ran]))
+            continue;
+        
+        break;
     }
 
     activity.type = MOVE;
