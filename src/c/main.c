@@ -9,12 +9,15 @@
  * 
  */
 #include <stdio.h>
+#include <stdlib.h>
 #include <tcl.h>
 #include "set.h"
 #include "./game/init.h"
 #include "./prog/print_value.h"
+#include "./prog/queue.h"
 #include "./game/game.h"
 #include "./gui/gui.h"
+#include "./Strategy/random.h"
 
 
 /**

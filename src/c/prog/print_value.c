@@ -26,7 +26,7 @@ void display_table(int **board, int h, int w){
     int x, y;
     rep(y, h){
         rep(x, w){
-            printf("%2d", board[y][x]);
+            printf("%3d", board[y][x]);
         }
         printf("\n");
     }
@@ -79,11 +79,12 @@ void game_data_showTextFile(const GAME_DATE game_data){
 
     int i;
     fprintf(f, "\n-----------------player--------------------\n");
-    rep(i, SUM_PLAYER_NUMBER){
-        fprintf(f, "player %d\n");
+    reps(i, 1, SUM_PLAYER_NUMBER+1){
+        fprintf(f, "player %d\n", i);
         fprintf(f, "Point x:%d, y:%d\n", game_data.player[i].position.x, game_data.player[i].position.y);
         fprintf(f, "wall_num : %d\n", game_data.player[i].wall_num);
         fprintf(f, "goal_h : %d\n", game_data.player[i].goal_h);
+        fprintf(f, "\n");
     }
 
     fclose(f);

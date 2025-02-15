@@ -1,7 +1,7 @@
 set canvas_size 700
 set game_info_size 300
 
-canvas .board -width [expr $canvas_size + 10 + $game_info_size] -height [expr $canvas_size + 10]
+canvas .board -width [expr $canvas_size + 10 + $game_info_size] -height [expr $canvas_size + 10] -bg "LightSkyBlue"
 
 set turn_text_x [expr $canvas_size + ($game_info_size / 2)]
 set turn_text_y 25
@@ -93,6 +93,9 @@ for {set i 0} {$i < $player_number} {incr i} {
 
 pack .board
 
+set main_text_x [expr $canvas_size + ($game_info_size / 2)]
+set main_text_y 100
+.board create text $main_text_x $main_text_y -text "White turn" -tags main_player -font {{ＭＳ 明朝} 20} -fill white
 .board itemconfigure turn -text "turn :[lindex $game_date 0]" -tags "turn"
 
 pack .board
@@ -126,9 +129,46 @@ proc draw_board {button_value} {
 
     pack .board
 
+    set wall 3
+    set count [expr $player_number * 3 + 6]
+    # 縦の壁
+    for {set y 0} {$y < [expr $sum_square_h + 1]} {incr y} {
+        for {set x 0} {$x < $sum_square_w} {incr x} {
+            set temp [lindex $game_date $count]
+            set wall_tag_name [format "wall_h_%d_%d" $x $y]
+            if {$temp == $wall} {    
+                .board itemconfig $wall_tag_name -fill red
+            } else {
+                .board itemconfig $wall_tag_name -fill white
+            }
+            incr count
+        }
+    }
+    # 横の壁
+    for {set y 0} {$y < $sum_square_h} {incr y} {
+        for {set x 0} {$x < [expr $sum_square_w + 1]} {incr x} {
+            set temp [lindex $game_date $count]
+            set wall_tag_name [format "wall_w_%d_%d" $x $y]
+            if {$temp == $wall} {
+                .board itemconfig $wall_tag_name -fill red
+            } else {
+                .board itemconfig $wall_tag_name -fill white
+            }
+            incr count
+        }
+    }
+
+    if {[lindex $game_date 1] == 1} {
+        .board itemconfigure main_player -text "White turn" -fill white
+    } elseif {[lindex $game_date 1] == 2} {
+        .board itemconfigure main_player -text "Black turn" -fill black
+    }
+
     .board itemconfigure turn -text "turn :[lindex $game_date 0]"
 
     pack .board
+
+    after 500 [list draw_board 0]
 }
 
 proc push_button {n} {
@@ -179,3 +219,5 @@ bind .board <Button-1> {
         }
     }
 }
+
+draw_board 0

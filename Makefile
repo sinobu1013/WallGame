@@ -5,7 +5,8 @@ MAIN_FILE = src/c/
 GAME_FILE = src/c/game/
 PROG_FILE = src/c/prog/
 GUI_FILE = src/c/gui/
-SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c $(SRCDIR)/$(PROG_FILE)*.c $(SRCDIR)/$(GUI_FILE)*.c}
+CPU_FILE = src/c/Strategy/
+SRCS = ${wildcard $(SRCDIR)/$(MAIN_FILE)*.c $(SRCDIR)/$(GAME_FILE)*.c $(SRCDIR)/$(PROG_FILE)*.c $(SRCDIR)/$(GUI_FILE)*.c $(SRCDIR)/$(CPU_FILE)*.c}
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -ltcl86 -ltk86
 CC = gcc

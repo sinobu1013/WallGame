@@ -14,6 +14,8 @@
 #include "./../set.h"
 #include "game.h"
 #include "wall.h"
+#include "./../prog/queue.h"
+#include "./../prog/print_value.h"
 
 /**
  * @brief wallのタグ名から情報を取得
@@ -49,4 +51,87 @@ ACT coordinate_from_tag_name(char *tag_name){
     ans.wall_point.y = atoi(str[3]);
 
     return ans;
+}
+
+
+/**
+ * @brief 現在のプレイヤーの位置からゴールまでの最短距離を探索
+ * 
+ * @param game_data ゲーム情報
+ * @param player 探索側（黒か白か）
+ * @return int ゴールまでの最短距離
+ */
+int shortest_distance(const GAME_DATE game_data, int player){
+    int i, j;
+    SEARCH_NODE *now_player = (SEARCH_NODE*)malloc(sizeof(SEARCH_NODE));
+    QUEUE queue = CreateQueue();    // キュー
+    int check[5] = {UP, RIGHT, DOWN, LEFT};
+    int **check_board;
+    check_board = (int **)malloc(SUM_CELL_H * sizeof(int*));
+    rep(i, SUM_CELL_H) check_board[i] = (int *)malloc(SUM_CELL_W * sizeof(int));
+    rep(i, SUM_CELL_H){
+        rep(j, SUM_CELL_W) check_board[i][j] = 0;
+    }
+    now_player->now_point = game_data.player[player].position;    //プレイヤーの現在位置を格納
+    now_player->deep = 0;    // 最短距離は0で初期化
+    check_board[now_player->now_point.y][now_player->now_point.x]++;
+    EnQueue(&queue, now_player, sizeof(SEARCH_NODE*));
+    SEARCH_NODE *node = (SEARCH_NODE*)DeQueue(&queue, sizeof(SEARCH_NODE*));
+
+    do{
+        int i;
+        rep(i, 4){
+            POINT next;
+            POINT action = act_conversion(check[i]);
+            next.x = node->now_point.x + action.x;
+            next.y = node->now_point.y + action.y;
+            if(outside_player(next)){ // 盤内か判定}
+                continue;     
+            }
+            if(player_check(next, game_data)){  // プレイヤーがいないか判定
+                continue;     
+            }
+            if(check_board[next.y][next.x]) continue;
+
+            // 終了判定
+            if(next.y == game_data.player[player].goal_h){
+                int ans = node->deep + 1;
+                free(node);
+                return ans;
+            }
+
+            if(check_NotWall_way(&game_data, node->now_point, next, check[i])){ // 壁がないか判定
+                continue;     
+            }
+
+            SEARCH_NODE *now_data = (SEARCH_NODE*)malloc(sizeof(SEARCH_NODE));
+            now_data->deep = node->deep + 1;
+            now_data->now_point = next;
+            check_board[next.y][next.x] = now_data->deep;
+            EnQueue(&queue, now_data, sizeof(SEARCH_NODE*));
+        }
+        free(node);
+        node = (SEARCH_NODE*)DeQueue(&queue, sizeof(SEARCH_NODE*));
+    }while(node != NULL);
+
+    return 0;   // ゴール不可
+}
+
+/**
+ * @brief 壁の設置の仕方が問題ないか判定
+ * 
+ * @param game_data ゲーム情報
+ * @return int 設置ＯＫかどうか
+ */
+int check_wall(GAME_DATE game_data){
+    int deep;
+    deep = shortest_distance(game_data, WHITE_PLAYER);
+    if(!deep)
+        return False;
+
+    deep = shortest_distance(game_data, BLACK_PLAYER);
+    if(!deep)
+        return False;
+
+    return True;
 }
