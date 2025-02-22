@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['act_0',['ACT',['../set_8h.html#a54d0fe08bae53a014d212153cad489ee',1,'set.h']]],
-  ['act_5fconversion_1',['act_conversion',['../game_8c.html#ac77787cbf2de49e998e34a7dbe58202b',1,'game.c']]],
-  ['activity_2',['Activity',['../struct_activity.html',1,'']]]
+  ['2025_2001_2025_0',['2025/01/25',['../md_daily.html#autotoc_md5',1,'']]],
+  ['2025_2001_2026_1',['2025/01/26',['../md_daily.html#autotoc_md6',1,'']]],
+  ['2025_2002_2001_2',['2025/02/01',['../md_daily.html#autotoc_md4',1,'']]],
+  ['2025_2002_2002_3',['2025/02/02',['../md_daily.html#autotoc_md3',1,'']]],
+  ['2025_2002_2015_4',['2025/02/15',['../md_daily.html#autotoc_md2',1,'']]],
+  ['25_5',['2025/01/25',['../md_daily.html#autotoc_md5',1,'']]],
+  ['26_6',['2025/01/26',['../md_daily.html#autotoc_md6',1,'']]]
 ];

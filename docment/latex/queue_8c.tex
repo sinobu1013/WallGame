@@ -1,0 +1,160 @@
+\doxysection{src/c/prog/queue.c File Reference}
+\hypertarget{queue_8c}{}\label{queue_8c}\index{src/c/prog/queue.c@{src/c/prog/queue.c}}
+
+
+キュー  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}queue.\+h"{}}\newline
+Include dependency graph for queue.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{queue_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} \mbox{\hyperlink{queue_8c_a6f55c56cbc6ce039123e86c6ae691272}{Create\+Queue}} (void)
+\begin{DoxyCompactList}\small\item\em キューを作成用関数（初期化用） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8c_a231885e0a82b558ff936e29bbd9cdf66}{Free\+Queue}} (\mbox{\hyperlink{queue_8h_a55493b1f70d7e72e2c2eb3616b8622f3}{Qdata}} \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em キューのデータを開放する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queue_8c_aa79555134e26a754f7a427f265f06766}{En\+Queue}} (\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} \texorpdfstring{$\ast$}{*}queue, void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em エンキュー \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{queue_8c_aac20a81cf42a8b946f6370dec907164c}{De\+Queue}} (\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} \texorpdfstring{$\ast$}{*}queue, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em デキュー（戻り値は開放する必要あり） \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+キュー 
+
+\begin{DoxyAuthor}{Author}
+okajima 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/02-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{queue_8c_source}{queue.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{queue_8c_a6f55c56cbc6ce039123e86c6ae691272}\index{queue.c@{queue.c}!CreateQueue@{CreateQueue}}
+\index{CreateQueue@{CreateQueue}!queue.c@{queue.c}}
+\doxysubsubsection{\texorpdfstring{CreateQueue()}{CreateQueue()}}
+{\footnotesize\ttfamily \label{queue_8c_a6f55c56cbc6ce039123e86c6ae691272} 
+\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} Create\+Queue (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+キューを作成用関数（初期化用） 
+
+\begin{DoxyReturn}{Returns}
+QUEUE\texorpdfstring{$\ast$}{*} 作成したキューを返す 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queue_8c_source_l00021}{21}} of file \mbox{\hyperlink{queue_8c_source}{queue.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8c_a6f55c56cbc6ce039123e86c6ae691272_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8c_aac20a81cf42a8b946f6370dec907164c}\index{queue.c@{queue.c}!DeQueue@{DeQueue}}
+\index{DeQueue@{DeQueue}!queue.c@{queue.c}}
+\doxysubsubsection{\texorpdfstring{DeQueue()}{DeQueue()}}
+{\footnotesize\ttfamily \label{queue_8c_aac20a81cf42a8b946f6370dec907164c} 
+void \texorpdfstring{$\ast$}{*} De\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+デキュー（戻り値は開放する必要あり） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & キュー本体 \\
+\hline
+{\em size} & キューのデータのサイズ（戻り値のサイズ） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void\texorpdfstring{$\ast$}{*} キューのデータ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queue_8c_source_l00068}{68}} of file \mbox{\hyperlink{queue_8c_source}{queue.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8c_aac20a81cf42a8b946f6370dec907164c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8c_aa79555134e26a754f7a427f265f06766}\index{queue.c@{queue.c}!EnQueue@{EnQueue}}
+\index{EnQueue@{EnQueue}!queue.c@{queue.c}}
+\doxysubsubsection{\texorpdfstring{EnQueue()}{EnQueue()}}
+{\footnotesize\ttfamily \label{queue_8c_aa79555134e26a754f7a427f265f06766} 
+void En\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+エンキュー 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & キュー本体 \\
+\hline
+{\em data} & 入れるデータ \\
+\hline
+{\em size} & 入れるデータのサイズ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queue_8c_source_l00044}{44}} of file \mbox{\hyperlink{queue_8c_source}{queue.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{queue_8c_aa79555134e26a754f7a427f265f06766_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{queue_8c_a231885e0a82b558ff936e29bbd9cdf66}\index{queue.c@{queue.c}!FreeQueue@{FreeQueue}}
+\index{FreeQueue@{FreeQueue}!queue.c@{queue.c}}
+\doxysubsubsection{\texorpdfstring{FreeQueue()}{FreeQueue()}}
+{\footnotesize\ttfamily \label{queue_8c_a231885e0a82b558ff936e29bbd9cdf66} 
+void Free\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{queue_8h_a55493b1f70d7e72e2c2eb3616b8622f3}{Qdata}} \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+キューのデータを開放する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & キューのデータ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queue_8c_source_l00033}{33}} of file \mbox{\hyperlink{queue_8c_source}{queue.\+c}}.
+

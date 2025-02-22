@@ -1,0 +1,9 @@
+<map id="random_move" name="random_move">
+<area shape="rect" id="Node000001" title="適当ランダム" alt="" coords="5,56,107,83"/>
+<area shape="rect" id="Node000002" href="$game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="171,5,278,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,53,162,35,164,40,104,58"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#ad0684515b1d47d919b769f355edfbf42" title="nextの座標に壁がないかの判定" alt="" coords="155,56,294,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,67,139,67,139,72,107,72"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="172,107,277,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,81,164,99,162,104,102,86"/>
+</map>

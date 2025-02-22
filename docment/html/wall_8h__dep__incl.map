@@ -1,7 +1,9 @@
 <map id="src/c/game/wall.h" name="src/c/game/wall.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,197,32"/>
-<area shape="rect" id="Node000002" href="$wall_8c.html" title=" " alt="" coords="5,80,129,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,45,81,81,77,78,111,42"/>
-<area shape="rect" id="Node000003" href="$gui_8c.html" title="guiを表示する" alt="" coords="153,80,256,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,41,194,78,190,81,155,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,5,286,32"/>
+<area shape="rect" id="Node000002" href="$game_8c.html" title="ゲームプログラム" alt="" coords="5,80,139,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,41,100,82,98,77,183,37"/>
+<area shape="rect" id="Node000003" href="$wall_8c.html" title=" " alt="" coords="162,80,286,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,48,227,80,221,80,221,48"/>
+<area shape="rect" id="Node000004" href="$gui_8c.html" title="guiを表示する" alt="" coords="310,80,413,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,37,338,77,336,82,260,42"/>
 </map>

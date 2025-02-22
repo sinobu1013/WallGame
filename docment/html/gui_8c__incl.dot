@@ -24,5 +24,7 @@ digraph "src/c/gui/gui.c"
   Node1 -> Node10 [id="edge9_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="./../game/wall.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$wall_8h.html",tooltip=" "];
   Node1 -> Node11 [id="edge10_Node000001_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="./../prog/print_value.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__value_8h.html",tooltip=" "];
+  Node11 [id="Node000011",label="./../Strategy/random.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random_8h.html",tooltip=" "];
+  Node1 -> Node12 [id="edge11_Node000001_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="./../prog/print_value.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$print__value_8h.html",tooltip=" "];
 }

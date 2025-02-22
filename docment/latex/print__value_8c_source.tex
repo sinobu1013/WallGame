@@ -13,7 +13,7 @@
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(y,\ h)\{}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(x,\ w)\{}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%2d"{}},\ board[y][x]);}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%3d"{}},\ board[y][x]);}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00032}00032\ \ \ \ \ \}}
@@ -66,14 +66,15 @@
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00081}00081\ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/player-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{set_8h_afc28855f97302d38207feabfda45fc97}{rep}}(i,\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}})\{}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}player\ \%d\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{set_8h_aae64e55d5a04f6f2eea6c83d13d7d9bf}{reps}}(i,\ 1,\ \mbox{\hyperlink{set_8h_a76237eff655a402aff8063b131a37d45}{SUM\_PLAYER\_NUMBER}}+1)\{}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}player\ \%d\(\backslash\)n"{}},\ i);}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}Point\ x:\%d,\ y:\%d\(\backslash\)n"{}},\ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}wall\_num\ :\ \%d\(\backslash\)n"{}},\ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i].\mbox{\hyperlink{struct_player_a590ec5341899a975ef548c82605cb658}{wall\_num}});}
 \DoxyCodeLine{\Hypertarget{print__value_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}goal\_h\ :\ \%d\(\backslash\)n"{}},\ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[i].\mbox{\hyperlink{struct_player_a227f4c86d6cfc3220edd7c204fe0833d}{goal\_h}});}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00087}00087\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00089}00089\ \ \ \ \ fclose(f);}
-\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ fprintf(f,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00090}00090\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{print__value_8c_source_l00091}00091\ \}}
 
 \end{DoxyCode}

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['daily_2emd_0',['daily.md',['../daily_8md.html',1,'']]],
-  ['date_1',['DATE',['../set_8h.html#a30b328ca499f27b3d0f8111b495834ca',1,'set.h']]],
-  ['direction_2',['direction',['../struct_activity.html#a886d551d5381dc3e53f17825ffc51641',1,'Activity']]],
-  ['display_5ftable_3',['display_table',['../print__value_8c.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c'],['../print__value_8h.html#aaefd78200bfd4f13ca59f2c02529bdfc',1,'display_table(int **board, int h, int w):&#160;print_value.c']]],
-  ['down_4',['DOWN',['../set_8h.html#a4193cd1c8c2e6ebd0e056fa2364a663f',1,'set.h']]]
+  ['check_5fnotwall_5fway_0',['check_NotWall_way',['../game_8c.html#ad0684515b1d47d919b769f355edfbf42',1,'check_NotWall_way(const GAME_DATE *game_date, POINT now, POINT next, int move_type):&#160;game.c'],['../game_8h.html#ad0684515b1d47d919b769f355edfbf42',1,'check_NotWall_way(const GAME_DATE *game_date, POINT now, POINT next, int move_type):&#160;game.c']]],
+  ['check_5fwall_1',['check_wall',['../wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f',1,'check_wall(GAME_DATE game_data):&#160;wall.c'],['../wall_8h.html#a7421fa21a9c825f11310d7b8103a8f3f',1,'check_wall(GAME_DATE game_data):&#160;wall.c']]],
+  ['coordinate_5ffrom_5ftag_5fname_2',['coordinate_from_tag_name',['../wall_8c.html#acb13434e47e857e3800f64eb75ad91c5',1,'coordinate_from_tag_name(char *tag_name):&#160;wall.c'],['../wall_8h.html#acb13434e47e857e3800f64eb75ad91c5',1,'coordinate_from_tag_name(char *tag_name):&#160;wall.c']]],
+  ['create_3',['CREATE',['../set_8h.html#a4c6b87853cbaf189fe1e484706ae1875',1,'set.h']]],
+  ['create_5fwall_4',['create_wall',['../game_8c.html#aa87725c2189bc2de03543ba29d6bdff2',1,'create_wall(GAME_DATE *game_date, ACT activity):&#160;game.c'],['../game_8h.html#aa87725c2189bc2de03543ba29d6bdff2',1,'create_wall(GAME_DATE *game_date, ACT activity):&#160;game.c']]],
+  ['createqueue_5',['CreateQueue',['../queue_8c.html#a6f55c56cbc6ce039123e86c6ae691272',1,'CreateQueue(void):&#160;queue.c'],['../queue_8h.html#a6f55c56cbc6ce039123e86c6ae691272',1,'CreateQueue(void):&#160;queue.c']]]
 ];

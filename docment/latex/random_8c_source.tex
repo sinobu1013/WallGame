@@ -1,0 +1,38 @@
+\doxysection{random.\+c}
+\hypertarget{random_8c_source}{}\label{random_8c_source}\index{src/c/Strategy/random.c@{src/c/Strategy/random.c}}
+\mbox{\hyperlink{random_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{./../set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{./../game/game.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{random_8h}{random.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00026}\mbox{\hyperlink{random_8c_a756fa6c976aeb746132c267c69f842a4}{00026}}\ \mbox{\hyperlink{struct_activity}{ACT}}\ \mbox{\hyperlink{random_8c_a756fa6c976aeb746132c267c69f842a4}{random\_move}}(\mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_data)\{}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{struct_activity}{ACT}}\ activity;}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ move\_type[5]\ =\ \{\mbox{\hyperlink{set_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}},\ \mbox{\hyperlink{set_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}},\ \mbox{\hyperlink{set_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}},\ \mbox{\hyperlink{set_8h_a437ef08681e7210d6678427030446a54}{LEFT}}\};}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ ran\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00030}00030\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ ran\ =\ rand()\ \%\ 4;}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_point}{POINT}}\ action\ =\ \mbox{\hyperlink{game_8c_ac77787cbf2de49e998e34a7dbe58202b}{act\_conversion}}(move\_type[ran]);}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_point}{POINT}}\ next\ =\ \{}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[game\_data.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}}].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ action.\mbox{\hyperlink{struct_point_a6150e0515f7202e2fb518f7206ed97dc}{x}},}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[game\_data.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}}].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}}.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +\ action.\mbox{\hyperlink{struct_point_a0a2f84ed7838f07779ae24c5a9086d33}{y}}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_a6b0341d04d731d716876aa81039d5ab2}{outside\_player}}(next))\ \textcolor{keywordflow}{continue};;}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{game_8c_ad0684515b1d47d919b769f355edfbf42}{check\_NotWall\_way}}(\&game\_data,\ game\_data.\mbox{\hyperlink{struct_game_date_ae96e06119c091b0428e3054a90c1f713}{player}}[game\_data.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}}].\mbox{\hyperlink{struct_player_a5b6c2afb51c019c53ee73a16f7f012a1}{position}},\ next,\ move\_type[ran]))}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00045}00045\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ac765329451135abec74c45e1897abf26}{type}}\ =\ \mbox{\hyperlink{set_8h_a2acdc4aa0f128c9b2788707db3e6935e}{MOVE}};}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00046}00046\ \ \ \ \ activity.\mbox{\hyperlink{struct_activity_ae9ba364c0145d7a82155e034f355635f}{move}}\ =\ move\_type[ran];}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ activity;}
+\DoxyCodeLine{\Hypertarget{random_8c_source_l00049}00049\ \}}
+
+\end{DoxyCode}

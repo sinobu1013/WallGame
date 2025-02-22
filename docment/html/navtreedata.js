@@ -26,10 +26,17 @@ var NAVTREE =
 [
   [ "WallGame", "index.html", [
     [ "日記", "md_daily.html", [
-      [ "2025/01/25", "md_daily.html#autotoc_md1", null ],
-      [ "2025/01/26", "md_daily.html#autotoc_md2", null ]
+      [ "便利なショットカットまとめ", "md_daily.html#autotoc_md1", null ],
+      [ "2025/02/15", "md_daily.html#autotoc_md2", null ],
+      [ "2025/02/02", "md_daily.html#autotoc_md3", null ],
+      [ "2025/02/01", "md_daily.html#autotoc_md4", null ],
+      [ "2025/01/25", "md_daily.html#autotoc_md5", null ],
+      [ "2025/01/26", "md_daily.html#autotoc_md6", null ]
     ] ],
     [ "README", "md__r_e_a_d_m_e.html", null ],
+    [ "戦略アルゴリズム仕様", "md_src_2c_2rule.html", [
+      [ "関数", "md_src_2c_2rule.html#autotoc_md8", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

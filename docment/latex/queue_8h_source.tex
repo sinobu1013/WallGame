@@ -1,0 +1,29 @@
+\doxysection{queue.\+h}
+\hypertarget{queue_8h_source}{}\label{queue_8h_source}\index{src/c/prog/queue.h@{src/c/prog/queue.h}}
+\mbox{\hyperlink{queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ QUEUE\_H}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00008}\mbox{\hyperlink{struct_queue_data}{00008}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_queue_data}{QueueData}}\{}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00009}\mbox{\hyperlink{struct_queue_data_a735984d41155bc1032e09bece8f8d66d}{00009}}\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_queue_data_a735984d41155bc1032e09bece8f8d66d}{data}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ データ用のポインタ}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00010}\mbox{\hyperlink{struct_queue_data_aaeae7dcf292b70141db32202487b2a51}{00010}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_queue_data}{QueueData}}\ *\mbox{\hyperlink{struct_queue_data_aaeae7dcf292b70141db32202487b2a51}{next}};\ \ \ \ \textcolor{comment}{//\ 次のデータのポインタ}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00011}\mbox{\hyperlink{queue_8h_a55493b1f70d7e72e2c2eb3616b8622f3}{00011}}\ \}\mbox{\hyperlink{queue_8h_a55493b1f70d7e72e2c2eb3616b8622f3}{Qdata}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00017}\mbox{\hyperlink{struct_q_u_e_u_e}{00017}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00018}\mbox{\hyperlink{struct_q_u_e_u_e_ae0e151c49bbbcd64946a65456c994b09}{00018}}\ \ \ \ \ \mbox{\hyperlink{struct_queue_data}{Qdata}}\ *\mbox{\hyperlink{struct_q_u_e_u_e_ae0e151c49bbbcd64946a65456c994b09}{top}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 取り出すところ}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00019}\mbox{\hyperlink{struct_q_u_e_u_e_a8211fa8ac48fa1e1540bae162ffe60e3}{00019}}\ \ \ \ \ \mbox{\hyperlink{struct_queue_data}{Qdata}}\ *\mbox{\hyperlink{struct_q_u_e_u_e_a8211fa8ac48fa1e1540bae162ffe60e3}{end}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 入れるところ}}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00020}00020\ \}\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}};}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00022}00022\ \mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}}\ \mbox{\hyperlink{queue_8h_a6f55c56cbc6ce039123e86c6ae691272}{CreateQueue}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00024}00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{queue_8h_a231885e0a82b558ff936e29bbd9cdf66}{FreeQueue}}(\mbox{\hyperlink{struct_queue_data}{Qdata}}\ *\mbox{\hyperlink{struct_queue_data_a735984d41155bc1032e09bece8f8d66d}{data}});}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{queue_8h_aa79555134e26a754f7a427f265f06766}{EnQueue}}(\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}}\ *queue,\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_queue_data_a735984d41155bc1032e09bece8f8d66d}{data}},\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00028}00028\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{queue_8h_aac20a81cf42a8b946f6370dec907164c}{DeQueue}}(\mbox{\hyperlink{struct_q_u_e_u_e}{QUEUE}}\ *queue,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{queue_8h_source_l00031}00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

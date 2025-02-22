@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['player_0',['PLAYER',['../set_8h.html#a07c10e4dca045acf9025061569b88f32',1,'set.h']]],
-  ['player_1',['Player',['../struct_player.html',1,'']]],
-  ['player_2',['player',['../struct_board.html#a09025d453eae0b3b054c61717362ebfc',1,'Board::player'],['../struct_game_date.html#ae96e06119c091b0428e3054a90c1f713',1,'GameDate::player']]],
-  ['player_5fcheck_3',['player_check',['../game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3',1,'game.c']]],
-  ['point_4',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]],
-  ['point_5',['Point',['../struct_point.html',1,'']]],
-  ['position_6',['position',['../struct_player.html#a5b6c2afb51c019c53ee73a16f7f012a1',1,'Player']]],
-  ['print_5fvalue_2ec_7',['print_value.c',['../print__value_8c.html',1,'']]],
-  ['print_5fvalue_2eh_8',['print_value.h',['../print__value_8h.html',1,'']]]
+  ['outside_5fplayer_0',['outside_player',['../game_8c.html#a6b0341d04d731d716876aa81039d5ab2',1,'outside_player(POINT point):&#160;game.c'],['../game_8h.html#a6b0341d04d731d716876aa81039d5ab2',1,'outside_player(POINT point):&#160;game.c']]]
 ];

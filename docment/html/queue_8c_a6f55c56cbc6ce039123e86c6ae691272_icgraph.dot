@@ -1,0 +1,20 @@
+digraph "CreateQueue"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="CreateQueue",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="キューを作成用関数（初期化用）"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="shortest_distance",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$wall_8c.html#ac915aa839568c9cdcf2e174854ca8108",tooltip="現在のプレイヤーの位置からゴールまでの最短距離を探索"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="check_wall",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f",tooltip="壁の設置の仕方が問題ないか判定"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="create_wall",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#aa87725c2189bc2de03543ba29d6bdff2",tooltip="壁を設置"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="game_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d",tooltip="ゲーム進行関数（メイン）"];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="gui_main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40",tooltip="ゲームを進める関数"];
+  Node2 -> Node5 [id="edge6_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

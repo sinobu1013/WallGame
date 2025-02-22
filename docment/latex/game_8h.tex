@@ -13,13 +13,87 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 int \mbox{\hyperlink{game_8h_a12f3e530c2aa129d300511879650ea51}{end\+\_\+decision}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date)
 \begin{DoxyCompactList}\small\item\em ゲームの終了判定 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} \mbox{\hyperlink{game_8h_ac77787cbf2de49e998e34a7dbe58202b}{act\+\_\+conversion}} (int act)
+\begin{DoxyCompactList}\small\item\em 移動向きから座標の変化値に変換 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a6b0341d04d731d716876aa81039d5ab2}{outside\+\_\+player}} (\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} point)
+\begin{DoxyCompactList}\small\item\em プレイヤーの座標がボードの範囲外かどうかを判定する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_afd0c88e07a242a8c3082ecdfc66a8ff3}{player\+\_\+check}} (\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} point, const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date)
+\begin{DoxyCompactList}\small\item\em 引数の座標にプレイヤーが存在するか判定する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_ad0684515b1d47d919b769f355edfbf42}{check\+\_\+\+Not\+Wall\+\_\+way}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} now, \mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} next, int move\+\_\+type)
+\begin{DoxyCompactList}\small\item\em nextの座標に壁がないかの判定 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{game_8h_a441d4f282398c2c2cfe4d27151ef2d0d}{game\+\_\+main}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
 \begin{DoxyCompactList}\small\item\em ゲーム進行関数（メイン） \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{game_8h_aa87725c2189bc2de03543ba29d6bdff2}{create\+\_\+wall}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}game\+\_\+date, \mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} activity)
-\begin{DoxyCompactList}\small\item\em 壁を設置 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 壁を設置 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game_8h_a8700dfc16655e8e84138731f440fea48}{win\+\_\+or\+\_\+loss\+\_\+decision}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date)
+\begin{DoxyCompactList}\small\item\em 勝敗判定 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{game_8h_ac77787cbf2de49e998e34a7dbe58202b}\index{game.h@{game.h}!act\_conversion@{act\_conversion}}
+\index{act\_conversion@{act\_conversion}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{act\_conversion()}{act\_conversion()}}
+{\footnotesize\ttfamily \label{game_8h_ac77787cbf2de49e998e34a7dbe58202b} 
+\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}} act\+\_\+conversion (\begin{DoxyParamCaption}\item[{int}]{act}{}\end{DoxyParamCaption})}
+
+
+
+移動向きから座標の変化値に変換 
+
+
+\begin{DoxyParams}{Parameters}
+{\em act} & 移動向き \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+POINT 座標の変化値 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00023}{23}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ac77787cbf2de49e998e34a7dbe58202b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_ad0684515b1d47d919b769f355edfbf42}\index{game.h@{game.h}!check\_NotWall\_way@{check\_NotWall\_way}}
+\index{check\_NotWall\_way@{check\_NotWall\_way}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{check\_NotWall\_way()}{check\_NotWall\_way()}}
+{\footnotesize\ttfamily \label{game_8h_ad0684515b1d47d919b769f355edfbf42} 
+int check\+\_\+\+Not\+Wall\+\_\+way (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+date}{, }\item[{\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}]{now}{, }\item[{\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}]{next}{, }\item[{int}]{move\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+nextの座標に壁がないかの判定 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em next} & 次に移動する座標 \\
+\hline
+{\em move\+\_\+type} & 移動する向き \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 移動が可能か（壁がないか） 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00111}{111}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ad0684515b1d47d919b769f355edfbf42_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{game_8h_aa87725c2189bc2de03543ba29d6bdff2}\index{game.h@{game.h}!create\_wall@{create\_wall}}
 \index{create\_wall@{create\_wall}!game.h@{game.h}}
 \doxysubsubsection{\texorpdfstring{create\_wall()}{create\_wall()}}
@@ -42,18 +116,17 @@ int 設置成功したかどうか
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{game_8c_source_l00132}{132}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+Definition at line \mbox{\hyperlink{game_8c_source_l00165}{165}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=260pt]{game_8h_aa87725c2189bc2de03543ba29d6bdff2_cgraph}
+\includegraphics[width=350pt]{game_8h_aa87725c2189bc2de03543ba29d6bdff2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -80,7 +153,7 @@ int ゲーム終了なら\+True、まだ続くなら\+False
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{game_8c_source_l00092}{92}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+Definition at line \mbox{\hyperlink{game_8c_source_l00096}{96}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -89,8 +162,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=297pt]{game_8h_a12f3e530c2aa129d300511879650ea51_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -119,7 +191,7 @@ int 行動成功かどうか
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{game_8c_source_l00164}{164}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+Definition at line \mbox{\hyperlink{game_8c_source_l00215}{215}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -129,11 +201,102 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{game_8h_a441d4f282398c2c2cfe4d27151ef2d0d_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{game_8h_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a6b0341d04d731d716876aa81039d5ab2}\index{game.h@{game.h}!outside\_player@{outside\_player}}
+\index{outside\_player@{outside\_player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{outside\_player()}{outside\_player()}}
+{\footnotesize\ttfamily \label{game_8h_a6b0341d04d731d716876aa81039d5ab2} 
+int outside\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}]{point}{}\end{DoxyParamCaption})}
+
+
+
+プレイヤーの座標がボードの範囲外かどうかを判定する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & プレイヤーの座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 範囲外なら\+True、範囲内なら\+False 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00048}{48}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=237pt]{game_8h_a441d4f282398c2c2cfe4d27151ef2d0d_icgraph}
+\includegraphics[width=350pt]{game_8h_a6b0341d04d731d716876aa81039d5ab2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_afd0c88e07a242a8c3082ecdfc66a8ff3}\index{game.h@{game.h}!player\_check@{player\_check}}
+\index{player\_check@{player\_check}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{player\_check()}{player\_check()}}
+{\footnotesize\ttfamily \label{game_8h_afd0c88e07a242a8c3082ecdfc66a8ff3} 
+int player\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a08b38b334eca063d45019fe9df7776bf}{POINT}}}]{point}{, }\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{}\end{DoxyParamCaption})}
+
+
+
+引数の座標にプレイヤーが存在するか判定する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & プレイヤーの座標 \\
+\hline
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 有：\+True、無：\+False 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00062}{62}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_afd0c88e07a242a8c3082ecdfc66a8ff3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a8700dfc16655e8e84138731f440fea48}\index{game.h@{game.h}!win\_or\_loss\_decision@{win\_or\_loss\_decision}}
+\index{win\_or\_loss\_decision@{win\_or\_loss\_decision}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{win\_or\_loss\_decision()}{win\_or\_loss\_decision()}}
+{\footnotesize\ttfamily \label{game_8h_a8700dfc16655e8e84138731f440fea48} 
+int win\+\_\+or\+\_\+loss\+\_\+decision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{}\end{DoxyParamCaption})}
+
+
+
+勝敗判定 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 勝者がいる場合は、勝者側を返す。いない場合は\+False 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8c_source_l00081}{81}} of file \mbox{\hyperlink{game_8c_source}{game.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a8700dfc16655e8e84138731f440fea48_icgraph}
 \end{center}
 \end{figure}

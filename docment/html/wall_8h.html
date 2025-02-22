@@ -97,6 +97,7 @@ $(function(){initNavTree('wall_8h.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">wall.h File Reference</div></div>
 </div><!--header-->
@@ -106,23 +107,103 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="wall_8h__dep__incl.png" border="0" usemap="#asrc_2c_2game_2wall_8hdep" alt=""/></div>
 <map name="asrc_2c_2game_2wall_8hdep" id="asrc_2c_2game_2wall_8hdep">
-<area shape="rect" title=" " alt="" coords="73,5,197,32"/>
-<area shape="rect" href="wall_8c.html" title=" " alt="" coords="5,80,129,107"/>
-<area shape="poly" title=" " alt="" coords="115,45,81,81,77,78,111,42"/>
-<area shape="rect" href="gui_8c.html" title="guiを表示する" alt="" coords="153,80,256,107"/>
-<area shape="poly" title=" " alt="" coords="159,41,194,78,190,81,155,45"/>
+<area shape="rect" title=" " alt="" coords="162,5,286,32"/>
+<area shape="rect" href="game_8c.html" title="ゲームプログラム" alt="" coords="5,80,139,107"/>
+<area shape="poly" title=" " alt="" coords="185,41,100,82,98,77,183,37"/>
+<area shape="rect" href="wall_8c.html" title=" " alt="" coords="162,80,286,107"/>
+<area shape="poly" title=" " alt="" coords="227,48,227,80,221,80,221,48"/>
+<area shape="rect" href="gui_8c.html" title="guiを表示する" alt="" coords="310,80,413,107"/>
+<area shape="poly" title=" " alt="" coords="263,37,338,77,336,82,260,42"/>
 </map>
 </div>
 </div>
 <p><a href="wall_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_e_a_r_c_h___n_o_d_e.html">SEARCH_NODE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">迷路探索用のノード  <a href="struct_s_e_a_r_c_h___n_o_d_e.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acb13434e47e857e3800f64eb75ad91c5" id="r_acb13434e47e857e3800f64eb75ad91c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="set_8h.html#a54d0fe08bae53a014d212153cad489ee">ACT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb13434e47e857e3800f64eb75ad91c5">coordinate_from_tag_name</a> (char *tag_name)</td></tr>
 <tr class="memdesc:acb13434e47e857e3800f64eb75ad91c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wallのタグ名から情報を取得  <br /></td></tr>
 <tr class="separator:acb13434e47e857e3800f64eb75ad91c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7421fa21a9c825f11310d7b8103a8f3f" id="r_a7421fa21a9c825f11310d7b8103a8f3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7421fa21a9c825f11310d7b8103a8f3f">check_wall</a> (<a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_data)</td></tr>
+<tr class="memdesc:a7421fa21a9c825f11310d7b8103a8f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">壁の設置の仕方が問題ないか判定  <br /></td></tr>
+<tr class="separator:a7421fa21a9c825f11310d7b8103a8f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac915aa839568c9cdcf2e174854ca8108" id="r_ac915aa839568c9cdcf2e174854ca8108"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac915aa839568c9cdcf2e174854ca8108">shortest_distance</a> (const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a> game_data, int player)</td></tr>
+<tr class="memdesc:ac915aa839568c9cdcf2e174854ca8108"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のプレイヤーの位置からゴールまでの最短距離を探索  <br /></td></tr>
+<tr class="separator:ac915aa839568c9cdcf2e174854ca8108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a7421fa21a9c825f11310d7b8103a8f3f" name="a7421fa21a9c825f11310d7b8103a8f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7421fa21a9c825f11310d7b8103a8f3f">&#9670;&#160;</a></span>check_wall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_wall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a></td>          <td class="paramname"><span class="paramname"><em>game_data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>壁の設置の仕方が問題ないか判定 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game_data</td><td>ゲーム情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 設置ＯＫかどうか </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="wall_8c_source.html#l00126">126</a> of file <a class="el" href="wall_8c_source.html">wall.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wall_8h_a7421fa21a9c825f11310d7b8103a8f3f_cgraph.png" border="0" usemap="#awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_cgraph" alt=""/></div>
+<map name="awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_cgraph" id="awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_cgraph">
+<area shape="rect" title="壁の設置の仕方が問題ないか判定" alt="" coords="5,157,91,184"/>
+<area shape="rect" href="wall_8c.html#ac915aa839568c9cdcf2e174854ca8108" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="139,157,263,184"/>
+<area shape="poly" title=" " alt="" coords="91,168,123,168,123,173,91,173"/>
+<area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="327,5,434,32"/>
+<area shape="poly" title=" " alt="" coords="208,155,248,101,276,70,309,42,317,37,320,42,313,46,280,73,252,104,213,158"/>
+<area shape="rect" href="game_8c.html#ad0684515b1d47d919b769f355edfbf42" title="nextの座標に壁がないかの判定" alt="" coords="311,56,450,83"/>
+<area shape="poly" title=" " alt="" coords="217,155,258,124,310,92,322,87,324,91,312,97,261,129,221,159"/>
+<area shape="rect" href="queue_8c.html#a6f55c56cbc6ce039123e86c6ae691272" title="キューを作成用関数（初期化用）" alt="" coords="332,107,429,133"/>
+<area shape="poly" title=" " alt="" coords="250,154,317,135,318,140,252,159"/>
+<area shape="rect" href="queue_8c.html#aac20a81cf42a8b946f6370dec907164c" title="デキュー（戻り値は開放する必要あり）" alt="" coords="343,157,418,184"/>
+<area shape="poly" title=" " alt="" coords="264,168,327,168,327,173,264,173"/>
+<area shape="rect" href="queue_8c.html#aa79555134e26a754f7a427f265f06766" title="エンキュー" alt="" coords="343,208,418,235"/>
+<area shape="poly" title=" " alt="" coords="252,182,329,204,327,209,250,187"/>
+<area shape="rect" href="game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="328,259,433,285"/>
+<area shape="poly" title=" " alt="" coords="221,182,261,213,312,244,324,250,322,255,310,249,258,217,217,187"/>
+<area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="332,309,430,336"/>
+<area shape="poly" title=" " alt="" coords="213,183,252,237,280,268,313,295,320,300,317,304,309,299,276,272,248,240,208,186"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wall_8h_a7421fa21a9c825f11310d7b8103a8f3f_icgraph.png" border="0" usemap="#awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_icgraph" alt=""/></div>
+<map name="awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_icgraph" id="awall_8h_a7421fa21a9c825f11310d7b8103a8f3f_icgraph">
+<area shape="rect" title="壁の設置の仕方が問題ないか判定" alt="" coords="397,5,483,32"/>
+<area shape="rect" href="game_8c.html#aa87725c2189bc2de03543ba29d6bdff2" title="壁を設置" alt="" coords="263,5,349,32"/>
+<area shape="poly" title=" " alt="" coords="382,21,350,21,350,16,382,16"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="127,5,215,32"/>
+<area shape="poly" title=" " alt="" coords="247,21,215,21,215,16,247,16"/>
+<area shape="rect" href="gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,5,79,32"/>
+<area shape="poly" title=" " alt="" coords="111,21,79,21,79,16,111,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acb13434e47e857e3800f64eb75ad91c5" name="acb13434e47e857e3800f64eb75ad91c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb13434e47e857e3800f64eb75ad91c5">&#9670;&#160;</a></span>coordinate_from_tag_name()</h2>
 
@@ -147,7 +228,79 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ACT 取得した情報（壁の設置場所） </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="wall_8c_source.html#l00024">24</a> of file <a class="el" href="wall_8c_source.html">wall.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="wall_8c_source.html#l00026">26</a> of file <a class="el" href="wall_8c_source.html">wall.c</a>.</p>
+
+</div>
+</div>
+<a id="ac915aa839568c9cdcf2e174854ca8108" name="ac915aa839568c9cdcf2e174854ca8108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac915aa839568c9cdcf2e174854ca8108">&#9670;&#160;</a></span>shortest_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int shortest_distance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="set_8h.html#a666ee3310647bfcbc80dc10db790866e">GAME_DATE</a></td>          <td class="paramname"><span class="paramname"><em>game_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>現在のプレイヤーの位置からゴールまでの最短距離を探索 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game_data</td><td>ゲーム情報 </td></tr>
+    <tr><td class="paramname">player</td><td>探索側（黒か白か） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int ゴールまでの最短距離 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="wall_8c_source.html#l00064">64</a> of file <a class="el" href="wall_8c_source.html">wall.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wall_8h_ac915aa839568c9cdcf2e174854ca8108_cgraph.png" border="0" usemap="#awall_8h_ac915aa839568c9cdcf2e174854ca8108_cgraph" alt=""/></div>
+<map name="awall_8h_ac915aa839568c9cdcf2e174854ca8108_cgraph" id="awall_8h_ac915aa839568c9cdcf2e174854ca8108_cgraph">
+<area shape="rect" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="5,157,130,184"/>
+<area shape="rect" href="game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="194,5,301,32"/>
+<area shape="poly" title=" " alt="" coords="75,155,114,101,143,70,176,42,184,37,187,42,179,46,147,73,119,104,79,158"/>
+<area shape="rect" href="game_8c.html#ad0684515b1d47d919b769f355edfbf42" title="nextの座標に壁がないかの判定" alt="" coords="178,56,317,83"/>
+<area shape="poly" title=" " alt="" coords="84,155,125,124,176,92,188,87,191,91,179,97,128,129,87,159"/>
+<area shape="rect" href="queue_8c.html#a6f55c56cbc6ce039123e86c6ae691272" title="キューを作成用関数（初期化用）" alt="" coords="199,107,296,133"/>
+<area shape="poly" title=" " alt="" coords="117,154,183,135,185,140,118,159"/>
+<area shape="rect" href="queue_8c.html#aac20a81cf42a8b946f6370dec907164c" title="デキュー（戻り値は開放する必要あり）" alt="" coords="210,157,285,184"/>
+<area shape="poly" title=" " alt="" coords="130,168,194,168,194,173,130,173"/>
+<area shape="rect" href="queue_8c.html#aa79555134e26a754f7a427f265f06766" title="エンキュー" alt="" coords="210,208,285,235"/>
+<area shape="poly" title=" " alt="" coords="118,182,195,204,194,209,117,187"/>
+<area shape="rect" href="game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="195,259,300,285"/>
+<area shape="poly" title=" " alt="" coords="87,182,128,213,179,244,191,250,188,255,176,249,125,217,84,187"/>
+<area shape="rect" href="game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="198,309,297,336"/>
+<area shape="poly" title=" " alt="" coords="79,183,119,237,147,268,179,295,187,300,184,304,176,299,143,272,114,240,75,186"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wall_8h_ac915aa839568c9cdcf2e174854ca8108_icgraph.png" border="0" usemap="#awall_8h_ac915aa839568c9cdcf2e174854ca8108_icgraph" alt=""/></div>
+<map name="awall_8h_ac915aa839568c9cdcf2e174854ca8108_icgraph" id="awall_8h_ac915aa839568c9cdcf2e174854ca8108_icgraph">
+<area shape="rect" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="531,31,655,57"/>
+<area shape="rect" href="wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f" title="壁の設置の仕方が問題ないか判定" alt="" coords="397,5,483,32"/>
+<area shape="poly" title=" " alt="" coords="515,34,483,28,484,23,516,29"/>
+<area shape="rect" href="game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="127,31,215,57"/>
+<area shape="poly" title=" " alt="" coords="515,47,215,47,215,41,515,41"/>
+<area shape="rect" href="game_8c.html#aa87725c2189bc2de03543ba29d6bdff2" title="壁を設置" alt="" coords="263,5,349,32"/>
+<area shape="poly" title=" " alt="" coords="382,21,350,21,350,16,382,16"/>
+<area shape="poly" title=" " alt="" coords="248,32,216,38,215,33,247,27"/>
+<area shape="rect" href="gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,31,79,57"/>
+<area shape="poly" title=" " alt="" coords="111,47,79,47,79,41,111,41"/>
+</map>
+</div>
 
 </div>
 </div>

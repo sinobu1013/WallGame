@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
-  ['move_1',['move',['../game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369',1,'game.c']]]
+  ['init_0',['init',['../init_8c.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c'],['../init_8h.html#aa0ebe7a80a7886951288e41439bd9ce5',1,'init(GAME_DATE *game_date):&#160;init.c']]]
 ];
