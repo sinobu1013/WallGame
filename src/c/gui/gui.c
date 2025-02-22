@@ -158,6 +158,8 @@ int game_conversion(const GAME_DATE game_date, int *date){
             num++;
         }
     }
+    date[num] = win_or_loss_decision(game_date);
+    num++;
     return num;
 }
 

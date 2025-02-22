@@ -17,4 +17,6 @@ num_wall 1
 wall_h h+1*w
 wall_w h*w+1
 
+end 1
+
 

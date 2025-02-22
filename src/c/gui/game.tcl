@@ -1,35 +1,15 @@
 set canvas_size 700
 set game_info_size 300
 
-canvas .board -width [expr $canvas_size + 10 + $game_info_size] -height [expr $canvas_size + 10] -bg "LightSkyBlue"
+set canvas_size_w [expr $canvas_size + 10 + $game_info_size]
+set canvas_size_h [expr $canvas_size + 10]
+canvas .board -width $canvas_size_w -height $canvas_size_h -bg "LightSkyBlue"
 
 set turn_text_x [expr $canvas_size + ($game_info_size / 2)]
 set turn_text_y 25
 .board create text $turn_text_x $turn_text_y -text "GAME START" -tags turn -font {{ＭＳ 明朝} 20}
 
 set button_value 0
-
-set button_font {{ＭＳ 明朝} 20}
-set button_w 6
-set up_button_x [expr $canvas_size + ($game_info_size / 2)]
-set up_button_y [expr $canvas_size / 2 - 50]
-set up_button [button .up_Button -text "UP" -width $button_w -bg red -font $button_font -command "push_button 1"]
-.board create window $up_button_x $up_button_y -window $up_button
-set left_button_x [expr $canvas_size + ($game_info_size / 2) -50]
-set left_button_y [expr $canvas_size / 2 - 50 + 50]
-set left_button [button .left_Button -text "LEFT" -width $button_w -bg red -font $button_font -command "push_button 4"]
-.board create window $left_button_x $left_button_y -window $left_button
-set right_button_x [expr $canvas_size + ($game_info_size / 2) + 50]
-set right_button_y [expr $canvas_size / 2 - 50 + 50]
-set right_button [button .right_Button -text "RIGHT" -width $button_w -bg red -font $button_font -command "push_button 3"]
-.board create window $right_button_x $right_button_y -window $right_button
-set down_button_x [expr $canvas_size + ($game_info_size / 2)]
-set down_button_y [expr $canvas_size / 2 - 50 + 100]
-set down_button [button .down_Button -text "DOWN" -width $button_w -bg red -font $button_font -command "push_button 2"]
-.board create window $down_button_x $down_button_y -window $down_button
-
-update idletasks
-puts "up_button_size_h : [winfo height $up_button]"
 
 set game_date [game_init]
 
@@ -105,9 +85,65 @@ set main_rectangle_ye [expr $main_text_y + 25]
 
 pack .board
 
+# ゲーム開始アクション
+.board create rectangle 0 100 [expr $canvas_size_w] [expr $canvas_size_h - 100] -fill red -tags "game_start game_start_rectangle"
+.board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "Game START !!" -font {{ＭＳ 明朝} 100} -fill white -tags game_start
+pack .board
+
+# 色を薄くする関数
+proc fade_out {rect_id alpha} {
+  if {$alpha > 0} {
+    # 色を薄くする
+    set color [format "#%02x%02x%02x" [expr {int(255 * $alpha)}] 0 0]
+    .board itemconfigure game_start_rectangle -fill $color
+
+    # 次の更新をスケジュール
+    after 100 [list fade_out rect_id [expr {$alpha - 0.05}]]
+  } else {
+    # 四角形を削除
+    update_trys
+  }
+}
+
+fade_out trys 1.0
+
+proc update_trys {} {
+    .board delete game_start
+    buttons
+    draw_board 0
+}
+
+# ボタン表示用関数（ゲーム開始アクションをしたいがために作成）
+proc buttons {} {
+    global canvas_size
+    global game_info_size
+    set button_font {{ＭＳ 明朝} 20}
+    set button_w 6
+    set up_button_x [expr $canvas_size + ($game_info_size / 2)]
+    set up_button_y [expr $canvas_size / 2 - 50]
+    set up_button [button .up_Button -text "UP" -width $button_w -bg red -font $button_font -command "push_button 1"]
+    .board create window $up_button_x $up_button_y -window $up_button
+    set left_button_x [expr $canvas_size + ($game_info_size / 2) -50]
+    set left_button_y [expr $canvas_size / 2 - 50 + 50]
+    set left_button [button .left_Button -text "LEFT" -width $button_w -bg red -font $button_font -command "push_button 4"]
+    .board create window $left_button_x $left_button_y -window $left_button
+    set right_button_x [expr $canvas_size + ($game_info_size / 2) + 50]
+    set right_button_y [expr $canvas_size / 2 - 50 + 50]
+    set right_button [button .right_Button -text "RIGHT" -width $button_w -bg red -font $button_font -command "push_button 3"]
+    .board create window $right_button_x $right_button_y -window $right_button
+    set down_button_x [expr $canvas_size + ($game_info_size / 2)]
+    set down_button_y [expr $canvas_size / 2 - 50 + 100]
+    set down_button [button .down_Button -text "DOWN" -width $button_w -bg red -font $button_font -command "push_button 2"]
+    .board create window $down_button_x $down_button_y -window $down_button
+}
+
+# グローバル変数でafterのIDを保持
+global draw_board_after_id
 
 # ターンごとに実行される関数
 proc draw_board {button_value} {
+    # グローバル変数でafterのIDを保持
+    global draw_board_after_id
     set canvas_size 700
     set game_info_size 300
 
@@ -172,10 +208,25 @@ proc draw_board {button_value} {
     }
 
     .board itemconfigure turn -text "turn :[lindex $game_date 0]"
+    # puts [lindex $game_date $count]
+    # puts $count
+    global canvas_size_h
+    global canvas_size_w
+    if {[lindex $game_date $count] == 1000} {
+        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "WIN" -font {{ＭＳ 明朝} 100} -fill red
+    } elseif {[lindex $game_date $count] == 1001} {
+        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "LOST" -font {{ＭＳ 明朝} 100} -fill bule
+    }
 
     pack .board
 
-    after 500 [list draw_board 0]
+    # 既存のスケジュールをキャンセル
+    if {[info exists draw_board_after_id]} {
+        after cancel $draw_board_after_id
+    }
+
+    # 新たにスケジュールを設定
+    set draw_board_after_id [after 500 [list draw_board 0]]
 }
 
 proc push_button {n} {
@@ -227,4 +278,3 @@ bind .board <Button-1> {
     }
 }
 
-draw_board 0

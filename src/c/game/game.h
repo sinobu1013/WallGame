@@ -15,4 +15,6 @@ int game_main(GAME_DATE *game_date, ACT activity);
 
 int create_wall(GAME_DATE *game_date, ACT activity);
 
+int win_or_loss_decision(GAME_DATE game_date);
+
 #endif
