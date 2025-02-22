@@ -12,4 +12,6 @@ typedef struct{
 
 BOOL copy_game_date(GAME_DATE *main, const GAME_DATE sub);
 
+NEXT_ACTION all_next_action(GAME_DATE game_date, int player);
+
 #endif

@@ -19,6 +19,7 @@
 #include "./../game/game.h"
 #include "./../game/wall.h"
 #include "./../Strategy/random.h"
+#include "./../Strategy/strategy_tool.h"
 #include "./../prog/print_value.h"
 
 /**

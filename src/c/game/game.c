@@ -108,19 +108,19 @@ int end_decision(const GAME_DATE game_date){
  * @param move_type 移動する向き
  * @return int 移動が可能か（壁がないか）
  */
-int check_NotWall_way(const GAME_DATE *game_date, POINT now, POINT next, int move_type){
+int check_NotWall_way(const GAME_DATE game_date, POINT now, POINT next, int move_type){
     // 壁の場所をまたいで移動できないように
     if(move_type == UP){
-        if(game_date->board.wall_w[next.y][next.x] == WALL)
+        if(game_date.board.wall_w[next.y][next.x] == WALL)
             return True;
     }else if(move_type == DOWN){
-        if(game_date->board.wall_w[now.y][next.x] == WALL)
+        if(game_date.board.wall_w[now.y][next.x] == WALL)
             return True;
     }else if(move_type == LEFT){
-        if(game_date->board.wall_h[next.y][next.x] == WALL)
+        if(game_date.board.wall_h[next.y][next.x] == WALL)
             return True;
     }else if(move_type == RIGHT){
-        if(game_date->board.wall_h[next.y][now.x] == WALL)
+        if(game_date.board.wall_h[next.y][now.x] == WALL)
             return True;
     }
 
@@ -143,7 +143,7 @@ int move(GAME_DATE *game_date, ACT activity){
         };
     if(outside_player(move_position)) return False;     // 範囲内か判定
     if(player_check(move_position, *game_date)) return False;  // プレイヤーが有かの判定
-    if(check_NotWall_way(game_date, game_date->player[game_date->main_player].position, move_position, activity.move)) return False;    // 壁がないかの判定
+    if(check_NotWall_way(*game_date, game_date->player[game_date->main_player].position, move_position, activity.move)) return False;    // 壁がないかの判定
 
     game_date->board.player[game_date->player[game_date->main_player].position.y][game_date->player[game_date->main_player].position.x] = SPACE;
     game_date->board.player[move_position.y][move_position.x] = game_date->main_player;

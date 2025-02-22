@@ -11,9 +11,11 @@
 
 #include <stdio.h>
 #include "./../set.h"
+#include "./../Strategy/strategy_tool.h"
 #include "print_value.h"
 
 char game_data_filename[N] = "game_data.txt";
+char All_next_action_filename[N] = "src/c/prog/debug/All_next_action.txt";
 
 /**
  * @brief 2次元半列をコンソールに表示
@@ -107,4 +109,50 @@ void game_data_showTextFile(const GAME_DATE game_data){
 void try_print_game_date(const GAME_DATE game_date){
     game_data_show_init();
     game_data_showTextFile(game_date);
+}
+
+/**
+ * @brief 次の手をすべてテキストファイルに出力する
+ * 
+ * @param next_action 次の手
+ * @param player プレイヤー
+ */
+void print_next_action(NEXT_ACTION next_action, int player){
+    FILE *f;
+    f = fopen(All_next_action_filename, "w");
+
+    fprintf(f, "All Next Action\n");
+
+    if(player == WHITE_PLAYER){
+        fprintf(f, "player : White Player\n");
+    }else if(player == BLACK_PLAYER){
+        fprintf(f, "player : Black Player\n");
+    }
+    fprintf(f, "sum : %d\n", next_action.sum);
+
+    fprintf(f, "\n--------------All action---------------\n");
+    int i;
+    rep(i, next_action.sum){
+        if(next_action.next_action[i].type == MOVE){
+            fprintf(f, "MOVE  ");
+            if(next_action.next_action[i].move == UP){
+                fprintf(f, "UP\n");
+            }else if(next_action.next_action[i].move == RIGHT){
+                fprintf(f, "RIGHT\n");
+            }else if(next_action.next_action[i].move == LEFT){
+                fprintf(f, "LEFT\n");
+            }else if(next_action.next_action[i].move == DOWN){
+                fprintf(f, "DOWN\n");
+            }
+        }else if(next_action.next_action[i].type == CREATE){
+            fprintf(f, "CREATE  ");
+            fprintf(f, "wall_");
+            if(next_action.next_action[i].direction == WHITE_WALL){
+                fprintf(f, "w");
+            }else if(next_action.next_action[i].direction == HEIGHT_WALL){
+                fprintf(f, "h");
+            }
+            fprintf(f, "_%d_%d\n", next_action.next_action[i].wall_point.x, next_action.next_action[i].wall_point.y);
+        }
+    }
 }

@@ -15,6 +15,7 @@
 #include "game.h"
 #include "wall.h"
 #include "./../prog/queue.h"
+#include "./../Strategy/strategy_tool.h"
 #include "./../prog/print_value.h"
 
 /**
@@ -100,7 +101,7 @@ int shortest_distance(const GAME_DATE game_data, int player){
                 return ans;
             }
 
-            if(check_NotWall_way(&game_data, node->now_point, next, check[i])){ // 壁がないか判定
+            if(check_NotWall_way(game_data, node->now_point, next, check[i])){ // 壁がないか判定
                 continue;     
             }
 

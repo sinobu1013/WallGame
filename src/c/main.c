@@ -13,13 +13,12 @@
 #include <tcl.h>
 #include "set.h"
 #include "./game/init.h"
-#include "./prog/print_value.h"
 #include "./prog/queue.h"
 #include "./game/game.h"
 #include "./gui/gui.h"
 #include "./Strategy/random.h"
 #include "./Strategy/strategy_tool.h"
-
+#include "./prog/print_value.h"
 
 /**
  * @brief main関数
@@ -30,11 +29,7 @@ int main(void){
     // gui();
     GAME_DATE game_date;
     init(&game_date);
-    game_date.turn = 1000;
-    game_date.board.wall_h[3][2] = 1999;
-    GAME_DATE try;
-    init(&try);
-    copy_game_date(&try, game_date);
-    try_print_game_date(try);
+    NEXT_ACTION next_action = all_next_action(game_date, WHITE_PLAYER);
+    print_next_action(next_action, WHITE_PLAYER);
     return 0;
 }
