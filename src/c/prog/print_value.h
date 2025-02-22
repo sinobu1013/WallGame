@@ -5,4 +5,6 @@ void display_table(int **board, int h, int w);
 
 void game_data_showTextFile(const GAME_DATE game_data);
 
+void try_print_game_date(const GAME_DATE game_date);
+
 #endif

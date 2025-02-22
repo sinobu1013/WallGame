@@ -37,6 +37,8 @@
 
 #define N 100
 
+typedef int BOOL;
+
 /**
  * @brief 座標表示
  * 

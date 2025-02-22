@@ -18,6 +18,7 @@
 #include "./game/game.h"
 #include "./gui/gui.h"
 #include "./Strategy/random.h"
+#include "./Strategy/strategy_tool.h"
 
 
 /**
@@ -26,6 +27,14 @@
  * @return int 実行成功判定
  */
 int main(void){
-    gui();
+    // gui();
+    GAME_DATE game_date;
+    init(&game_date);
+    game_date.turn = 1000;
+    game_date.board.wall_h[3][2] = 1999;
+    GAME_DATE try;
+    init(&try);
+    copy_game_date(&try, game_date);
+    try_print_game_date(try);
     return 0;
 }

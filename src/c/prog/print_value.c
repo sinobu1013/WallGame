@@ -32,6 +32,10 @@ void display_table(int **board, int h, int w){
     }
 }
 
+/**
+ * @brief ゲーム情報を表示ファイルの初期化
+ * 
+ */
 void game_data_show_init(void){
     FILE *f;
     f = fopen(game_data_filename, "w");
@@ -39,6 +43,11 @@ void game_data_show_init(void){
     fclose(f);
 }
 
+/**
+ * @brief ゲーム情報をテキストファイルに書き出す
+ * 
+ * @param game_data ゲーム情報
+ */
 void game_data_showTextFile(const GAME_DATE game_data){
     FILE *f;
     game_data_show_init();
@@ -88,4 +97,14 @@ void game_data_showTextFile(const GAME_DATE game_data){
     }
 
     fclose(f);
+}
+
+/**
+ * @brief ゲーム情報をテキストファイルに書き出す（簡略化バージョン）
+ * 
+ * @param game_date ゲーム情報
+ */
+void try_print_game_date(const GAME_DATE game_date){
+    game_data_show_init();
+    game_data_showTextFile(game_date);
 }
