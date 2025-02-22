@@ -95,7 +95,12 @@ pack .board
 
 set main_text_x [expr $canvas_size + ($game_info_size / 2)]
 set main_text_y 100
-.board create text $main_text_x $main_text_y -text "White turn" -tags main_player -font {{ＭＳ 明朝} 20} -fill white
+set main_rectangle_xs [expr $main_text_x - 75]
+set main_rectangle_ys [expr $main_text_y - 25]
+set main_rectangle_xe [expr $main_text_x + 75]
+set main_rectangle_ye [expr $main_text_y + 25]
+.board create rectangle $main_rectangle_xs $main_rectangle_ys $main_rectangle_xe $main_rectangle_ye -fill white -tags main_rectangle
+.board create text $main_text_x $main_text_y -text "White turn" -tags main_player -font {{ＭＳ 明朝} 20} -fill black
 .board itemconfigure turn -text "turn :[lindex $game_date 0]" -tags "turn"
 
 pack .board
@@ -159,9 +164,11 @@ proc draw_board {button_value} {
     }
 
     if {[lindex $game_date 1] == 1} {
-        .board itemconfigure main_player -text "White turn" -fill white
+        .board itemconfigure main_rectangle -fill white
+        .board itemconfigure main_player -text "White turn" -fill black
     } elseif {[lindex $game_date 1] == 2} {
-        .board itemconfigure main_player -text "Black turn" -fill black
+        .board itemconfigure main_rectangle -fill black
+        .board itemconfigure main_player -text "Black turn" -fill white
     }
 
     .board itemconfigure turn -text "turn :[lindex $game_date 0]"
