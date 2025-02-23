@@ -65,6 +65,7 @@ BOOL copy_game_date(GAME_DATE *main, const GAME_DATE sub){
     return True;
 }
 
+
 /**
  * @brief その行動が可能かどうか判定
  * 
@@ -96,40 +97,57 @@ BOOL check_action(const GAME_DATE game_date, ACT activity, int player){
     else if(activity.type == CREATE){
         int x = activity.wall_point.x;
         int y = activity.wall_point.y;
+        int sub_WallFlag = False;
         if(outside_player(activity.wall_point)) return False;
         if(activity.direction == WHITE_WALL){
+            if(game_date.board.wall_w[y][x] == WALL) return False;
             game_date.board.wall_w[y][x] = WALL;
             POINT point = {x + 1, y};
-            if(!outside_player(point)){
-                game_date.board.wall_w[y][x+1] = WALL;
+            if(game_date.board.wall_w[y][x+1] != WALL){
+                if(!outside_player(point)){
+                    game_date.board.wall_w[y][x+1] = WALL;
+                    sub_WallFlag = True;
+                }
             }
     
             // 迷路探索(設置可能場所か探索)
             int deep = check_wall(game_date);
             if(!deep){
                 game_date.board.wall_w[y][x] = SPACE;
-                game_date.board.wall_w[y][x+1] = SPACE;
+                if(sub_WallFlag){
+                    game_date.board.wall_w[y][x+1] = SPACE;
+                }
                 return False;
             }
             game_date.board.wall_w[y][x] = SPACE;
-            game_date.board.wall_w[y][x+1] = SPACE;
+            if(sub_WallFlag){
+                game_date.board.wall_w[y][x+1] = SPACE;
+            }
         // 縦方向の壁設置の場合
         }else if(activity.direction == HEIGHT_WALL){
+            if(game_date.board.wall_h[y][x] == WALL) return False;
             game_date.board.wall_h[y][x] = WALL;
             POINT point = {x, y + 1};
-            if(!outside_player(point)){
-                game_date.board.wall_h[y+1][x] = WALL;
+            if(game_date.board.wall_h[y+1][x] != WALL){
+                if(!outside_player(point)){
+                    game_date.board.wall_h[y+1][x] = WALL;
+                    sub_WallFlag = True;
+                }
             }
             
             // 迷路探索(設置可能場所か探索)
             int deep = check_wall(game_date);
             if(!deep){
                 game_date.board.wall_h[y][x] = SPACE;
-                game_date.board.wall_h[y+1][x] = SPACE;
+                if(sub_WallFlag){
+                    game_date.board.wall_h[y+1][x] = SPACE;
+                }
                 return False;
             }
             game_date.board.wall_h[y][x] = SPACE;
-            game_date.board.wall_h[y+1][x] = SPACE;
+            if(sub_WallFlag){
+                game_date.board.wall_h[y+1][x] = SPACE;
+            }
         }else{
             return False;
         }
@@ -139,6 +157,7 @@ BOOL check_action(const GAME_DATE game_date, ACT activity, int player){
 
     return True;
 }
+
 
 /**
  * @brief 次の手を洗い出す
@@ -170,9 +189,9 @@ NEXT_ACTION all_next_action(GAME_DATE game_date, int player){
     int x, y;
     ACT activity;
     activity.type = CREATE;
-    activity.direction = HEIGHT_WALL;
     rep(y, SUM_CELL_H){
         rep(x, SUM_CELL_W){
+            activity.direction = HEIGHT_WALL;
             activity.wall_point.x = x;
             activity.wall_point.y = y;
             if(check_action(game_date, activity, player)){
@@ -180,13 +199,7 @@ NEXT_ACTION all_next_action(GAME_DATE game_date, int player){
                 now_count++;
                 next_action.sum++;
             }
-        }
-    }
-    activity.direction = WHITE_WALL;;
-    rep(y, SUM_CELL_H){
-        rep(x, SUM_CELL_W){
-            activity.wall_point.x = x;
-            activity.wall_point.y = y;
+            activity.direction = WHITE_WALL;
             if(check_action(game_date, activity, player)){
                 next_action.next_action[now_count] = activity;
                 now_count++;
@@ -196,4 +209,107 @@ NEXT_ACTION all_next_action(GAME_DATE game_date, int player){
     }
 
     return next_action;
+}
+
+
+/**
+ * @brief 現時点での得点を計算
+ * 
+ * @param game_date ゲーム情報
+ * @param player プレイヤー
+ * @return int 得点
+ */
+int  GetScore(const GAME_DATE game_date, int player){
+    return shortest_distance(game_date, player);
+}
+
+
+/**
+ * @brief その行動時の得点を計算
+ * 
+ * @details
+ * GAME_DATEの中身は更新されない。
+ * しかし、内部的には変更を行なっている（行なった後、元に戻している）
+ * 
+ * @param game_date ゲーム情報
+ * @param player プレイヤー
+ * @param activity 行動
+ * @return int 得点
+ */
+int calculate_score(GAME_DATE game_date, int player, ACT activity){
+
+    if(activity.type == MOVE){
+        POINT action = act_conversion(activity.move);
+        POINT now = {
+            game_date.player[player].position.x,
+            game_date.player[player].position.y
+        };
+        POINT next = {
+            game_date.player[player].position.x + action.x,
+            game_date.player[player].position.y + action.y
+        };
+        game_date.board.player[now.y][now.x] = SPACE;
+        game_date.board.player[next.y][next.x] = player;
+        game_date.player[player].position = next;
+        int score = GetScore(game_date, player);
+        game_date.board.player[now.y][now.x] = player;
+        game_date.board.player[next.y][next.x] = SPACE;
+        game_date.player[player].position = now;
+        return score;
+    }else if(activity.type == CREATE){
+        BOOL sub_WallFlag = False;
+        int y = activity.wall_point.y;
+        int x = activity.wall_point.x;
+        if(activity.direction == WHITE_WALL){
+            game_date.board.wall_w[y][x] = WALL;
+            POINT point = {x, y};
+            if(game_date.board.wall_w[y][x+1] != WALL){
+                if(!outside_player(point)){
+                    game_date.board.wall_w[y][x+1] = WALL;
+                    sub_WallFlag = True;
+                }
+            }
+
+            int score = GetScore(game_date, player);
+            game_date.board.wall_w[y][x] = SPACE;
+            if(sub_WallFlag){
+                game_date.board.wall_w[y][x+1] = SPACE;
+            }
+            return score;
+        
+        }else if(activity.direction == HEIGHT_WALL){
+            game_date.board.wall_h[y][x] = WALL;
+            POINT point = {x, y};
+            if(game_date.board.wall_h[y+1][x] != WALL){
+                if(!outside_player(point)){
+                    game_date.board.wall_h[y+1][x] = WALL;
+                    sub_WallFlag = True;
+                }
+            }
+
+            int score = GetScore(game_date, player);
+            game_date.board.wall_h[y][x] = SPACE;
+            if(sub_WallFlag){
+                game_date.board.wall_h[y+1][x] = SPACE;
+            }
+            return score;
+        }
+    }
+}
+
+
+/**
+ * @brief 次の手の得点を全て計算する（結果はNEXT_ACTIONに格納）
+ * 
+ * @param game_date ゲーム情報
+ * @param player プレイヤー
+ * @param next_action 次の手をまとめたもの
+ */
+void calculate_all_next_action(GAME_DATE game_date, int player, NEXT_ACTION *next_action){
+    int i;
+    int sum = next_action->sum;
+
+    rep(i, sum){
+        next_action->score[i] = calculate_score(game_date, player, next_action->next_action[i]);
+    }
 }

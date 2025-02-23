@@ -26,10 +26,11 @@
  * @return int 実行成功判定
  */
 int main(void){
-    // gui();
+    gui();
     GAME_DATE game_date;
     init(&game_date);
     NEXT_ACTION next_action = all_next_action(game_date, WHITE_PLAYER);
+    calculate_all_next_action(game_date, WHITE_PLAYER, &next_action);
     print_next_action(next_action, WHITE_PLAYER);
     return 0;
 }

@@ -136,14 +136,15 @@ void print_next_action(NEXT_ACTION next_action, int player){
         if(next_action.next_action[i].type == MOVE){
             fprintf(f, "MOVE  ");
             if(next_action.next_action[i].move == UP){
-                fprintf(f, "UP\n");
+                fprintf(f, "UP");
             }else if(next_action.next_action[i].move == RIGHT){
-                fprintf(f, "RIGHT\n");
+                fprintf(f, "RIGHT");
             }else if(next_action.next_action[i].move == LEFT){
-                fprintf(f, "LEFT\n");
+                fprintf(f, "LEFT");
             }else if(next_action.next_action[i].move == DOWN){
-                fprintf(f, "DOWN\n");
+                fprintf(f, "DOWN");
             }
+            fprintf(f, "   : %d\n", next_action.score[i]);
         }else if(next_action.next_action[i].type == CREATE){
             fprintf(f, "CREATE  ");
             fprintf(f, "wall_");
@@ -152,7 +153,7 @@ void print_next_action(NEXT_ACTION next_action, int player){
             }else if(next_action.next_action[i].direction == HEIGHT_WALL){
                 fprintf(f, "h");
             }
-            fprintf(f, "_%d_%d\n", next_action.next_action[i].wall_point.x, next_action.next_action[i].wall_point.y);
+            fprintf(f, "_%d_%d   : %d\n", next_action.next_action[i].wall_point.x, next_action.next_action[i].wall_point.y, next_action.score[i]);
         }
     }
 }
