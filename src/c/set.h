@@ -35,7 +35,9 @@
 
 #define SUM_TURN 30
 
+#define NO_WALL -999
 #define N 100
+#define INF 99999
 
 typedef int BOOL;
 

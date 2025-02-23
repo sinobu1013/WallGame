@@ -94,15 +94,19 @@ int shortest_distance(const GAME_DATE game_data, int player){
             }
             if(check_board[next.y][next.x]) continue;
 
+            if(check_NotWall_way(game_data, node->now_point, next, check[i])){ // 壁がないか判定
+                continue;     
+            }
+
             // 終了判定
             if(next.y == game_data.player[player].goal_h){
                 int ans = node->deep + 1;
                 free(node);
-                return ans;
-            }
+                int k;
 
-            if(check_NotWall_way(game_data, node->now_point, next, check[i])){ // 壁がないか判定
-                continue;     
+                rep(k, SUM_CELL_H) free(check_board[k]);
+                free(check_board);
+                return ans;
             }
 
             SEARCH_NODE *now_data = (SEARCH_NODE*)malloc(sizeof(SEARCH_NODE));
@@ -115,7 +119,11 @@ int shortest_distance(const GAME_DATE game_data, int player){
         node = (SEARCH_NODE*)DeQueue(&queue, sizeof(SEARCH_NODE*));
     }while(node != NULL);
 
-    return 0;   // ゴール不可
+    int k;
+    rep(k, SUM_CELL_H) free(check_board[k]);
+    free(check_board);
+    free(node);
+    return NO_WALL;   // ゴール不可
 }
 
 /**
@@ -127,11 +135,11 @@ int shortest_distance(const GAME_DATE game_data, int player){
 int check_wall(GAME_DATE game_data){
     int deep;
     deep = shortest_distance(game_data, WHITE_PLAYER);
-    if(!deep)
+    if(deep == NO_WALL)
         return False;
 
     deep = shortest_distance(game_data, BLACK_PLAYER);
-    if(!deep)
+    if(deep == NO_WALL)
         return False;
 
     return True;

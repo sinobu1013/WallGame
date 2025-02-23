@@ -19,4 +19,6 @@ NEXT_ACTION all_next_action(GAME_DATE game_date, int player);
 
 void calculate_all_next_action(GAME_DATE game_date, int player, NEXT_ACTION *next_action);
 
+ACT max_score_action(NEXT_ACTION next_action);
+
 #endif

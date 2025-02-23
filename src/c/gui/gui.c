@@ -20,6 +20,7 @@
 #include "./../game/wall.h"
 #include "./../Strategy/random.h"
 #include "./../Strategy/strategy_tool.h"
+#include "./../Strategy/greedy.h"
 #include "./../prog/print_value.h"
 
 /**
@@ -176,6 +177,10 @@ int *gui_main(Tcl_Interp *interp, ACT activity){
     static int date[DATE] = {0};
     static int count = 0;
     static int after_flag = False;
+    ACT (*battlt)(GAME_DATE);
+
+    // 対戦相手の戦略を選択
+    battlt = greedy;
 
     if(!count)
         init(&game_date);
@@ -183,19 +188,25 @@ int *gui_main(Tcl_Interp *interp, ACT activity){
     if(!end_decision(game_date)){
         if(after_flag){
             game_date.main_player =  BLACK_PLAYER;
-            activity = random_move(game_date);
+            activity = battlt(game_date);
             int flag = game_main(&game_date, activity);
             if(flag) after_flag = False;
         }else{
             game_date.main_player = WHITE_PLAYER;
             after_flag = game_main(&game_date, activity);
         }
-        int deep = shortest_distance(game_date, WHITE_PLAYER);
-        // printf("deep = %d\n", deep);
     }
-
+    
+    NEXT_ACTION next_action = all_next_action(game_date, WHITE_PLAYER);
+    calculate_all_next_action(game_date, WHITE_PLAYER, &next_action);
+    print_next_action(next_action, WHITE_PLAYER);
     game_data_showTextFile(game_date);
-
+    
+    if(game_date.turn >= 10){
+    int deep = shortest_distance(game_date, WHITE_PLAYER);
+    printf("deep = %d\n", deep);
+    }
+    
     game_conversion(game_date, date);
 
     int i;

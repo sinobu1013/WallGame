@@ -262,7 +262,7 @@ int calculate_score(GAME_DATE game_date, int player, ACT activity){
         int x = activity.wall_point.x;
         if(activity.direction == WHITE_WALL){
             game_date.board.wall_w[y][x] = WALL;
-            POINT point = {x, y};
+            POINT point = {x+1, y};
             if(game_date.board.wall_w[y][x+1] != WALL){
                 if(!outside_player(point)){
                     game_date.board.wall_w[y][x+1] = WALL;
@@ -279,7 +279,7 @@ int calculate_score(GAME_DATE game_date, int player, ACT activity){
         
         }else if(activity.direction == HEIGHT_WALL){
             game_date.board.wall_h[y][x] = WALL;
-            POINT point = {x, y};
+            POINT point = {x, y+1};
             if(game_date.board.wall_h[y+1][x] != WALL){
                 if(!outside_player(point)){
                     game_date.board.wall_h[y+1][x] = WALL;
@@ -312,4 +312,26 @@ void calculate_all_next_action(GAME_DATE game_date, int player, NEXT_ACTION *nex
     rep(i, sum){
         next_action->score[i] = calculate_score(game_date, player, next_action->next_action[i]);
     }
+}
+
+
+/**
+ * @brief 得点が最大の行動を探索
+ * 
+ * @param next_action 次の行動のまとめ
+ * @return ACT 
+ */
+ACT max_score_action(NEXT_ACTION next_action){
+    int i;
+    int max = INF;
+    int index = INF;
+
+    rep(i, next_action.sum){
+        if(max > next_action.score[i]){
+            max = next_action.score[i];
+            index = i;
+        }
+    }
+
+    return next_action.next_action[index];
 }

@@ -156,4 +156,5 @@ void print_next_action(NEXT_ACTION next_action, int player){
             fprintf(f, "_%d_%d   : %d\n", next_action.next_action[i].wall_point.x, next_action.next_action[i].wall_point.y, next_action.score[i]);
         }
     }
+    fclose(f);
 }

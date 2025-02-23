@@ -16,12 +16,19 @@
 #include "./game/init.h"
 #include "./prog/queue.h"
 #include "./game/game.h"
+#include "./game/wall.h"
 #include "./gui/gui.h"
 #include "./Strategy/random.h"
 #include "./Strategy/strategy_tool.h"
+#include "./Strategy/greedy.h"
 #include "./prog/print_value.h"
 
-
+/**
+ * @brief main関数の引数を表示
+ * 
+ * @param argc main関数の引数の数
+ * @param argv main関数の引数
+ */
 void print_main(int argc, char *argv[]){
     int i;
 
@@ -48,11 +55,25 @@ int main(int argc, char *argv[]){
             return 0;
         }
     }
-
+    
     GAME_DATE game_date;
     init(&game_date);
-    NEXT_ACTION next_action = all_next_action(game_date, WHITE_PLAYER);
-    calculate_all_next_action(game_date, WHITE_PLAYER, &next_action);
-    print_next_action(next_action, WHITE_PLAYER);
+    int i;
+    rep(i, 30){
+        ACT activity;
+        if(i%2 == 0){
+            game_date.main_player = WHITE_PLAYER;
+            activity = greedy(game_date);
+        }else{
+            game_date.main_player = BLACK_PLAYER;
+            activity = greedy(game_date);
+        }
+        game_main(&game_date, activity);
+        if(i == 10){
+            game_date.player[WHITE_PLAYER].position.y = 6;
+            int deep = shortest_distance(game_date, WHITE_PLAYER);
+        }
+    }
+
     return 0;
 }
