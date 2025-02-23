@@ -191,7 +191,7 @@ int *gui_main(Tcl_Interp *interp, ACT activity){
             after_flag = game_main(&game_date, activity);
         }
         int deep = shortest_distance(game_date, WHITE_PLAYER);
-        printf("deep = %d\n", deep);
+        // printf("deep = %d\n", deep);
     }
 
     game_data_showTextFile(game_date);

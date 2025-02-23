@@ -19,8 +19,13 @@ $(NAME): $(OBJS)
 
 all: clean $(NAME) exe
 
+gui: all $(NAME) exeGui
+
 exe:
 	game
+
+exeGui:
+	game gui
 
 clean:
 	rm -f $(NAME) $(OBJS)
