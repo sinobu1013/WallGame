@@ -64,6 +64,12 @@ ACT coordinate_from_tag_name(char *tag_name){
  */
 int shortest_distance(const GAME_DATE game_data, int player){
     int i, j;
+
+    // ゴールにいる場合
+    if(game_data.player[player].position.y == game_data.player[player].goal_h){
+        return 0;
+    }
+
     SEARCH_NODE *now_player = (SEARCH_NODE*)malloc(sizeof(SEARCH_NODE));
     QUEUE queue = CreateQueue();    // キュー
     int check[5] = {UP, RIGHT, DOWN, LEFT};

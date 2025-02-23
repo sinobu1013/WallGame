@@ -70,8 +70,12 @@ int main(int argc, char *argv[]){
         }
         game_main(&game_date, activity);
         if(i == 10){
-            game_date.player[WHITE_PLAYER].position.y = 6;
+            game_date.player[WHITE_PLAYER].position.y = 0;
+            game_date.board.player[0][game_date.player[WHITE_PLAYER].position.x] = WHITE_PLAYER;
+            game_date.board.player[game_date.player[WHITE_PLAYER].position.y][game_date.player[WHITE_PLAYER].position.x] = SPACE;
+            game_data_showTextFile(game_date);
             int deep = shortest_distance(game_date, WHITE_PLAYER);
+            printf("deep : %d\n", deep);
         }
     }
 
