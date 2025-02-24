@@ -33,7 +33,7 @@
 #define False 0
 #define DATE 200
 
-#define SUM_TURN 30
+#define SUM_TURN 100
 
 #define NO_WALL -999
 #define N 100

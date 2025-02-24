@@ -113,11 +113,12 @@ static int proc_createWall(ClientData ClientData, Tcl_Interp *interp, int argc, 
     }
 
     // 引数からデータを取り出す
-    char **wall_data;
+    char **wall_data = (char**)malloc(sizeof(char*) * 10);
     int len = 0;
     int i;
-    rep(i, 2){    
-        wall_data[i] = Tcl_GetStringFromObj(argv[i + 1], &len);
+    printf("argv = %s\n", argv[1]);
+    rep(i, 2){
+        wall_data[i] = Tcl_GetStringFromObj(argv[i+1], &len);
     }
     ACT activity = coordinate_from_tag_name(wall_data[0]); 
     activity.type = CREATE;
@@ -197,15 +198,15 @@ int *gui_main(Tcl_Interp *interp, ACT activity){
         }
     }
     
-    NEXT_ACTION next_action = all_next_action(game_date, WHITE_PLAYER);
-    calculate_all_next_action(game_date, WHITE_PLAYER, &next_action);
-    print_next_action(next_action, WHITE_PLAYER);
+    NEXT_ACTION next_action = all_next_action(game_date, BLACK_PLAYER);
+    calculate_all_next_action(game_date, BLACK_PLAYER, &next_action);
+    print_next_action(next_action, BLACK_PLAYER);
     game_data_showTextFile(game_date);
     
-    if(game_date.turn >= 10){
-    int deep = shortest_distance(game_date, WHITE_PLAYER);
-    printf("deep = %d\n", deep);
-    }
+    // if(game_date.turn >= 10){
+    // int deep = shortest_distance(game_date, WHITE_PLAYER);
+    // printf("deep = %d\n", deep);
+    // }
     
     game_conversion(game_date, date);
 
@@ -244,7 +245,7 @@ int gui(){
     Tcl_CreateObjCommand(interp, "create_wall", proc_createWall, NULL, NULL);
 
 
-    if(Tcl_EvalFile(interp, "./src/c/gui/game.tcl") == TCL_ERROR){  // インタプリタを実行
+    if(Tcl_EvalFile(interp, "c:/WallGame/src/c/gui/game.tcl") == TCL_ERROR){  // インタプリタを実行
         const char *errmsg = Tcl_GetStringResult(interp);  // エラーメッセージを取得
         printf("Execution Failure: Error Description : %s\n", errmsg);
         return -1;
