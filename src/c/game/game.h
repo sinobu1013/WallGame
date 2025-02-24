@@ -9,7 +9,7 @@ int outside_player(POINT point);
 
 int player_check(POINT point, const GAME_DATE game_date);
 
-int check_NotWall_way(const GAME_DATE *game_date, POINT now, POINT next, int move_type);
+int check_NotWall_way(const GAME_DATE game_date, POINT now, POINT next, int move_type);
 
 int game_main(GAME_DATE *game_date, ACT activity);
 

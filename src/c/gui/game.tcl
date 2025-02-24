@@ -215,7 +215,7 @@ proc draw_board {button_value} {
     if {[lindex $game_date $count] == 1000} {
         .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "WIN" -font {{ＭＳ 明朝} 100} -fill red
     } elseif {[lindex $game_date $count] == 1001} {
-        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "LOST" -font {{ＭＳ 明朝} 100} -fill bule
+        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "LOST" -font {{ＭＳ 明朝} 100} -fill blue
     }
 
     pack .board

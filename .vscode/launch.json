@@ -39,6 +39,32 @@
           "ignoreFailures": true
         }
       ]
-    }
+    },
+    {
+      "name": "Run binary",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/game",
+      "args": [
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/src/c",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+          {
+              "description": "gdb の再フォーマットを有効にする",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description": "逆アセンブリ フレーバーを Intel に設定",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
+      ],
+      "preLaunchTask": "build",
+  }
   ]
 }
