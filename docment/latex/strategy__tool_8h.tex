@@ -1,0 +1,212 @@
+\doxysection{src/c/\+Strategy/strategy\+\_\+tool.h File Reference}
+\hypertarget{strategy__tool_8h}{}\label{strategy__tool_8h}\index{src/c/Strategy/strategy\_tool.h@{src/c/Strategy/strategy\_tool.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{strategy__tool_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}}
+\begin{DoxyCompactList}\small\item\em 選択可能な次の手 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765}{Get\+Score}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int player)
+\begin{DoxyCompactList}\small\item\em 現時点での得点を計算 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{set_8h_a050c65e107f0c828f856a231f4b4e788}{BOOL}} \mbox{\hyperlink{strategy__tool_8h_ad0fee82726e74a0a035cda40f14c2d70}{copy\+\_\+game\+\_\+date}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}}, const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} sub)
+\begin{DoxyCompactList}\small\item\em ゲーム情報構造体をコピーする（依存関係がない状態で） \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} \mbox{\hyperlink{strategy__tool_8h_a562814235b58325637803d77642a986e}{all\+\_\+next\+\_\+action}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int player)
+\begin{DoxyCompactList}\small\item\em 次の手を洗い出す \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416}{calculate\+\_\+all\+\_\+next\+\_\+action}} (\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date, int player, \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} \texorpdfstring{$\ast$}{*}next\+\_\+action)
+\begin{DoxyCompactList}\small\item\em 次の手の得点を全て計算する（結果は\+NEXT\+\_\+\+ACTIONに格納） \end{DoxyCompactList}\item 
+\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} \mbox{\hyperlink{strategy__tool_8h_ac4ea5c92ad00333c18d1daf56d3d74d2}{max\+\_\+score\+\_\+action}} (\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} next\+\_\+action)
+\begin{DoxyCompactList}\small\item\em 得点が最大の行動を探索 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{strategy__tool_8h_a562814235b58325637803d77642a986e}\index{strategy\_tool.h@{strategy\_tool.h}!all\_next\_action@{all\_next\_action}}
+\index{all\_next\_action@{all\_next\_action}!strategy\_tool.h@{strategy\_tool.h}}
+\doxysubsubsection{\texorpdfstring{all\_next\_action()}{all\_next\_action()}}
+{\footnotesize\ttfamily \label{strategy__tool_8h_a562814235b58325637803d77642a986e} 
+\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} all\+\_\+next\+\_\+action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+次の手を洗い出す 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em player} & 対称プレイヤー \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION} 探索結果 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{strategy__tool_8c_source_l00169}{169}} of file \mbox{\hyperlink{strategy__tool_8c_source}{strategy\+\_\+tool.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{strategy__tool_8h_a562814235b58325637803d77642a986e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{strategy__tool_8h_a562814235b58325637803d77642a986e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416}\index{strategy\_tool.h@{strategy\_tool.h}!calculate\_all\_next\_action@{calculate\_all\_next\_action}}
+\index{calculate\_all\_next\_action@{calculate\_all\_next\_action}!strategy\_tool.h@{strategy\_tool.h}}
+\doxysubsubsection{\texorpdfstring{calculate\_all\_next\_action()}{calculate\_all\_next\_action()}}
+{\footnotesize\ttfamily \label{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416} 
+void calculate\+\_\+all\+\_\+next\+\_\+action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int}]{player}{, }\item[{\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} \texorpdfstring{$\ast$}{*}}]{next\+\_\+action}{}\end{DoxyParamCaption})}
+
+
+
+次の手の得点を全て計算する（結果は\+NEXT\+\_\+\+ACTIONに格納） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em player} & プレイヤー \\
+\hline
+{\em next\+\_\+action} & 次の手をまとめたもの \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{strategy__tool_8c_source_l00308}{308}} of file \mbox{\hyperlink{strategy__tool_8c_source}{strategy\+\_\+tool.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{strategy__tool_8h_ad0fee82726e74a0a035cda40f14c2d70}\index{strategy\_tool.h@{strategy\_tool.h}!copy\_game\_date@{copy\_game\_date}}
+\index{copy\_game\_date@{copy\_game\_date}!strategy\_tool.h@{strategy\_tool.h}}
+\doxysubsubsection{\texorpdfstring{copy\_game\_date()}{copy\_game\_date()}}
+{\footnotesize\ttfamily \label{strategy__tool_8h_ad0fee82726e74a0a035cda40f14c2d70} 
+\mbox{\hyperlink{set_8h_a050c65e107f0c828f856a231f4b4e788}{BOOL}} copy\+\_\+game\+\_\+date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} \texorpdfstring{$\ast$}{*}}]{main}{, }\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{sub}{}\end{DoxyParamCaption})}
+
+
+
+ゲーム情報構造体をコピーする（依存関係がない状態で） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em main} & コピーする構造体 \\
+\hline
+{\em sub} & コピー元 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+BOOL 成功 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{strategy__tool_8c_source_l00025}{25}} of file \mbox{\hyperlink{strategy__tool_8c_source}{strategy\+\_\+tool.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{strategy__tool_8h_ad0fee82726e74a0a035cda40f14c2d70_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765}\index{strategy\_tool.h@{strategy\_tool.h}!GetScore@{GetScore}}
+\index{GetScore@{GetScore}!strategy\_tool.h@{strategy\_tool.h}}
+\doxysubsubsection{\texorpdfstring{GetScore()}{GetScore()}}
+{\footnotesize\ttfamily \label{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765} 
+int Get\+Score (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+現時点での得点を計算 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+{\em player} & プレイヤー \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 得点 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{strategy__tool_8c_source_l00222}{222}} of file \mbox{\hyperlink{strategy__tool_8c_source}{strategy\+\_\+tool.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{strategy__tool_8h_ac4ea5c92ad00333c18d1daf56d3d74d2}\index{strategy\_tool.h@{strategy\_tool.h}!max\_score\_action@{max\_score\_action}}
+\index{max\_score\_action@{max\_score\_action}!strategy\_tool.h@{strategy\_tool.h}}
+\doxysubsubsection{\texorpdfstring{max\_score\_action()}{max\_score\_action()}}
+{\footnotesize\ttfamily \label{strategy__tool_8h_ac4ea5c92ad00333c18d1daf56d3d74d2} 
+\mbox{\hyperlink{set_8h_a54d0fe08bae53a014d212153cad489ee}{ACT}} max\+\_\+score\+\_\+action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}}}]{next\+\_\+action}{}\end{DoxyParamCaption})}
+
+
+
+得点が最大の行動を探索 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+\_\+action} & 次の行動のまとめ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ACT 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{strategy__tool_8c_source_l00324}{324}} of file \mbox{\hyperlink{strategy__tool_8c_source}{strategy\+\_\+tool.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{strategy__tool_8h_ac4ea5c92ad00333c18d1daf56d3d74d2_icgraph}
+\end{center}
+\end{figure}

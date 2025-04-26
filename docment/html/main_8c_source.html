@@ -102,31 +102,59 @@ $(function(){initNavTree('main_8c_source.html',''); initResizable(true); });
 <a href="main_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;tcl.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="set_8h.html">set.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">./game/init.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="print__value_8h.html">./prog/print_value.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;tcl.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="set_8h.html">set.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">./game/init.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">./prog/queue.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="game_8h.html">./game/game.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="gui_8h.html">./gui/gui.h</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="random_8h.html">./Strategy/random.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">   28</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="wall_8h.html">./game/wall.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="gui_8h.html">./gui/gui.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="random_8h.html">./Strategy/random.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="strategy__tool_8h.html">./Strategy/strategy_tool.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="greedy_8h.html">./Strategy/greedy.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="print__value_8h.html">./prog/print_value.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="main_8c.html#acf708c357965b6cb24e54069cbf55772">   32</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8c.html#acf708c357965b6cb24e54069cbf55772">print_main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]){</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    printf(<span class="stringliteral">&quot;argc : %d\n&quot;</span>, argc);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="set_8h.html#afc28855f97302d38207feabfda45fc97">rep</a>(i, argc){</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        printf(<span class="stringliteral">&quot;argv[%d] = %s\n&quot;</span>, i, argv[i]);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">   49</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="main_8c.html#acf708c357965b6cb24e54069cbf55772">print_main</a>(argc,argv);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span>(argc != 1){</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span>(strcmp(argv[1], <span class="stringliteral">&quot;gui&quot;</span>) == 0){</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_function" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>
 <div class="ttc" id="agame_8h_html"><div class="ttname"><a href="game_8h.html">game.h</a></div></div>
-<div class="ttc" id="agui_8c_html_a3ce77eece6653ebcb6f1e59c36030b13"><div class="ttname"><a href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a></div><div class="ttdeci">int gui()</div><div class="ttdoc">guiを表示する（メイン）</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00211">gui.c:211</a></div></div>
+<div class="ttc" id="agreedy_8h_html"><div class="ttname"><a href="greedy_8h.html">greedy.h</a></div></div>
+<div class="ttc" id="agui_8c_html_a3ce77eece6653ebcb6f1e59c36030b13"><div class="ttname"><a href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13">gui</a></div><div class="ttdeci">int gui()</div><div class="ttdoc">guiを表示する（メイン）</div><div class="ttdef"><b>Definition</b> <a href="gui_8c_source.html#l00226">gui.c:226</a></div></div>
 <div class="ttc" id="agui_8h_html"><div class="ttname"><a href="gui_8h.html">gui.h</a></div></div>
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
-<div class="ttc" id="amain_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdoc">main関数</div><div class="ttdef"><b>Definition</b> <a href="#l00028">main.c:28</a></div></div>
+<div class="ttc" id="amain_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">main 関数</div><div class="ttdef"><b>Definition</b> <a href="#l00049">main.c:49</a></div></div>
+<div class="ttc" id="amain_8c_html_acf708c357965b6cb24e54069cbf55772"><div class="ttname"><a href="main_8c.html#acf708c357965b6cb24e54069cbf55772">print_main</a></div><div class="ttdeci">void print_main(int argc, char *argv[])</div><div class="ttdoc">main関数の引数を表示</div><div class="ttdef"><b>Definition</b> <a href="#l00032">main.c:32</a></div></div>
 <div class="ttc" id="aprint__value_8h_html"><div class="ttname"><a href="print__value_8h.html">print_value.h</a></div></div>
 <div class="ttc" id="aqueue_8h_html"><div class="ttname"><a href="queue_8h.html">queue.h</a></div></div>
 <div class="ttc" id="arandom_8h_html"><div class="ttname"><a href="random_8h.html">random.h</a></div></div>
 <div class="ttc" id="aset_8h_html"><div class="ttname"><a href="set_8h.html">set.h</a></div></div>
+<div class="ttc" id="aset_8h_html_afc28855f97302d38207feabfda45fc97"><div class="ttname"><a href="set_8h.html#afc28855f97302d38207feabfda45fc97">rep</a></div><div class="ttdeci">#define rep(i, n)</div><div class="ttdef"><b>Definition</b> <a href="set_8h_source.html#l00030">set.h:30</a></div></div>
+<div class="ttc" id="astrategy__tool_8h_html"><div class="ttname"><a href="strategy__tool_8h.html">strategy_tool.h</a></div></div>
+<div class="ttc" id="awall_8h_html"><div class="ttname"><a href="wall_8h.html">wall.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

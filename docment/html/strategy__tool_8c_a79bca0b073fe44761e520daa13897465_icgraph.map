@@ -1,0 +1,10 @@
+<map id="check_action" name="check_action">
+<area shape="rect" id="Node000001" title="その行動が可能かどうか判定" alt="" coords="391,31,490,57"/>
+<area shape="rect" id="Node000002" href="$strategy__tool_8c.html#a562814235b58325637803d77642a986e" title="次の手を洗い出す" alt="" coords="235,31,343,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,47,344,47,344,41,376,41"/>
+<area shape="rect" id="Node000003" href="$greedy_8c.html#a1869328968b525fe9043cf207264eff7" title="貪欲法" alt="" coords="127,5,187,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,33,187,27,188,22,220,28"/>
+<area shape="rect" id="Node000004" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,31,79,57"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="220,47,79,47,79,41,220,41"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,31,80,39,78,33,111,26"/>
+</map>

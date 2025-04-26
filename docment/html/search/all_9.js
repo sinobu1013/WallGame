@@ -10,9 +10,13 @@ var searchData=
   ['game_5ffree_7',['game_free',['../init_8c.html#a720b51e9bd80836bb89ca1d0d2b1da5b',1,'game_free(GAME_DATE *game_date):&#160;init.c'],['../init_8h.html#a720b51e9bd80836bb89ca1d0d2b1da5b',1,'game_free(GAME_DATE *game_date):&#160;init.c']]],
   ['game_5fmain_8',['game_main',['../game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d',1,'game_main(GAME_DATE *game_date, ACT activity):&#160;game.c'],['../game_8h.html#a441d4f282398c2c2cfe4d27151ef2d0d',1,'game_main(GAME_DATE *game_date, ACT activity):&#160;game.c']]],
   ['gamedate_9',['GameDate',['../struct_game_date.html',1,'']]],
-  ['goal_5fh_10',['goal_h',['../struct_player.html#a227f4c86d6cfc3220edd7c204fe0833d',1,'Player']]],
-  ['gui_11',['gui',['../gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c'],['../gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c']]],
-  ['gui_2ec_12',['gui.c',['../gui_8c.html',1,'']]],
-  ['gui_2eh_13',['gui.h',['../gui_8h.html',1,'']]],
-  ['gui_5fmain_14',['gui_main',['../gui_8c.html#a0535b8637187c8866effe4f7369f8d40',1,'gui_main(Tcl_Interp *interp, ACT activity):&#160;gui.c'],['../gui_8h.html#a8254690620cce75aaa7da148bad48922',1,'gui_main(Tcl_Interp *interp, ACT action):&#160;gui.c']]]
+  ['getscore_10',['GetScore',['../strategy__tool_8c.html#a4b25a288d8608339e1c17a84ef22d765',1,'GetScore(const GAME_DATE game_date, int player):&#160;strategy_tool.c'],['../strategy__tool_8h.html#a4b25a288d8608339e1c17a84ef22d765',1,'GetScore(const GAME_DATE game_date, int player):&#160;strategy_tool.c']]],
+  ['goal_5fh_11',['goal_h',['../struct_player.html#a227f4c86d6cfc3220edd7c204fe0833d',1,'Player']]],
+  ['greedy_12',['greedy',['../greedy_8c.html#a1869328968b525fe9043cf207264eff7',1,'greedy(GAME_DATE game_date):&#160;greedy.c'],['../greedy_8h.html#a1869328968b525fe9043cf207264eff7',1,'greedy(GAME_DATE game_date):&#160;greedy.c']]],
+  ['greedy_2ec_13',['greedy.c',['../greedy_8c.html',1,'']]],
+  ['greedy_2eh_14',['greedy.h',['../greedy_8h.html',1,'']]],
+  ['gui_15',['gui',['../gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c'],['../gui_8h.html#a3ce77eece6653ebcb6f1e59c36030b13',1,'gui():&#160;gui.c']]],
+  ['gui_2ec_16',['gui.c',['../gui_8c.html',1,'']]],
+  ['gui_2eh_17',['gui.h',['../gui_8h.html',1,'']]],
+  ['gui_5fmain_18',['gui_main',['../gui_8c.html#a0535b8637187c8866effe4f7369f8d40',1,'gui_main(Tcl_Interp *interp, ACT activity):&#160;gui.c'],['../gui_8h.html#a8254690620cce75aaa7da148bad48922',1,'gui_main(Tcl_Interp *interp, ACT action):&#160;gui.c']]]
 ];

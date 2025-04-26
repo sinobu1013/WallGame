@@ -1,7 +1,6 @@
 \doxysection{src/c/prog/print\+\_\+value.h File Reference}
 \hypertarget{print__value_8h}{}\label{print__value_8h}\index{src/c/prog/print\_value.h@{src/c/prog/print\_value.h}}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,7 +13,11 @@ This graph shows which files directly or indirectly include this file\+:
 void \mbox{\hyperlink{print__value_8h_aaefd78200bfd4f13ca59f2c02529bdfc}{display\+\_\+table}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}board, int h, int w)
 \begin{DoxyCompactList}\small\item\em 2次元半列をコンソールに表示 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{print__value_8h_a446b9b342d29629dc66c53240dfc4d20}{game\+\_\+data\+\_\+show\+Text\+File}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+data)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ゲーム情報をテキストファイルに書き出す \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print__value_8h_acc546af1be0fe9f705b234ea69de6db2}{try\+\_\+print\+\_\+game\+\_\+date}} (const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}} game\+\_\+date)
+\begin{DoxyCompactList}\small\item\em ゲーム情報をテキストファイルに書き出す（簡略化バージョン） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print__value_8h_a11e85aedd6fcb892b1ca772930ef47fb}{print\+\_\+next\+\_\+action}} (\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}} next\+\_\+action, int player)
+\begin{DoxyCompactList}\small\item\em 次の手をすべてテキストファイルに出力する \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -39,7 +42,7 @@ void display\+\_\+table (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\as
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{print__value_8c_source_l00025}{25}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
+Definition at line \mbox{\hyperlink{print__value_8c_source_l00027}{27}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
 
 \Hypertarget{print__value_8h_a446b9b342d29629dc66c53240dfc4d20}\index{print\_value.h@{print\_value.h}!game\_data\_showTextFile@{game\_data\_showTextFile}}
 \index{game\_data\_showTextFile@{game\_data\_showTextFile}!print\_value.h@{print\_value.h}}
@@ -49,19 +52,86 @@ void game\+\_\+data\+\_\+show\+Text\+File (\begin{DoxyParamCaption}\item[{const 
 
 
 
-Definition at line \mbox{\hyperlink{print__value_8c_source_l00042}{42}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
+ゲーム情報をテキストファイルに書き出す 
 
-Here is the call graph for this function\+:\nopagebreak
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+data} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print__value_8c_source_l00053}{53}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{print__value_8h_a446b9b342d29629dc66c53240dfc4d20_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{print__value_8h_a446b9b342d29629dc66c53240dfc4d20_icgraph}
+\includegraphics[width=347pt]{print__value_8h_a446b9b342d29629dc66c53240dfc4d20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print__value_8h_a11e85aedd6fcb892b1ca772930ef47fb}\index{print\_value.h@{print\_value.h}!print\_next\_action@{print\_next\_action}}
+\index{print\_next\_action@{print\_next\_action}!print\_value.h@{print\_value.h}}
+\doxysubsubsection{\texorpdfstring{print\_next\_action()}{print\_next\_action()}}
+{\footnotesize\ttfamily \label{print__value_8h_a11e85aedd6fcb892b1ca772930ef47fb} 
+void print\+\_\+next\+\_\+action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\+\_\+\+ACTION}}}]{next\+\_\+action}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+次の手をすべてテキストファイルに出力する 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+\_\+action} & 次の手 \\
+\hline
+{\em player} & プレイヤー \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print__value_8c_source_l00120}{120}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{print__value_8h_a11e85aedd6fcb892b1ca772930ef47fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{print__value_8h_acc546af1be0fe9f705b234ea69de6db2}\index{print\_value.h@{print\_value.h}!try\_print\_game\_date@{try\_print\_game\_date}}
+\index{try\_print\_game\_date@{try\_print\_game\_date}!print\_value.h@{print\_value.h}}
+\doxysubsubsection{\texorpdfstring{try\_print\_game\_date()}{try\_print\_game\_date()}}
+{\footnotesize\ttfamily \label{print__value_8h_acc546af1be0fe9f705b234ea69de6db2} 
+void try\+\_\+print\+\_\+game\+\_\+date (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{set_8h_a666ee3310647bfcbc80dc10db790866e}{GAME\+\_\+\+DATE}}}]{game\+\_\+date}{}\end{DoxyParamCaption})}
+
+
+
+ゲーム情報をテキストファイルに書き出す（簡略化バージョン） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+date} & ゲーム情報 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{print__value_8c_source_l00109}{109}} of file \mbox{\hyperlink{print__value_8c_source}{print\+\_\+value.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{print__value_8h_acc546af1be0fe9f705b234ea69de6db2_cgraph}
 \end{center}
 \end{figure}

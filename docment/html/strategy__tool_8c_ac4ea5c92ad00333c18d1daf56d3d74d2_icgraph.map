@@ -1,0 +1,7 @@
+<map id="max_score_action" name="max_score_action">
+<area shape="rect" id="Node000001" title="得点が最大の行動を探索" alt="" coords="235,5,362,32"/>
+<area shape="rect" id="Node000002" href="$greedy_8c.html#a1869328968b525fe9043cf207264eff7" title="貪欲法" alt="" coords="127,5,187,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,21,187,21,187,16,220,16"/>
+<area shape="rect" id="Node000003" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,5,79,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,21,79,21,79,16,111,16"/>
+</map>

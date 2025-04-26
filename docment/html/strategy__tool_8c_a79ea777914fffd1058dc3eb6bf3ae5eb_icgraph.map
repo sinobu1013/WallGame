@@ -1,0 +1,10 @@
+<map id="calculate_score" name="calculate_score">
+<area shape="rect" id="Node000001" title="その行動時の得点を計算" alt="" coords="408,31,521,57"/>
+<area shape="rect" id="Node000002" href="$strategy__tool_8c.html#acc0524cb732d561b0d38bdc9eb90f416" title="次の手の得点を全て計算する（結果はNEXT_ACTIONに格納）" alt="" coords="235,23,360,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,47,360,47,360,41,393,41"/>
+<area shape="rect" id="Node000003" href="$greedy_8c.html#a1869328968b525fe9043cf207264eff7" title="貪欲法" alt="" coords="127,5,187,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,33,187,27,188,21,220,27"/>
+<area shape="rect" id="Node000004" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,31,79,57"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="219,47,79,47,79,41,219,41"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,31,80,39,78,33,111,26"/>
+</map>

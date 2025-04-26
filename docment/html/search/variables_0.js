@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['board_0',['board',['../struct_game_date.html#a6d7928635054e378da8fea2722146c00',1,'GameDate']]]
+  ['all_5fnext_5faction_5ffilename_0',['All_next_action_filename',['../print__value_8c.html#a9ecee7a89e961e18315a7fba80bbb9bb',1,'print_value.c']]]
 ];

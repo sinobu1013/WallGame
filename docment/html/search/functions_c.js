@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['win_5for_5floss_5fdecision_0',['win_or_loss_decision',['../game_8c.html#a8700dfc16655e8e84138731f440fea48',1,'win_or_loss_decision(GAME_DATE game_date):&#160;game.c'],['../game_8h.html#a8700dfc16655e8e84138731f440fea48',1,'win_or_loss_decision(GAME_DATE game_date):&#160;game.c']]]
+  ['try_5fprint_5fgame_5fdate_0',['try_print_game_date',['../print__value_8c.html#acc546af1be0fe9f705b234ea69de6db2',1,'try_print_game_date(const GAME_DATE game_date):&#160;print_value.c'],['../print__value_8h.html#acc546af1be0fe9f705b234ea69de6db2',1,'try_print_game_date(const GAME_DATE game_date):&#160;print_value.c']]]
 ];

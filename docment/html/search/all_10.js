@@ -7,6 +7,8 @@ var searchData=
   ['point_4',['POINT',['../set_8h.html#a08b38b334eca063d45019fe9df7776bf',1,'set.h']]],
   ['point_5',['Point',['../struct_point.html',1,'']]],
   ['position_6',['position',['../struct_player.html#a5b6c2afb51c019c53ee73a16f7f012a1',1,'Player']]],
-  ['print_5fvalue_2ec_7',['print_value.c',['../print__value_8c.html',1,'']]],
-  ['print_5fvalue_2eh_8',['print_value.h',['../print__value_8h.html',1,'']]]
+  ['print_5fmain_7',['print_main',['../main_8c.html#acf708c357965b6cb24e54069cbf55772',1,'main.c']]],
+  ['print_5fnext_5faction_8',['print_next_action',['../print__value_8c.html#a11e85aedd6fcb892b1ca772930ef47fb',1,'print_next_action(NEXT_ACTION next_action, int player):&#160;print_value.c'],['../print__value_8h.html#a11e85aedd6fcb892b1ca772930ef47fb',1,'print_next_action(NEXT_ACTION next_action, int player):&#160;print_value.c']]],
+  ['print_5fvalue_2ec_9',['print_value.c',['../print__value_8c.html',1,'']]],
+  ['print_5fvalue_2eh_10',['print_value.h',['../print__value_8h.html',1,'']]]
 ];

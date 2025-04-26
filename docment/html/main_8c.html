@@ -106,40 +106,52 @@ $(function(){initNavTree('main_8c.html',''); initResizable(true); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;tcl.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="set_8h_source.html">set.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="init_8h_source.html">./game/init.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="print__value_8h_source.html">./prog/print_value.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="queue_8h_source.html">./prog/queue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">./game/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="wall_8h_source.html">./game/wall.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="gui_8h_source.html">./gui/gui.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="random_8h_source.html">./Strategy/random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="strategy__tool_8h_source.html">./Strategy/strategy_tool.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="greedy_8h_source.html">./Strategy/greedy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="print__value_8h_source.html">./prog/print_value.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2c_2main_8c" alt=""/></div>
 <map name="asrc_2c_2main_8c" id="asrc_2c_2main_8c">
-<area shape="rect" title="main関数" alt="" coords="389,5,482,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,66,107"/>
-<area shape="poly" title=" " alt="" coords="389,29,254,49,81,82,80,77,254,44,388,23"/>
-<area shape="rect" title=" " alt="" coords="89,80,153,107"/>
-<area shape="poly" title=" " alt="" coords="389,32,168,82,167,77,388,27"/>
-<area shape="rect" title=" " alt="" coords="176,80,223,107"/>
-<area shape="poly" title=" " alt="" coords="392,35,238,82,237,76,391,30"/>
-<area shape="rect" href="set_8h.html" title=" " alt="" coords="246,80,297,107"/>
-<area shape="poly" title=" " alt="" coords="408,35,312,77,310,72,406,30"/>
-<area shape="rect" href="init_8h.html" title=" " alt="" coords="321,80,414,107"/>
-<area shape="poly" title=" " alt="" coords="426,34,392,70,388,67,422,31"/>
-<area shape="rect" href="print__value_8h.html" title=" " alt="" coords="438,80,569,107"/>
-<area shape="poly" title=" " alt="" coords="449,31,483,67,479,70,445,34"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="593,80,697,107"/>
-<area shape="poly" title=" " alt="" coords="473,30,595,72,593,77,471,35"/>
-<area shape="rect" href="game_8h.html" title=" " alt="" coords="721,80,830,107"/>
-<area shape="poly" title=" " alt="" coords="483,27,706,75,705,80,482,33"/>
-<area shape="rect" href="gui_8h.html" title=" " alt="" coords="854,80,932,107"/>
-<area shape="poly" title=" " alt="" coords="483,23,637,44,839,77,838,82,637,49,482,28"/>
-<area shape="rect" href="random_8h.html" title=" " alt="" coords="957,80,1093,107"/>
-<area shape="poly" title=" " alt="" coords="483,22,941,77,941,82,483,28"/>
+<area shape="rect" title="main関数" alt="" coords="598,5,692,32"/>
+<area shape="rect" title=" " alt="" coords="5,88,66,115"/>
+<area shape="poly" title=" " alt="" coords="598,22,501,24,371,32,224,51,150,65,78,83,72,84,71,79,76,77,148,59,223,45,370,27,501,19,598,17"/>
+<area shape="rect" title=" " alt="" coords="89,88,153,115"/>
+<area shape="poly" title=" " alt="" coords="598,24,515,28,407,38,286,55,166,83,160,84,158,79,164,77,285,50,406,33,515,23,597,19"/>
+<area shape="rect" title=" " alt="" coords="177,88,241,115"/>
+<area shape="poly" title=" " alt="" coords="598,26,444,43,349,60,255,83,249,84,248,79,253,77,348,54,443,38,597,21"/>
+<area shape="rect" title=" " alt="" coords="266,88,312,115"/>
+<area shape="poly" title=" " alt="" coords="598,26,472,44,398,60,324,83,322,83,321,78,323,77,396,55,471,39,597,21"/>
+<area shape="rect" href="set_8h.html" title=" " alt="" coords="336,88,386,115"/>
+<area shape="poly" title=" " alt="" coords="598,30,505,50,399,83,397,83,395,79,397,77,504,45,597,25"/>
+<area shape="rect" href="init_8h.html" title=" " alt="" coords="410,88,504,115"/>
+<area shape="poly" title=" " alt="" coords="617,35,501,84,499,79,614,30"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="527,88,632,115"/>
+<area shape="poly" title=" " alt="" coords="637,34,601,78,597,75,633,31"/>
+<area shape="rect" href="game_8h.html" title=" " alt="" coords="656,88,764,115"/>
+<area shape="poly" title=" " alt="" coords="657,31,693,75,689,78,653,34"/>
+<area shape="rect" href="wall_8h.html" title=" " alt="" coords="789,88,887,115"/>
+<area shape="poly" title=" " alt="" coords="676,30,795,79,793,84,674,35"/>
+<area shape="rect" href="gui_8h.html" title=" " alt="" coords="911,88,989,115"/>
+<area shape="poly" title=" " alt="" coords="692,26,789,47,900,77,907,80,905,85,899,83,788,53,691,32"/>
+<area shape="rect" href="random_8h.html" title=" " alt="" coords="1014,88,1150,115"/>
+<area shape="poly" title=" " alt="" coords="692,24,831,46,1001,77,1019,81,1018,86,1000,83,830,51,691,29"/>
+<area shape="rect" href="strategy__tool_8h.html" title=" " alt="" coords="1175,80,1304,123"/>
+<area shape="poly" title=" " alt="" coords="692,21,892,39,1023,55,1160,77,1159,82,1023,61,891,44,692,26"/>
+<area shape="rect" href="greedy_8h.html" title=" " alt="" coords="1328,88,1460,115"/>
+<area shape="poly" title=" " alt="" coords="692,19,959,35,1137,52,1317,77,1336,81,1335,86,1316,83,1136,57,958,40,692,24"/>
+<area shape="rect" href="print__value_8h.html" title=" " alt="" coords="1485,88,1615,115"/>
+<area shape="poly" title=" " alt="" coords="692,18,826,21,1020,30,1245,48,1473,77,1493,81,1492,86,1472,83,1244,53,1019,35,826,26,692,23"/>
 </map>
 </div>
 </div>
@@ -147,9 +159,12 @@ Include dependency graph for main.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">main関数  <br /></td></tr>
-<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf708c357965b6cb24e54069cbf55772" id="r_acf708c357965b6cb24e54069cbf55772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf708c357965b6cb24e54069cbf55772">print_main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:acf708c357965b6cb24e54069cbf55772"><td class="mdescLeft">&#160;</td><td class="mdescRight">main関数の引数を表示  <br /></td></tr>
+<tr class="separator:acf708c357965b6cb24e54069cbf55772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">main 関数  <br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>main関数 </p>
@@ -160,8 +175,8 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,24 +184,91 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>main関数 </p>
-<dl class="section return"><dt>Returns</dt><dd>int 実行成功判定 </dd></dl>
+<p>main 関数 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>引数の個数 </td></tr>
+    <tr><td class="paramname">argv</td><td>値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 実効性効果どうか </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00028">28</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00049">49</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" alt=""/></div>
-<map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
-<area shape="rect" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
-<area shape="poly" title=" " alt="" coords="55,16,87,16,87,21,55,21"/>
+<div class="center"><img src="main_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
+<map name="amain_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
+<area shape="rect" title="main 関数" alt="" coords="5,31,55,57"/>
+<area shape="rect" href="gui_8c.html#a3ce77eece6653ebcb6f1e59c36030b13" title="guiを表示する（メイン）" alt="" coords="124,5,163,32"/>
+<area shape="poly" title=" " alt="" coords="54,36,108,24,110,29,55,41"/>
+<area shape="rect" href="main_8c.html#acf708c357965b6cb24e54069cbf55772" title="main関数の引数を表示" alt="" coords="103,56,184,83"/>
+<area shape="poly" title=" " alt="" coords="55,47,88,54,87,59,54,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a0ddf1224851353fc92bfbff6f499fa97_icgraph.png" border="0" usemap="#amain_8c_a0ddf1224851353fc92bfbff6f499fa97_icgraph" alt=""/></div>
+<map name="amain_8c_a0ddf1224851353fc92bfbff6f499fa97_icgraph" id="amain_8c_a0ddf1224851353fc92bfbff6f499fa97_icgraph">
+<area shape="rect" title="main 関数" alt="" coords="174,5,223,32"/>
+<area shape="rect" href="strategy__tool_8c.html#ad0fee82726e74a0a035cda40f14c2d70" title="ゲーム情報構造体をコピーする（依存関係がない状態で）" alt="" coords="5,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf708c357965b6cb24e54069cbf55772" name="acf708c357965b6cb24e54069cbf55772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf708c357965b6cb24e54069cbf55772">&#9670;&#160;</a></span>print_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>main関数の引数を表示 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>main関数の引数の数 </td></tr>
+    <tr><td class="paramname">argv</td><td>main関数の引数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00032">32</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_acf708c357965b6cb24e54069cbf55772_icgraph.png" border="0" usemap="#amain_8c_acf708c357965b6cb24e54069cbf55772_icgraph" alt=""/></div>
+<map name="amain_8c_acf708c357965b6cb24e54069cbf55772_icgraph" id="amain_8c_acf708c357965b6cb24e54069cbf55772_icgraph">
+<area shape="rect" title="main関数の引数を表示" alt="" coords="271,5,352,32"/>
+<area shape="rect" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="main 関数" alt="" coords="174,5,223,32"/>
+<area shape="poly" title=" " alt="" coords="255,21,223,21,223,16,255,16"/>
+<area shape="rect" href="strategy__tool_8c.html#ad0fee82726e74a0a035cda40f14c2d70" title="ゲーム情報構造体をコピーする（依存関係がない状態で）" alt="" coords="5,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
 </map>
 </div>
 

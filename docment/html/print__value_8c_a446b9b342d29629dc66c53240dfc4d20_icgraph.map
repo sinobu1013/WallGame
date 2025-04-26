@@ -1,5 +1,7 @@
 <map id="game_data_showTextFile" name="game_data_showTextFile">
-<area shape="rect" id="Node000001" title=" " alt="" coords="127,5,295,32"/>
-<area shape="rect" id="Node000002" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,5,79,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,21,79,21,79,16,111,16"/>
+<area shape="rect" id="Node000001" title="ゲーム情報をテキストファイルに書き出す" alt="" coords="193,31,361,57"/>
+<area shape="rect" id="Node000002" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="38,5,112,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,34,112,26,113,21,177,29"/>
+<area shape="rect" id="Node000003" href="$print__value_8c.html#acc546af1be0fe9f705b234ea69de6db2" title="ゲーム情報をテキストファイルに書き出す（簡略化バージョン）" alt="" coords="5,56,145,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,59,145,63,144,58,177,54"/>
 </map>

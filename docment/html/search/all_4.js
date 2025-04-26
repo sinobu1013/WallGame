@@ -4,5 +4,6 @@ var searchData=
   ['black_5fwin_1',['BLACK_WIN',['../set_8h.html#a4f08aa9676f55492cbf1f9f43ce43f77',1,'set.h']]],
   ['board_2',['BOARD',['../set_8h.html#a20e826fa1a9a7c4abccd7c7823e92bb9',1,'set.h']]],
   ['board_3',['Board',['../struct_board.html',1,'']]],
-  ['board_4',['board',['../struct_game_date.html#a6d7928635054e378da8fea2722146c00',1,'GameDate']]]
+  ['board_4',['board',['../struct_game_date.html#a6d7928635054e378da8fea2722146c00',1,'GameDate']]],
+  ['bool_5',['BOOL',['../set_8h.html#a050c65e107f0c828f856a231f4b4e788',1,'set.h']]]
 ];

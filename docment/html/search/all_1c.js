@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['関数_0',['関数',['../md_src_2c_2rule.html#autotoc_md8',1,'']]]
+  ['戦略アルゴリズム仕様_0',['戦略アルゴリズム仕様',['../md_src_2c_2rule.html',1,'']]]
 ];

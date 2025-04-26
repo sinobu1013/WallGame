@@ -1,0 +1,26 @@
+\doxysection{strategy\+\_\+tool.\+h}
+\hypertarget{strategy__tool_8h_source}{}\label{strategy__tool_8h_source}\index{src/c/Strategy/strategy\_tool.h@{src/c/Strategy/strategy\_tool.h}}
+\mbox{\hyperlink{strategy__tool_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ STRATEGY\_TOOL\_H}}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ STRATEGY\_TOOL\_H}}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00008}\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{00008}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00009}\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n_a930b83edda39ee8cfa78dd4574a50bc3}{00009}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n_a930b83edda39ee8cfa78dd4574a50bc3}{sum}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00010}\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n_ad9c61f17435be9a69b3bf0f8a83362db}{00010}}\ \ \ \ \ \mbox{\hyperlink{struct_activity}{ACT}}\ next\_action[\mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}}];\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00011}\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n_a30f2169e04782bb7cda904d50a7bdfd1}{00011}}\ \ \ \ \ \textcolor{keywordtype}{int}\ score[\mbox{\hyperlink{set_8h_a30b328ca499f27b3d0f8111b495834ca}{DATE}}];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00012}00012\ \}\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\_ACTION}};}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00014}00014\ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{strategy__tool_8h_a4b25a288d8608339e1c17a84ef22d765}{GetScore}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00016}00016\ \mbox{\hyperlink{set_8h_a050c65e107f0c828f856a231f4b4e788}{BOOL}}\ \mbox{\hyperlink{strategy__tool_8h_ad0fee82726e74a0a035cda40f14c2d70}{copy\_game\_date}}(\mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ *\mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ sub);}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00018}00018\ \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\_ACTION}}\ \mbox{\hyperlink{strategy__tool_8h_a562814235b58325637803d77642a986e}{all\_next\_action}}(\mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00020}00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{strategy__tool_8h_acc0524cb732d561b0d38bdc9eb90f416}{calculate\_all\_next\_action}}(\mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date,\ \textcolor{keywordtype}{int}\ player,\ \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\_ACTION}}\ *next\_action);}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00022}00022\ \mbox{\hyperlink{struct_activity}{ACT}}\ \mbox{\hyperlink{strategy__tool_8h_ac4ea5c92ad00333c18d1daf56d3d74d2}{max\_score\_action}}(\mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\_ACTION}}\ next\_action);}
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{strategy__tool_8h_source_l00024}00024\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

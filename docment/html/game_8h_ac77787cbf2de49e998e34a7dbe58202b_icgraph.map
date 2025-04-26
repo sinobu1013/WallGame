@@ -1,20 +1,37 @@
 <map id="act_conversion" name="act_conversion">
-<area shape="rect" id="Node000001" title="移動向きから座標の変化値に変換" alt="" coords="719,56,826,83"/>
-<area shape="rect" id="Node000002" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="281,56,332,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="704,72,332,72,332,67,704,67"/>
-<area shape="rect" id="Node000005" href="$random_8c.html#a756fa6c976aeb746132c267c69f842a4" title="適当ランダム" alt="" coords="397,5,499,32"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="704,59,671,53,499,28,500,23,671,48,704,54"/>
-<area shape="rect" id="Node000006" href="$wall_8c.html#ac915aa839568c9cdcf2e174854ca8108" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="547,107,671,133"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="713,90,655,109,654,104,712,85"/>
-<area shape="rect" id="Node000003" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="127,81,215,108"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,80,216,89,215,84,265,74"/>
-<area shape="rect" id="Node000004" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,56,79,83"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="111,86,79,79,80,74,112,80"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="382,29,79,68,79,62,382,24"/>
-<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="542,140,482,151,412,159,336,159,262,148,222,131,189,111,192,106,224,127,264,143,337,154,411,154,481,146,541,135"/>
-<area shape="rect" id="Node000007" href="$wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f" title="壁の設置の仕方が問題ないか判定" alt="" coords="405,107,491,133"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="531,123,491,123,491,117,531,117"/>
-<area shape="rect" id="Node000008" href="$game_8c.html#aa87725c2189bc2de03543ba29d6bdff2" title="壁を設置" alt="" coords="263,107,349,133"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="390,123,350,123,350,117,390,117"/>
-<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="247,112,215,106,216,100,248,106"/>
+<area shape="rect" id="Node000001" title="移動向きから座標の変化値に変換" alt="" coords="874,83,982,109"/>
+<area shape="rect" id="Node000002" href="$strategy__tool_8c.html#a79ea777914fffd1058dc3eb6bf3ae5eb" title="その行動時の得点を計算" alt="" coords="408,13,521,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="892,77,861,60,826,47,744,31,661,24,585,22,521,25,521,19,584,17,662,18,745,25,827,41,863,55,895,72"/>
+<area shape="rect" id="Node000006" href="$strategy__tool_8c.html#a79bca0b073fe44761e520daa13897465" title="その行動が可能かどうか判定" alt="" coords="415,71,514,97"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="863,81,826,73,698,55,641,55,569,61,513,73,511,68,568,56,641,50,698,50,827,68,864,76"/>
+<area shape="rect" id="Node000008" href="$game_8c.html#a3c8bc1cd598e6d4535061d375b6f4369" title="プレイヤーの移動関数" alt="" coords="586,223,637,249"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="902,122,868,149,828,174,776,196,724,214,638,234,637,229,722,208,775,191,825,170,865,145,899,118"/>
+<area shape="rect" id="Node000010" href="$random_8c.html#a756fa6c976aeb746132c267c69f842a4" title="適当ランダム" alt="" coords="714,133,815,160"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="869,117,811,135,809,130,867,112"/>
+<area shape="rect" id="Node000011" href="$wall_8c.html#ac915aa839568c9cdcf2e174854ca8108" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="702,83,826,109"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="859,99,827,99,827,93,859,93"/>
+<area shape="rect" id="Node000003" href="$strategy__tool_8c.html#acc0524cb732d561b0d38bdc9eb90f416" title="次の手の得点を全て計算する（結果はNEXT_ACTIONに格納）" alt="" coords="235,5,360,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,29,360,29,360,24,393,24"/>
+<area shape="rect" id="Node000004" href="$greedy_8c.html#a1869328968b525fe9043cf207264eff7" title="貪欲法" alt="" coords="127,64,187,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,56,189,69,187,64,221,51"/>
+<area shape="rect" id="Node000005" href="$gui_8c.html#a0535b8637187c8866effe4f7369f8d40" title="ゲームを進める関数" alt="" coords="5,89,79,116"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="220,34,173,42,128,54,92,72,63,91,60,86,90,67,126,50,172,37,219,29"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="112,90,80,97,78,92,111,85"/>
+<area shape="rect" id="Node000007" href="$strategy__tool_8c.html#a562814235b58325637803d77642a986e" title="次の手を洗い出す" alt="" coords="244,72,352,99"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="400,87,352,88,352,82,400,82"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="228,84,187,82,188,76,228,79"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="228,100,187,105,79,107,79,102,187,100,228,95"/>
+<area shape="rect" id="Node000009" href="$game_8c.html#a441d4f282398c2c2cfe4d27151ef2d0d" title="ゲーム進行関数（メイン）" alt="" coords="254,171,342,197"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="570,233,408,207,342,195,343,189,409,201,571,227"/>
+<area shape="poly" id="edge12_Node000009_Node000005" title=" " alt="" coords="238,168,78,117,80,112,239,163"/>
+<area shape="poly" id="edge19_Node000011_Node000009" title=" " alt="" coords="712,119,704,124,681,144,671,154,655,162,614,176,571,186,484,195,405,196,342,192,342,187,405,191,484,190,570,180,612,171,653,158,667,150,677,140,700,119,710,114"/>
+<area shape="rect" id="Node000012" href="$wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f" title="壁の設置の仕方が問題ないか判定" alt="" coords="569,121,654,148"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="695,116,655,126,654,121,693,111"/>
+<area shape="rect" id="Node000014" href="$strategy__tool_8c.html#a4b25a288d8608339e1c17a84ef22d765" title="現時点での得点を計算" alt="" coords="573,71,650,97"/>
+<area shape="poly" id="edge20_Node000011_Node000014" title=" " alt="" coords="687,93,650,90,650,84,687,87"/>
+<area shape="poly" id="edge16_Node000012_Node000006" title=" " alt="" coords="555,118,505,100,506,95,557,113"/>
+<area shape="rect" id="Node000013" href="$game_8c.html#aa87725c2189bc2de03543ba29d6bdff2" title="壁を設置" alt="" coords="421,121,508,148"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="553,137,508,137,508,132,553,132"/>
+<area shape="poly" id="edge18_Node000013_Node000009" title=" " alt="" coords="408,154,343,174,342,168,406,149"/>
+<area shape="poly" id="edge21_Node000014_Node000002" title=" " alt="" coords="560,67,500,43,502,38,562,62"/>
 </map>

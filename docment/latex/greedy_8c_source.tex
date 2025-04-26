@@ -1,0 +1,18 @@
+\doxysection{greedy.\+c}
+\hypertarget{greedy_8c_source}{}\label{greedy_8c_source}\index{src/c/Strategy/greedy.c@{src/c/Strategy/greedy.c}}
+\mbox{\hyperlink{greedy_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{set_8h}{./../set.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{strategy__tool_8h}{strategy\_tool.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{greedy_8h}{greedy.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00024}\mbox{\hyperlink{greedy_8c_a1869328968b525fe9043cf207264eff7}{00024}}\ \mbox{\hyperlink{struct_activity}{ACT}}\ \mbox{\hyperlink{greedy_8c_a1869328968b525fe9043cf207264eff7}{greedy}}(\mbox{\hyperlink{struct_game_date}{GAME\_DATE}}\ game\_date)\{}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{struct_n_e_x_t___a_c_t_i_o_n}{NEXT\_ACTION}}\ next\_action\ =\ \mbox{\hyperlink{strategy__tool_8c_a562814235b58325637803d77642a986e}{all\_next\_action}}(game\_date,\ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}});\ \ \ \ \textcolor{comment}{//\ 現時点の状況から取り得る手をすべて取得する}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{strategy__tool_8c_acc0524cb732d561b0d38bdc9eb90f416}{calculate\_all\_next\_action}}(game\_date,\ game\_date.\mbox{\hyperlink{struct_game_date_a74a2d6184f22f573b3b1c28db96e1c85}{main\_player}},\ \&next\_action);\ \ \ \ \ \ \textcolor{comment}{//\ 取り得るそれぞれの手の得点を計算}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{strategy__tool_8c_ac4ea5c92ad00333c18d1daf56d3d74d2}{max\_score\_action}}(next\_action);\ \ \ \ \ \ \ \textcolor{comment}{//\ 最大の得点の行動を探索}}
+\DoxyCodeLine{\Hypertarget{greedy_8c_source_l00028}00028\ \}}
+
+\end{DoxyCode}

@@ -7,14 +7,18 @@ main関数
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$tcl.\+h$>$}\newline
 {\ttfamily \#include "{}set.\+h"{}}\newline
 {\ttfamily \#include "{}./game/init.\+h"{}}\newline
-{\ttfamily \#include "{}./prog/print\+\_\+value.\+h"{}}\newline
 {\ttfamily \#include "{}./prog/queue.\+h"{}}\newline
 {\ttfamily \#include "{}./game/game.\+h"{}}\newline
+{\ttfamily \#include "{}./game/wall.\+h"{}}\newline
 {\ttfamily \#include "{}./gui/gui.\+h"{}}\newline
 {\ttfamily \#include "{}./\+Strategy/random.\+h"{}}\newline
+{\ttfamily \#include "{}./\+Strategy/strategy\+\_\+tool.\+h"{}}\newline
+{\ttfamily \#include "{}./\+Strategy/greedy.\+h"{}}\newline
+{\ttfamily \#include "{}./prog/print\+\_\+value.\+h"{}}\newline
 Include dependency graph for main.\+c\+:
 \nopagebreak
 \begin{figure}[H]
@@ -26,8 +30,10 @@ Include dependency graph for main.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
-\begin{DoxyCompactList}\small\item\em main関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{main_8c_acf708c357965b6cb24e54069cbf55772}{print\+\_\+main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main関数の引数を表示 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main 関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,27 +58,72 @@ Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{main.c@{main.c}!main@{main}}
 \index{main@{main}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
-int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{main_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
 
 
 
-main関数 
+main 関数 
 
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & 引数の個数 \\
+\hline
+{\em argv} & 値 \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-int 実行成功判定 
+int 実効性効果どうか 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00028}{28}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00049}{49}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\includegraphics[width=214pt]{main_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{main_8c_a0ddf1224851353fc92bfbff6f499fa97_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_acf708c357965b6cb24e54069cbf55772}\index{main.c@{main.c}!print\_main@{print\_main}}
+\index{print\_main@{print\_main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{print\_main()}{print\_main()}}
+{\footnotesize\ttfamily \label{main_8c_acf708c357965b6cb24e54069cbf55772} 
+void print\+\_\+main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+main関数の引数を表示 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & main関数の引数の数 \\
+\hline
+{\em argv} & main関数の引数 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00032}{32}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{main_8c_acf708c357965b6cb24e54069cbf55772_icgraph}
 \end{center}
 \end{figure}

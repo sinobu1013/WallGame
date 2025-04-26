@@ -108,21 +108,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="set_8h__dep__incl.png" border="0" usemap="#asrc_2c_2set_8hdep" alt=""/></div>
 <map name="asrc_2c_2set_8hdep" id="asrc_2c_2set_8hdep">
-<area shape="rect" title=" " alt="" coords="511,5,594,32"/>
-<area shape="rect" href="random_8c.html" title="ランダムな行動メイン" alt="" coords="5,80,167,107"/>
-<area shape="poly" title=" " alt="" coords="496,31,168,82,167,77,495,26"/>
-<area shape="rect" href="game_8c.html" title="ゲームプログラム" alt="" coords="191,80,325,107"/>
-<area shape="poly" title=" " alt="" coords="496,37,310,82,309,77,495,31"/>
-<area shape="rect" href="init_8c.html" title="ゲームの初期化" alt="" coords="348,80,467,107"/>
-<area shape="poly" title=" " alt="" coords="515,42,434,82,432,77,513,37"/>
-<area shape="rect" href="wall_8c.html" title=" " alt="" coords="491,80,614,107"/>
-<area shape="poly" title=" " alt="" coords="555,48,555,80,550,80,550,48"/>
-<area shape="rect" href="gui_8c.html" title="guiを表示する" alt="" coords="638,80,742,107"/>
-<area shape="poly" title=" " alt="" coords="591,37,667,77,665,82,589,42"/>
-<area shape="rect" href="main_8c.html" title="main関数" alt="" coords="766,80,859,107"/>
-<area shape="poly" title=" " alt="" coords="610,33,768,77,766,82,608,38"/>
-<area shape="rect" href="print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="883,80,1038,107"/>
-<area shape="poly" title=" " alt="" coords="610,27,890,77,889,82,609,33"/>
+<area shape="rect" title=" " alt="" coords="725,5,808,32"/>
+<area shape="rect" href="greedy_8c.html" title="貪欲法" alt="" coords="5,88,163,115"/>
+<area shape="poly" title=" " alt="" coords="709,26,475,45,326,62,175,83,137,90,136,85,174,77,325,56,475,40,709,21"/>
+<area shape="rect" href="random_8c.html" title="ランダムな行動メイン" alt="" coords="187,88,349,115"/>
+<area shape="poly" title=" " alt="" coords="710,30,552,52,360,83,324,90,323,85,360,77,551,46,709,25"/>
+<area shape="rect" href="strategy__tool_8c.html" title="戦略アルゴリズム開発での共有関数" alt="" coords="372,80,527,123"/>
+<area shape="poly" title=" " alt="" coords="711,37,528,83,526,78,710,32"/>
+<area shape="rect" href="game_8c.html" title="ゲームプログラム" alt="" coords="551,88,684,115"/>
+<area shape="poly" title=" " alt="" coords="731,42,642,90,639,85,729,37"/>
+<area shape="rect" href="init_8c.html" title="ゲームの初期化" alt="" coords="708,88,826,115"/>
+<area shape="poly" title=" " alt="" coords="769,48,769,88,764,88,764,48"/>
+<area shape="rect" href="wall_8c.html" title=" " alt="" coords="850,88,974,115"/>
+<area shape="poly" title=" " alt="" coords="804,37,891,85,888,90,801,42"/>
+<area shape="rect" href="gui_8c.html" title="guiを表示する" alt="" coords="998,88,1101,115"/>
+<area shape="poly" title=" " alt="" coords="824,32,986,77,1011,85,1009,90,985,83,823,38"/>
+<area shape="rect" href="main_8c.html" title="main関数" alt="" coords="1125,88,1219,115"/>
+<area shape="poly" title=" " alt="" coords="824,24,957,45,1114,77,1139,85,1137,90,1113,83,956,50,823,30"/>
+<area shape="rect" href="print__value_8c.html" title="データを表示用（視覚化）" alt="" coords="1242,88,1398,115"/>
+<area shape="poly" title=" " alt="" coords="824,23,1005,44,1231,77,1268,85,1267,90,1230,83,1005,49,823,28"/>
 </map>
 </div>
 </div>
@@ -198,13 +202,19 @@ Macros</h2></td></tr>
 <tr class="separator:a306ebd41c0cd1303b1372c6153f0caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30b328ca499f27b3d0f8111b495834ca" id="r_a30b328ca499f27b3d0f8111b495834ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30b328ca499f27b3d0f8111b495834ca">DATE</a>&#160;&#160;&#160;200</td></tr>
 <tr class="separator:a30b328ca499f27b3d0f8111b495834ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace38c071c18e7c43292e2c31175a678b" id="r_ace38c071c18e7c43292e2c31175a678b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace38c071c18e7c43292e2c31175a678b">SUM_TURN</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memitem:ace38c071c18e7c43292e2c31175a678b" id="r_ace38c071c18e7c43292e2c31175a678b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace38c071c18e7c43292e2c31175a678b">SUM_TURN</a>&#160;&#160;&#160;100</td></tr>
 <tr class="separator:ace38c071c18e7c43292e2c31175a678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae273f99fc3684324eb72bbb4151009a7" id="r_ae273f99fc3684324eb72bbb4151009a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae273f99fc3684324eb72bbb4151009a7">NO_WALL</a>&#160;&#160;&#160;-999</td></tr>
+<tr class="separator:ae273f99fc3684324eb72bbb4151009a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0240ac851181b84ac374872dc5434ee4" id="r_a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;100</td></tr>
 <tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c2040f25d8e3a7b9e1c2024c618cb6" id="r_a12c2040f25d8e3a7b9e1c2024c618cb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12c2040f25d8e3a7b9e1c2024c618cb6">INF</a>&#160;&#160;&#160;99999</td></tr>
+<tr class="separator:a12c2040f25d8e3a7b9e1c2024c618cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a050c65e107f0c828f856a231f4b4e788" id="r_a050c65e107f0c828f856a231f4b4e788"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a050c65e107f0c828f856a231f4b4e788">BOOL</a></td></tr>
+<tr class="separator:a050c65e107f0c828f856a231f4b4e788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08b38b334eca063d45019fe9df7776bf" id="r_a08b38b334eca063d45019fe9df7776bf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08b38b334eca063d45019fe9df7776bf">POINT</a></td></tr>
 <tr class="memdesc:a08b38b334eca063d45019fe9df7776bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標表示  <br /></td></tr>
 <tr class="separator:a08b38b334eca063d45019fe9df7776bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +349,22 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="a12c2040f25d8e3a7b9e1c2024c618cb6" name="a12c2040f25d8e3a7b9e1c2024c618cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c2040f25d8e3a7b9e1c2024c618cb6">&#9670;&#160;</a></span>INF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INF&#160;&#160;&#160;99999</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00040">40</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
 <a id="a437ef08681e7210d6678427030446a54" name="a437ef08681e7210d6678427030446a54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a437ef08681e7210d6678427030446a54">&#9670;&#160;</a></span>LEFT</h2>
 
@@ -381,6 +407,22 @@ Typedefs</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define N&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00039">39</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
+
+</div>
+</div>
+<a id="ae273f99fc3684324eb72bbb4151009a7" name="ae273f99fc3684324eb72bbb4151009a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae273f99fc3684324eb72bbb4151009a7">&#9670;&#160;</a></span>NO_WALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NO_WALL&#160;&#160;&#160;-999</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -549,7 +591,7 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SUM_TURN&#160;&#160;&#160;30</td>
+          <td class="memname">#define SUM_TURN&#160;&#160;&#160;100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -722,6 +764,22 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ゲームのボード情報 </p>
+
+</div>
+</div>
+<a id="a050c65e107f0c828f856a231f4b4e788" name="a050c65e107f0c828f856a231f4b4e788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050c65e107f0c828f856a231f4b4e788">&#9670;&#160;</a></span>BOOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="#a050c65e107f0c828f856a231f4b4e788">BOOL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="set_8h_source.html#l00042">42</a> of file <a class="el" href="set_8h_source.html">set.h</a>.</p>
 
 </div>
 </div>

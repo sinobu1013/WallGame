@@ -1,0 +1,25 @@
+<map id="check_action" name="check_action">
+<area shape="rect" id="Node000001" title="その行動が可能かどうか判定" alt="" coords="5,157,104,184"/>
+<area shape="rect" id="Node000002" href="$game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="473,5,581,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,154,111,135,151,116,232,87,314,63,457,29,459,34,316,68,233,92,153,121,113,140,79,159"/>
+<area shape="rect" id="Node000003" href="$game_8c.html#a59099bbc813a737414509473b4d224fc" title="nextの座標に壁がないかの判定" alt="" coords="457,56,597,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,155,151,143,442,82,443,87,152,148,105,160"/>
+<area shape="rect" id="Node000004" href="$wall_8c.html#a7421fa21a9c825f11310d7b8103a8f3f" title="壁の設置の仕方が問題ないか判定" alt="" coords="152,157,237,184"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,168,136,168,136,173,104,173"/>
+<area shape="rect" id="Node000009" href="$game_8c.html#a6b0341d04d731d716876aa81039d5ab2" title="プレイヤーの座標がボードの範囲外かどうかを判定する" alt="" coords="474,259,580,285"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="105,181,152,193,318,229,460,257,459,262,317,235,151,199,103,187"/>
+<area shape="rect" id="Node000010" href="$game_8c.html#afd0c88e07a242a8c3082ecdfc66a8ff3" title="引数の座標にプレイヤーが存在するか判定する" alt="" coords="478,309,576,336"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="80,182,153,218,235,247,319,272,463,307,462,312,318,277,234,252,151,222,78,187"/>
+<area shape="rect" id="Node000005" href="$wall_8c.html#ac915aa839568c9cdcf2e174854ca8108" title="現在のプレイヤーの位置からゴールまでの最短距離を探索" alt="" coords="285,157,409,184"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,168,270,168,270,173,237,173"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="355,155,394,101,423,70,456,42,463,37,466,42,459,46,427,73,398,104,359,158"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="364,155,405,124,456,92,468,87,470,91,459,97,408,129,367,159"/>
+<area shape="rect" id="Node000006" href="$queue_8c.html#a6f55c56cbc6ce039123e86c6ae691272" title="キューを作成用関数（初期化用）" alt="" coords="478,107,576,133"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="397,154,463,135,464,140,398,159"/>
+<area shape="rect" id="Node000007" href="$queue_8c.html#aac20a81cf42a8b946f6370dec907164c" title="デキュー（戻り値は開放する必要あり）" alt="" coords="489,157,565,184"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="410,168,474,168,474,173,410,173"/>
+<area shape="rect" id="Node000008" href="$queue_8c.html#aa79555134e26a754f7a427f265f06766" title="エンキュー" alt="" coords="489,208,565,235"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="398,182,475,204,474,209,397,187"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="369,182,459,244,470,250,468,255,456,249,366,187"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="359,183,398,237,427,268,459,295,466,300,463,304,456,299,423,272,394,240,355,186"/>
+</map>

@@ -1,5 +1,7 @@
 <map id="gui" name="gui">
-<area shape="rect" id="Node000001" title="guiを表示する（メイン）" alt="" coords="103,5,141,32"/>
-<area shape="rect" id="Node000002" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main関数" alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="rect" id="Node000001" title="guiを表示する（メイン）" alt="" coords="271,5,309,32"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="main 関数" alt="" coords="174,5,223,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,21,223,21,223,16,255,16"/>
+<area shape="rect" id="Node000003" href="$strategy__tool_8c.html#ad0fee82726e74a0a035cda40f14c2d70" title="ゲーム情報構造体をコピーする（依存関係がない状態で）" alt="" coords="5,5,126,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
 </map>

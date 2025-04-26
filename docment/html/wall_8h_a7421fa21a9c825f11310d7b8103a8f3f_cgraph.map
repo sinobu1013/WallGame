@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,168,123,168,123,173,91,173"/>
 <area shape="rect" id="Node000003" href="$game_8c.html#ac77787cbf2de49e998e34a7dbe58202b" title="移動向きから座標の変化値に変換" alt="" coords="327,5,434,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,155,248,101,276,70,309,42,317,37,320,42,313,46,280,73,252,104,213,158"/>
-<area shape="rect" id="Node000004" href="$game_8c.html#ad0684515b1d47d919b769f355edfbf42" title="nextの座標に壁がないかの判定" alt="" coords="311,56,450,83"/>
+<area shape="rect" id="Node000004" href="$game_8c.html#a59099bbc813a737414509473b4d224fc" title="nextの座標に壁がないかの判定" alt="" coords="311,56,450,83"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="217,155,258,124,310,92,322,87,324,91,312,97,261,129,221,159"/>
 <area shape="rect" id="Node000005" href="$queue_8c.html#a6f55c56cbc6ce039123e86c6ae691272" title="キューを作成用関数（初期化用）" alt="" coords="332,107,429,133"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="250,154,317,135,318,140,252,159"/>
