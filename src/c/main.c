@@ -21,6 +21,7 @@
 #include "./Strategy/random.h"
 #include "./Strategy/strategy_tool.h"
 #include "./Strategy/greedy.h"
+#include "./Strategy/alphabeta.h"
 #include "./prog/print_value.h"
 
 /**
