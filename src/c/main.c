@@ -18,6 +18,7 @@
 #include "./game/game.h"
 #include "./game/wall.h"
 #include "./gui/gui.h"
+#include "./gui/match_gui.h"
 #include "./Strategy/random.h"
 #include "./Strategy/strategy_tool.h"
 #include "./Strategy/greedy.h"
@@ -57,8 +58,7 @@ int main(int argc, char *argv[]){
         }
     }
 
-    GAME_RESULT result = match(greedy, greedy, False);
-    matchResult_print(result);
+    match_gui();
     
     return 0;
 }
