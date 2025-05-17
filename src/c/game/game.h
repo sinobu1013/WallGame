@@ -17,4 +17,6 @@ int create_wall(GAME_DATE *game_date, ACT activity);
 
 int win_or_loss_decision(GAME_DATE game_date);
 
+GAME_RESULT match(ACT (*aStrategy)(GAME_DATE), ACT (*bStrategy)(GAME_DATE), int aFist_flag);
+
 #endif

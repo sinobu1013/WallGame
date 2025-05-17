@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "./../set.h"
+#include "init.h"
 #include "wall.h"
 #include "game.h"
 
@@ -250,4 +251,52 @@ int game_main(GAME_DATE *game_date, ACT activity){
 
     if(action_flag) game_date->turn++;  // 行動を起こせた時に、ターンを上げる
     return action_flag;
+}
+
+
+/**
+ * @brief CPU vs CPU用の関数
+ * 
+ * @param aStrategy a戦略（関数ポインタ）
+ * @param bStrategy b戦略（関数ポインタ）
+ * @param aFist_flag aが先手かどうか（先手なら1、後手なら0）
+ * @return GAME_RESULT 試合結果
+ */
+GAME_RESULT match(ACT (*aStrategy)(GAME_DATE), ACT (*bStrategy)(GAME_DATE), int aFist_flag){
+    int turn;
+    GAME_DATE game_date;
+    init(&game_date);
+    aFist_flag = 1 ^ aFist_flag;    // フラグを反転
+
+    rep(turn, SUM_TURN){
+        ACT action;
+        if((turn % 2) == (aFist_flag % 2)) {
+            game_date.main_player = WHITE_PLAYER;
+            action = aStrategy(game_date);
+        } else {
+            game_date.main_player = BLACK_PLAYER;
+            action = bStrategy(game_date);
+        }
+
+        game_main(&game_date, action);
+        if(end_decision(game_date))     // ゲーム終了判定
+            break;
+    }
+
+    // ゲーム結果を格納
+    GAME_RESULT result;
+    int win = win_or_loss_decision(game_date);
+    if(win == WHITE_WIN){
+        result.win_player = WHITE_PLAYER;
+    } else if(win == BLACK_WIN) {
+        result.win_player = BLACK_PLAYER;
+    } else {
+        result.win_player = DROW;
+    }
+    result.turn = turn;
+    result.deep[WHITE_PLAYER] = shortest_distance(game_date, WHITE_PLAYER);
+    result.deep[BLACK_PLAYER] = shortest_distance(game_date, BLACK_PLAYER);
+
+    game_free(&game_date);
+    return result;
 }

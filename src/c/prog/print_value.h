@@ -9,4 +9,6 @@ void try_print_game_date(const GAME_DATE game_date);
 
 void print_next_action(NEXT_ACTION next_action, int player);
 
+void matchResult_print(GAME_RESULT result);
+
 #endif

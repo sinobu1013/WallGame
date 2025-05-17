@@ -26,6 +26,7 @@
 #define BLACK_WIN WIN + BLACK_PLAYER    /**< 黒の勝利 */
 #define WALL_SUM_NUMBER 5   /**< 壁の枚数（初期値） */
 #define SUM_PLAYER_NUMBER 2 /**< プレイヤー数 */
+#define DROW 5      /**< 引き分け */
 
 #define rep(i, n) for(i=0;i<n;i++)
 #define reps(i,s,n) for(i=s;i<n;i++)
@@ -92,5 +93,16 @@ typedef struct Activity{
     POINT wall_point;   /**< 壁を設置する場合の座標 */
     int direction;      /**< 壁を設置する場合の向き */
 }ACT;
+
+
+/**
+ * @brief ゲーム結果を格納
+ * 
+ */
+typedef struct{
+    int win_player;     /**< 勝利プレイヤー */
+    int deep[N];        /**< ゴールまでの距離 */
+    int turn;           /**< 経過ターン */
+}GAME_RESULT;
 
 #endif

@@ -158,3 +158,27 @@ void print_next_action(NEXT_ACTION next_action, int player){
     }
     fclose(f);
 }
+
+
+/**
+ * @brief 試合結果をターミナル上に表示
+ * 
+ * @param result 試合結果
+ */
+void matchResult_print(GAME_RESULT result){
+    printf("\n------------Game Result-----------\n");
+    
+    printf("win : ");
+    if(result.win_player == WHITE_PLAYER){
+        printf("white player !!!\n");
+    } else if(result.win_player == BLACK_PLAYER) {
+        printf("black player !!!\n");
+    } else {
+        printf("drow ...\n");
+    }
+
+    printf("elapsed_turn : %d\n", result.turn);
+    printf("deep : \n");
+    printf("\twhite player : %d\n", result.deep[WHITE_PLAYER]);
+    printf("\tblack player : %d\n", result.deep[BLACK_PLAYER]);
+}
