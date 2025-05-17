@@ -97,10 +97,81 @@ fade_out 1.0
 # 四角形を削除（ゲーム開始アニメーション用）
 proc delete_rectangle {} {
     .board delete game_start
+    draw_board
 }
-
 
 pack .board
 
 
+proc draw_board {} {
+    global canvas_size
+    global game_info_size
+    global sum_square_h
+    global sum_square_w
+    global square_size_h
+    global square_size_w
 
+    set game_data [match_data]
+    set player_number [lindex $game_data 4]
+    for {set i 0} {$i < $player_number} {incr i} {
+        set center_x [expr ([lindex $game_data [expr $i * 3 + 5]] + 0.5) * $square_size_w]
+        set center_y [expr ([lindex $game_data [expr $i * 3 + 6]] + 0.5) * $square_size_h]
+        set xs [expr {int($center_x - (($square_size_w * 0.8) / 2))} + 10]
+        set ys [expr {int($center_y - (($square_size_h * 0.8) / 2))} + 10]
+        set xe [expr {int($center_x + (($square_size_w * 0.8) / 2))} + 10]
+        set ye [expr {int($center_y + (($square_size_h * 0.8) / 2))} + 10]
+
+        .board coords player_$i $xs $ys $xe $ye
+    }
+
+    set wall 3
+    set count [expr $player_number * 3 + 6]
+    # 縦の壁
+    for {set y 0} {$y < [expr $sum_square_h + 1]} {incr y} {
+        for {set x 0} {$x < $sum_square_w} {incr x} {
+            set temp [lindex $game_data $count]
+            set wall_tag_name [format "wall_h_%d_%d" $x $y]
+            if {$temp == $wall} {    
+                .board itemconfig $wall_tag_name -fill red
+            } else {
+                .board itemconfig $wall_tag_name -fill white
+            }
+            incr count
+        }
+    }
+    # 横の壁
+    for {set y 0} {$y < $sum_square_h} {incr y} {
+        for {set x 0} {$x < [expr $sum_square_w + 1]} {incr x} {
+            set temp [lindex $game_data $count]
+            set wall_tag_name [format "wall_w_%d_%d" $x $y]
+            if {$temp == $wall} {
+                .board itemconfig $wall_tag_name -fill red
+            } else {
+                .board itemconfig $wall_tag_name -fill white
+            }
+            incr count
+        }
+    }
+
+    if {[lindex $game_data 1] == 1} {
+        .board itemconfigure main_rectangle -fill white
+        .board itemconfigure main_player -text "White turn" -fill black
+    } elseif {[lindex $game_data 1] == 2} {
+        .board itemconfigure main_rectangle -fill black
+        .board itemconfigure main_player -text "Black turn" -fill white
+    }
+
+    .board itemconfigure turn -text "turn :[lindex $game_data 0]"
+    global canvas_size_h
+    global canvas_size_w
+    if {[lindex $game_data $count] == 1000} {
+        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "WIN" -font {{ＭＳ 明朝} 100} -fill red
+    } elseif {[lindex $game_data $count] == 1001} {
+        .board create text [expr $canvas_size_w / 2] [expr $canvas_size_h / 2] -text "LOST" -font {{ＭＳ 明朝} 100} -fill blue
+    }
+
+    pack .board
+
+    # 新たにスケジュールを設定
+    after 1000 draw_board
+}

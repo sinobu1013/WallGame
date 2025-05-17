@@ -267,6 +267,7 @@ GAME_RESULT match(ACT (*aStrategy)(GAME_DATE), ACT (*bStrategy)(GAME_DATE), int 
     GAME_DATE game_date;
     init(&game_date);
     aFist_flag = 1 ^ aFist_flag;    // フラグを反転
+    printf("aFist_flag = %d\n", aFist_flag);
 
     rep(turn, SUM_TURN){
         ACT action;

@@ -58,7 +58,9 @@ int main(int argc, char *argv[]){
         }
     }
 
-    match_gui();
+    GAME_RESULT result = match(greedy, greedy, False);
+    matchResult_print(result);
+    match_gui(greedy, greedy);
     
     return 0;
 }
