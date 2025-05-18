@@ -1,17 +1,17 @@
 game_data information
-turn : 13
+turn : 0
 main_player : white player
 
 ---------------board infor --------------------
 player
+ 0 0 0 0 2 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
  0 0 0 0 1 0 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 2 0 0
- 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0
 wall_w
  0 0 0 0 0 0 0 0
  0 0 0 0 0 0 0 0
@@ -34,12 +34,12 @@ num_wall : 0
 
 -----------------player--------------------
 player 1
-Point x:4, y:0
+Point x:4, y:7
 wall_num : 5
 goal_h : 0
 
 player 2
-Point x:5, y:5
+Point x:4, y:0
 wall_num : 5
 goal_h : 7
 

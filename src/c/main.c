@@ -49,18 +49,32 @@ void print_main(int argc, char *argv[]){
  * @return int 実効性効果どうか
  */
 int main(int argc, char *argv[]){
+    ACT (*default_fStrategy)(GAME_DATE) = greedy;
+    ACT (*default_sStrategy)(GAME_DATE) = greedy;
     print_main(argc,argv);
     
     if(argc != 1){
+        
+        // プレイヤー vs CPU
         if(strcmp(argv[1], "gui") == 0){
             gui();
             return 0;
         }
-    }
 
-    GAME_RESULT result = match(greedy, greedy, False);
-    matchResult_print(result);
-    match_gui(greedy, greedy);
-    
+        // CPU vs CPU
+        if(strcmp(argv[1], "match") == 0) {
+            if(argc == 2) {
+                GAME_RESULT result = match(default_fStrategy, default_sStrategy, True);
+                matchResult_print(result);
+            }
+        }
+
+        // CPU vs CPU（GUI）
+        if(strcmp(argv[1], "match_gui") == 0) {
+            if(argc == 2) {
+                match_gui(default_fStrategy, default_sStrategy);
+            }
+        }
+    }    
     return 0;
 }
